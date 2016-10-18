@@ -67,6 +67,19 @@
     .hint-container__text{
         width: 150px;
     }
+    .popover.right{
+        margin-left: -270px;
+        margin-top: 45px;
+        opacity: 0.99;
+    }
+    .popover.right>.arrow{
+        margin-top: -47px;
+//        opacity: 0.99;
+        left: auto;
+        right: 10px;
+        z-index: 100;
+        transform: rotate(90deg);
+    }
 }
 
 @media only screen and (max-width : 630px){

@@ -11,15 +11,31 @@
   .hint-container__text {
     width: 150px;
   }
+
+  /* line 70, ../scss/media.scss */
+  .popover.right {
+    margin-left: -270px;
+    margin-top: 45px;
+    opacity: 0.99;
+  }
+
+  /* line 75, ../scss/media.scss */
+  .popover.right > .arrow {
+    margin-top: -47px;
+    left: auto;
+    right: 10px;
+    z-index: 100;
+    transform: rotate(90deg);
+  }
 }
 @media only screen and (max-width: 630px) {
-  /* line 73, ../scss/media.scss */
+  /* line 86, ../scss/media.scss */
   .hint-container__text {
     width: 125px;
   }
 }
 @media only screen and (max-width: 580px) {
-  /* line 80, ../scss/media.scss */
+  /* line 93, ../scss/media.scss */
   .hint-container__text {
     width: 105%;
     top: 30px;
@@ -27,7 +43,7 @@
     left: -2.5%;
     box-shadow: 1px 1px 2px 1.5px #777;
   }
-  /* line 86, ../scss/media.scss */
+  /* line 99, ../scss/media.scss */
   .hint-container__text:after {
     top: -1px;
     margin-top: -5px;
@@ -42,7 +58,7 @@
   }
 }
 @media only screen and (max-width: 480px) {
-  /* line 104, ../scss/media.scss */
+  /* line 117, ../scss/media.scss */
   .card-container {
     margin-top: 20%;
   }

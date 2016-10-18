@@ -9,16 +9,20 @@
     <title>tap2pay</title>
 
     <link href="stylesheets/normalize.min.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" rel="stylesheet" href="stylesheets/intlInputPhone.min.css">
     <link href="stylesheets/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="stylesheets/fonts.css" type="text/css" rel="stylesheet">
     <link href="stylesheets/font-awesome.min.css" type="text/css" rel="stylesheet">
-    <link  href="build/css/intlTelInput.css" rel="stylesheet"  type="text/css">
+<!--    <link  href="build/css/intlTelInput.css" rel="stylesheet"  type="text/css">-->
     <link href="stylesheets/screen.css" type="text/css" rel="stylesheet">
     <link href="stylesheets/media.css" type="text/css" rel="stylesheet">
+   
+   
    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     
     <script src="build/js/intlTelInput.js"></script>
+<!--
     <script>
         $(function() {
             $("#mobile-number").intlTelInput({
@@ -37,6 +41,8 @@
             });
         });
     </script>
+-->
+
 
 <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
@@ -102,24 +108,31 @@
                         <span class="hint-container__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum magnam reprehenderit similique optio numquam commodi unde, obcaecati pariatur.</span>
                     </div>
                     
-                    <a target="_blank" href="#" class="btn btn-send-to btn-telegram modal-button icon-button messenger-button"><i class="fa fa-messenger"></i>Send to Messenger</a>
-<!--                    <button type="button" class="modal-button icon-button messenger-button"><span>Send to Messenger</span></button>-->
+                    <a target="_blank" href="#" class="btn btn-send-to modal-button icon-button messenger-button"><i class="fa fa-messenger"></i>Send to Messenger</a>
+
                     <p class="account-icon"><i></i><span>Виталий Поляков</span><a href="#">Not you ?</a></p>
                     <a target="_blank" href="https://telegram.me/Tap2PaySandboxBot?start=aW52b2ljZTo0YjVlZTJmMQ==" class="btn btn-send-to btn-telegram telegram-button"><i class="fa fa-paper-plane"></i>Send to Telegram</a>
-<!--                    <button type="button" class="modal-button icon-button telegram-button"><span>Send to Telegram</span></button>-->
-                    <a target="_blank" href="https://telegram.me/Tap2PaySandboxBot?start=aW52b2ljZTo0YjVlZTJmMQ==" class="btn btn-send-to modal-button icon-button skype-button"><i class="fa fa-skype"></i>Send to Skype</a>
-<!--                        <button type="button" class="modal-button icon-button skype-button"><span>Send to Skype</span></button>-->
+
+                    <a target="_blank" href="#" class="btn btn-send-to modal-button icon-button skype-button"><i class="fa fa-skype"></i>Send to Skype</a>
+
                 </div>
                 
                 <div class="step-authorization" id="step-authorization">
-                    <form action="#" class="phone-number-form" method="POST" accept-charset="utf8">
+                    <form action="#" id="formsID" name="formsName" class="phone-number-form" method="POST" accept-charset="utf8">
                         <div class="phone-input-container">
-                            <input type="tel" id="mobile-number" pattern="^((8|\+)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"  name="phone-number" class="phone-number-input" placeholder="Пример + 375 29 111 11 11" required onsubmit="validateComments(this)">
+<!--                           <input type="text" name="name" required="required" pattern="^[0123456789+]+$" title="Required & Pattern" />-->
+<!--                            <input type="tel" id="mobile-number"  name="phone-number" class="phone-number-input" placeholder="Пример + 375 29 111 11 11" required="required" >-->
+<!--                            <input type="tel" id="mobile-number" pattern="^[0123456789+]+$" name="phone-number" class="phone-number-input" placeholder="Пример + 375 29 111 11 11" required="required" >-->
+<!--                            <input type="tel" id="mobile-number" pattern="^\S[0-9]{13}" name="phone-number" class="phone-number-input" placeholder="Пример + 375 29 111 11 11" required="required" >-->
+                            
+                            <div class="input-phone"></div>
+
+                            <!-- oninput="validateComments(this)"  pattern="^((8|\+)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"-->
                             
                                <div class="send-container">
-                                <input type="submit" value="Send SMS-Code" class="submit-button gradient-bg step-authorization-submit">
+                                <input type="submit" value="Send SMS-Code" id="phone-validation-submit" class="submit-button gradient-bg step-authorization-submit" name="name008">
                             </div>
-                            <!--  1) отправка sending либо подменяется инпут, либо заменяется кнопкой 2) button -->
+                            <!--  1) отправка sending либо подменяется инпут, либо заменяется кнопкой 2) button 
 <!--
                             <div class="send-container sending">
                                 <input type="submit" value="Sending..." class="submit-button gradient-bg step-authorization-submit">
@@ -166,6 +179,15 @@
         </div>
     </div>
 </div>
+
+<script src="javascripts/intlInputPhone.min.js"></script>
+
+<script>
+    $(function() {
+        $('.input-phone').intlInputPhone(
+        );
+    });
+</script>
 
 <script src="javascripts/bootstrap.min.js"></script>
 <script src="javascripts/work-scripts.js"></script>

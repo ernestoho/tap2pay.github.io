@@ -421,6 +421,12 @@ h3{
         margin-right: 7px;
     }
 }
+.btn-send-to{
+    color: #fff;
+    &:hover, &:focus, &:visited, &:active{
+        color: #fff;
+    }
+}
 .messenger-button{
     background-color: #0084ff;
     letter-spacing: -0.3px;
@@ -445,6 +451,12 @@ h3{
     background: linear-gradient(rgb(54, 174, 226) 20%, rgb(76, 183, 229) 80%);
     border-color: transparent;
     letter-spacing: 0.1px;
+    line-height: 38px;
+    &:hover, &:focus, &:visited, &:active{
+        background: linear-gradient(rgb(54, 174, 226) 20%, rgb(76, 183, 229) 80%);
+        border-color: transparent;
+//        box-shadow: 0 0 1px 1px #ccc;
+    }
 }
 .step-choose-method .skype-button{
     margin-top: 10px;
@@ -532,13 +544,13 @@ h3{
 .intl-tel-input.allow-dropdown{
     width: 100%;
 }
-.phone-number-input:focus:invalid {
-    border: 1px solid $red;
+//.phone-number-input:focus:invalid {
+//    border: 1px solid $red;
 //    &:focus,&:active{
 //        border: 1px solid $red;
 //    }
-    color: black;
-}
+//    color: black;
+//}
 
 input[type="tel"]:valid {
     position: relative;
@@ -680,4 +692,8 @@ h2.step-payment{
     font-size: 15px;
     border-radius: 20px;
     border: 1px solid $border-gray;
+}
+
+.popover-content{
+    color: #000;
 }
