@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    
+    <title>tap2pay</title>
+
+    <link href="stylesheets/normalize.min.css" type="text/css" rel="stylesheet">
+    <link href="stylesheets/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="stylesheets/fonts.css" type="text/css" rel="stylesheet">
+    <link  href="build/css/intlTelInput.css" rel="stylesheet"  type="text/css">
+    <link href="stylesheets/screen.css" type="text/css" rel="stylesheet">
+    <link href="stylesheets/media.css" type="text/css" rel="stylesheet">
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    
+    <script src="build/js/intlTelInput.js"></script>
+    <script>
+        $(function() {
+            $("#mobile-number").intlTelInput({
+            allowExtensions: true,
+            autoFormat: false,
+            autoHideDialCode: false,
+            autoPlaceholder: false,
+            defaultCountry: "auto",
+            ipinfoToken: "yolo",
+            nationalMode: false,
+            numberType: "MOBILE",
+            //onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+            //preferredCountries: ['cn', 'jp'],
+            preventInvalidNumbers: true,
+            utilsScript: "lib/libphonenumber/build/utils.js"
+            });
+        });
+    </script>
+
+<!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+<![endif]-->
+   
+    <link rel="shortcut icon" href="images/favicon/.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/favicon/.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/.png"> 
+    
+
+</head>
+<body>
+
+	<!-- Button trigger modal -->
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-backdrop="static" data-target="#myModal">
+        Посмотреть демо
+      </button>
+<div class="Main-container">
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+   <div class="watermark">
+       <img src="images/watermark.png" alt="Powered by tap2pay" class="watermark__img">
+   </div>
+    <div class="modal-dialog card-container">
+       
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-header__container">
+                <!-- меняет заставку магазина -->
+<!--                <div class="modal-header__container without-img">-->
+<!--                    <span>Fifth element store</span>-->
+                    <img src="images/head-logo.jpg" class="modal-header__img" alt="logo of site">
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                
+                
+                <h1 class="modal-title step-choose-method on">Choose payment method</h1>
+                <h2 class="modal-title step-authorization">
+                    <span class="step-back" id="backToChooseMetod"></span>Authorization
+                </h2><!-- класс для активации авторизации  -->
+                <h2 class="modal-title step-payment">
+                    <span class="step-back" id="backToStepAuthorization"></span>Payment
+                </h2><!-- класс для активации платежа  -->
+                <p id="phone-number" class="phone-number">+ 375 (29) 12-34-567</p>
+<!--                <p id="phone-number" class="phone-number">+ 375 (29) 12-34-567</p>-->
+                
+            </div>
+            <div class="modal-body">
+               
+                <div class="step-choose-method on"><!-- класс для активации первого шага выбора способа оплаты  -->
+                    
+                    <div class="hint-container">
+                        <h3  class="modal-hint">By web browser <span></span></h3>
+                        <span class="hint-container__text">Lorem ipsum dolor sit amet.</span>
+                    </div>
+                    <button type="button" id="signup-button" class="modal-button icon-button signup-button gradient-bg">Sign in with phone number</button>
+                    <div class="gray-line"></div>
+                    <div class="hint-container">
+                        <h3  class="modal-hint">By messenger <span></span></h3>
+                        <span class="hint-container__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum magnam reprehenderit similique optio numquam commodi unde, obcaecati pariatur.</span>
+                    </div>
+                    
+                    <button type="button" class="modal-button icon-button messenger-button"><span>Send to Messenger</span></button>
+                    <p class="account-icon"><i></i><span>Виталий Поляков</span><a href="#">Not you ?</a></p>
+                    <button type="button" class="modal-button icon-button telegram-button"><span>Send to Telegram</span></button>
+
+                        <button type="button" class="modal-button icon-button skype-button"><span>Send to Skype</span></button>
+                </div>
+                
+                <div class="step-authorization" id="step-authorization">
+                    <form action="#" class="phone-number-form" method="POST" accept-charset="utf8">
+                        <div class="phone-input-container">
+                            <input type="tel" id="mobile-number" pattern="^((8|\+)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"  name="phone-number" class="phone-number-input" placeholder="Пример + 375 29 111 11 11" required onsubmit="validateComments(this)">
+                            
+                               <div class="send-container">
+                                <input type="submit" value="Send SMS-Code" class="submit-button gradient-bg step-authorization-submit">
+                            </div>
+                            <!--  1) отправка sending либо подменяется инпут, либо заменяется кнопкой 2) button -->
+<!--
+                            <div class="send-container sending">
+                                <input type="submit" value="Sending..." class="submit-button gradient-bg step-authorization-submit">
+                            </div>
+-->
+                            <!-- 2) кнопка  button-->
+<!--
+                            <button type="button" class="modal-button icon-button gradient-bg sending"> <img src="images/loading-gif.gif" alt="loading"> Sending...</button>
+                            <button type="button" class="modal-button icon-button gradient-bg sending"> <img src="images/loading.gif" alt="loading" class="load"> Sending...</button>
+                            <button type="button" class="modal-button icon-button gradient-bg sending"> <img src="images/loading1.gif" alt="loading" class="load"> Sending...</button>
+                            <button type="button" class="modal-button icon-button gradient-bg sending"> <img src="images/loading3.gif" alt="loading3" class="load"> Sending...</button>
+                            <button type="button" class="modal-button icon-button gradient-bg sending"> <img src="images/loading5.gif" alt="loading5" class="load"> Sending...</button>
+-->
+                           
+<!--
+                            <div class="enter-sms-code" >
+                                <input type="text" class="sms-code-input" id="sms-code" placeholder="Enter SMS-Code..." required>
+                                <p>SMS-Code has been successfully sended to you.</p>
+  <p>You will get a SMS-Code on your phone in a few seconds.</p>
+
+                              <p class="sending-process"><img src="images/loading-gif.gif" alt="loading">Sending SMS to your phone...</p>
+                               
+                                <p class="dont-get-code">Don’t get a SMS-Code? <a href="#">Send it again.</a></p>
+                            </div>
+-->
+                            
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="step-payment">
+                    
+                </div>
+                
+            </div>
+      
+            <div class="modal-footer step-authorization">
+                <button type="button" id="continue" class="modal-button icon-button gradient-bg">Continue</button>
+            </div>
+            <div class="modal-footer step-authorization">
+                <button type="button" id="authorization-continue" class="modal-button icon-button gradient-bg">Continue</button>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<script src="javascripts/bootstrap.min.js"></script>
+<script src="javascripts/work-scripts.js"></script>
+
+</div>
+</body>
+</html>

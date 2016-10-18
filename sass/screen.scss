@@ -1,0 +1,690 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+/*@import "compass/reset";*/
+
+/*colors*/
+$dark-gray: #ebebeb;
+//$border-gray: #d7d7d7;
+$border-gray: #cbcbcb;
+$light-gray : #f9f9f9;
+$light-button : #fafafa;
+$red: #fd1f39;
+$green: #3ed539;
+$dark-blue: #097fd2;
+$medium-blue: #3e9ff8;
+$medium-blue: #46b4e4;
+$sky-blue: #00aeed;
+$light-blue: #e5f7fd;
+$light-gray-text: #868383;
+$dark-gray-text: #474747;
+
+article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{
+    display:block;
+}
+
+body{
+    font-family: "HelveticaNeueCyr-Roman", Arial;
+    font-size: 12px;
+    background-color: #e6e6e6;
+    color: $dark-gray-text;
+}
+
+button, input[type="submit"], input{
+    &:focus, &:hover, &:active, &:visited{
+        outline: none !important;
+    }
+}
+
+h1,h2{
+    font-size: 18px;
+    font-family: "HelveticaNeueCyr-Medium", Arial;
+}
+h3{
+    font-size: 15px;
+    letter-spacing: 0.2px;
+}
+
+.Main-container{
+	display: block;
+	margin: 0 auto;
+}
+
+#myModal{
+    position: relative;
+    text-align: center;
+}
+
+.watermark{
+    display: block;
+    position: fixed;
+    bottom: 5px;
+    left: 5px;
+}
+.card-container{
+	display: block;
+    text-align: left;
+    margin: 0 auto;
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+//    zoom: 1;
+    margin-top: 10%;
+//    transform: translateY(-120%) !important;
+	max-width: 300px;
+	min-height: 500px;
+    border-radius: 5px;
+}
+
+.modal-header, .modal-body, .modal-footer{
+    padding-left: 19px;
+    padding-right: 19px;
+}
+.modal-header{
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom: 1px solid #d7d7d7;
+}
+.modal-body{
+    padding-bottom: 20px;
+}
+.modal-content{
+//	outline: 1px solid green;
+    background-color: #f9f9f9;
+    position: relative;
+    margin: 0 auto;
+    min-height: 465px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+.modal-header{
+    position: relative;
+    background-color: $dark-gray;
+}
+.modal-header__container{
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    margin-left: -50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 1px 1px 0 #999;
+}
+.modal-header__img{
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%,-50%);
+    margin-top: 2px;/* дизайн */
+}
+.without-img{
+    img{
+        display: none;
+    }
+    width: 150px;
+    margin-left: -75px;
+    text-align: center;
+    border-radius: 0px;
+    background-color: transparent;
+    box-shadow: none;
+//    border-bottom: 1px solid #999;
+    top: 15px;
+    color: #868383;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    &:after{
+        position: absolute;
+        width: 50px;
+        height: 1px;
+        margin: 0 auto;
+        left: 50%;
+        margin-left: -25px;
+        display: block;
+        top: 35px;
+        background-color: #999;
+        content: "";
+    }
+}
+
+.modal-title{
+    margin-top: 47px;
+    font-family: "HelveticaNeueCyr-Medium", Arial;
+    font-size: 18px;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+.modal-button{
+    display: block;
+    width: 100%;
+    height: 37px;
+    text-align: left;
+    border-radius: 5px;
+}
+.gradient-bg{
+    border: 1px solid $border-gray;
+    border-bottom: 2px solid $border-gray;
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, #fff 0%, rgba(255,255,255,1) 0%, rgba(245,246,245,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(0%, #fff), color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(245,246,245,1)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, #fff 0%, rgba(255,255,255,1) 0%, rgba(245,246,245,1) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, #fff 0%, rgba(255,255,255,1) 0%, rgba(245,246,245,1) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, #fff 0%, rgba(255,255,255,1) 0%, rgba(245,246,245,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, #fff 0%, rgba(255,255,255,1) 0%, rgba(245,246,245,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f5f6f5', GradientType=0 );
+    &:hover{
+        border: 1px solid $border-gray;
+        border-bottom: 2px solid $border-gray;
+        background: rgba(255,255,255,1);
+        background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(233,233,233,1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(233,233,233,1)));
+        background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(233,233,233,1) 100%);
+        background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(233,233,233,1) 100%);
+        background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(233,233,233,1) 100%);
+        background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(233,233,233,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e9e9e9', GradientType=0 );
+    }
+    &:focus{
+        box-shadow: 0 0 2px 1px #d3d3d3;
+    }
+}
+
+
+.modal-hint span{
+    display: inline-block;
+    float: right;
+    width: 22px;
+    height: 22px;
+    position: relative;
+    top: -3px;
+    background: url(../images/icons.png) -67px 0px no-repeat;
+    &:hover{
+        cursor: pointer;
+    }
+}
+.hint-container__text{
+//    position: absolute;
+    display: none;
+    margin: 20px 0;
+}
+.hint-container__text.on{
+    display: block;
+}
+.hint-container{
+    position: relative;
+}
+.hint-container__text{
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 105%;
+    margin: 0;
+    font-size: 14px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px 1px #444;
+    width: 100%;
+    z-index: 5;
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        margin-top: -5px;
+        left: -6px;
+        width: 10px;
+        height: 10px; 
+        background: #FFFFFF;
+        border-left: 1px solid #999;
+        border-bottom: 1px solid #999;
+        -moz-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+    }
+}
+
+.modal-header .close{
+    margin-top: 0px;
+    margin-right: -7px;
+}
+.close{
+    position: relative;
+    display: block;
+    width: 25px;
+    height: 25px;
+}
+.close:before{
+    position: absolute;
+    content: '';
+    width: 16px;
+    display: block;
+    top: 10px;
+    left: 5px;
+    height: 2px;
+    transform: rotate(-45deg);
+    background-color: black;
+}
+.close:after{
+    position: absolute;
+    content: '';
+    width: 16px;
+    display: block;
+    top: 10px;
+    left: 5px;
+    height: 2px;
+    transform: rotate(45deg);
+    background-color: black;
+}
+.step-back{
+    display: inline-block;
+    position: absolute;
+    left: -5px;
+    top: 2px;
+    width: 7px;
+    height: 12px;
+    padding: 10px;
+//    outline: 1px solid red;
+    background: url(../images/icons.png) -466px 4px no-repeat;
+    &:hover{
+        cursor: pointer;
+    }
+}
+.submit-button{
+    display: block;
+    width: 100%;
+    border: 1px solid $border-gray;
+    border-radius: 5px;
+    height: 37px;
+    font-size: 15px;
+    color: $dark-gray-text;
+    font-family: "HelveticaNeueCyr-Roman", Arial;
+    border-bottom: 2px solid $border-gray;
+}
+.send-container{
+    position: relative;
+}
+.send-container.sending{
+    input{
+        padding-left: 35px;
+    }
+    &:after{
+        position: absolute;
+        content: '';
+        left: 80px;
+        top: 9px;
+        width: 20px;
+        height: 20px;
+        background: url(../images/loading-gif.gif) no-repeat;
+    }
+}
+.load{
+    width: 20px;
+    height: 20px;
+}
+.sending{
+    margin-top: 2px;
+    text-align: center;
+    padding-left: 0;
+}
+.icon-button.sending{
+    padding-left: 0;
+    img{
+        margin-right: 8px;
+    }
+}
+
+
+/*стили выбора метода оплаты*/
+.step-choose-method{
+    display: none;
+}
+.step-choose-method.on{
+    display: block;
+}
+/* временная активация , деактивация*/
+.modal-header{
+    padding-bottom: 13px;
+}
+.modal-title.step-choose-method{
+    margin: 50px 0 0 -2px;
+}
+.step-choose-method h3{
+    margin: 8px 0 5px -1px;
+}
+.step-choose-method .modal-button{
+    margin-top: 23px;
+}
+
+
+.step-choose-method .signup-button{
+    margin: 23px 0 0px 0;
+}
+.signup-button{
+    position: relative;
+    &:before{
+        top: 9px;
+        left: 12px;
+        background: url(../images/icons.png) 0px 0px no-repeat;
+        width: 10px;
+        height: 16px;
+    }
+}
+.gray-line{
+    display: block;
+    width: calc(100% + 7.3%);
+    position: relative;
+    margin: 20px 0 23px 0;
+    height: 1px;
+    background-color: #e3e3e3;
+}
+.icon-button{
+    padding: 1px 0 0 34px;
+    font-size: 15px;
+}
+.signup-button, .messenger-button  span, .telegram-button span, .skype-button span{
+    position: relative;
+    &:before, span:before{
+        position: absolute;
+        display: block;
+        content: "";
+        top: 9px;
+        left: 12px;
+    }
+}
+.messenger-button, .telegram-button, .skype-button{
+//    width: 172px;
+    width: 100%;
+    color: #fff;
+    height: 36px;
+    text-align: center;
+//    padding-top: 0px;
+    letter-spacing: -0.3px;
+    border: none;
+//    padding-left: 35px;
+    padding: 0 0 0 5px;
+    box-shadow: 0 0 1px 1px #ccc;
+    &:hover{
+        box-shadow: 0 0 1px 2px #aaa;
+    }
+}
+.messenger-button{
+    background-color: #0084ff;
+    span{
+        position: relative;
+        &:before{
+            width: 18px;
+            height: 20px;
+            top: -1px;
+            left: -22px;
+            background: url(../images/icons.png) -12px 0px no-repeat;
+        }
+    }
+}
+.step-choose-method .telegram-button{
+    margin-top: 5px;
+}
+.telegram-button{
+    background-color: $medium-blue;
+//    line-height: 38px;
+    span{
+        position: relative;
+        &:before{
+            left: -18px;
+            top: 0px;
+            width: 15px;
+            height: 14px;
+            background: url(../images/icons.png) -50px 0px no-repeat;
+        }
+    }
+}
+.step-choose-method .skype-button{
+    margin-top: 10px;
+}
+.skype-button{
+    background-color: $sky-blue;
+//    line-height: 38px;
+    span{
+        position: relative;
+        &:before{
+            left: -20px;
+            top: 0px;
+            width: 16px;
+            height: 16px;
+            background: url(../images/icons.png) -32px 0px no-repeat;
+        }
+    }
+}
+
+
+
+.step-choose-method {
+    p{
+        margin: 10px 0 0 0;
+        font-size: 12px;
+    }
+    .account-icon{
+        i{
+            display: inline-block;
+            width: 20px;
+            margin-right: 5px;
+            height: 20px;
+            background: url(../images/icon-man.png) 0px 0px no-repeat;
+            border-radius: 50%;
+        }
+        span{
+            display: inline-block;
+            vertical-align: top;
+            line-height: 1.7;
+        }
+        a{
+            display: inline-block;
+            vertical-align: top;
+            line-height: 1.7;
+            margin-left: 10px;
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            color: #969696;
+        }
+    }
+}
+
+
+/* стили авторизации */
+.step-authorization{
+    margin-bottom: 3px;
+    display: none;
+}
+.step-authorization.on{
+    display: block;
+}
+.phone-number-form{
+    margin-top: 5px;
+}
+.phone-input-container{
+    position: relative;
+//    outline: 1px solid red;
+}
+.phone-number-input{
+    padding: 0 10px 0 8px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 5px;
+    height: 36px;
+    border: 1px solid $border-gray;
+    &:focus, &:active{
+        outline: none;
+        box-shadow: 0 0 2px 1px #b3e4f6;
+        border: 1px solid #27baf0;
+    }
+    &:hover{
+        border: 1px solid #27baf0;
+    }
+}
+.intl-tel-input .country-list{
+    max-width: 250px;
+}
+.intl-tel-input.allow-dropdown{
+    width: 100%;
+}
+.phone-number-input:focus:invalid {
+    border: 1px solid $red;
+//    &:focus,&:active{
+//        border: 1px solid $red;
+//    }
+    color: black;
+}
+
+input[type="tel"]:valid {
+    position: relative;
+    background-color: #e5f7fd;
+    background-image: url(../images/ok-blue.png);
+    background-repeat: no-repeat;
+    background-position: 230px 11px;
+    &:focus,&:active{
+        
+    }
+}
+.phone-helper{
+    display: inline-block;
+//    border-right: 1px solid $border-gray;
+    padding: 0;
+//    outline: 1px solid red;
+    position: absolute;
+    height: 36px;
+    width: 100px;
+    top: 0;
+    left: 0;
+    select{
+        display: inline-block;
+        width: 100%;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-color: $border-gray;
+        border-right: none;
+        margin: 0;
+        height: 36px;
+        position: relative;
+        padding: 1px 0 0 30px;
+        font-size: 15px;
+        &:focus, &:active{
+            outline: none;
+        }
+
+    }
+    option{
+        padding-left: 50px;
+        position: relative;
+        font-size: 14px;
+        background-repeat: no-repeat;
+        -webkit-appearance:none;
+        -moz-appearance:none;
+        appearance:none;
+    }
+}
+.step-authorization-submit{
+    margin-top: 10px;
+    line-height: 35px;
+}
+.step-authorization p{
+    margin: 5px 0 0 0;
+    font-size: 14px;
+    a{
+        font-size: 15px;
+        color: #097fd2;
+        text-decoration: underline;
+    }
+}
+ 
+
+/*ввод смс кода*/
+.enter-sms-code{
+    p{
+        margin-top: 12px;
+        letter-spacing: 0.3px;
+        line-height: 1.3;
+    }
+    img{
+        margin: 0 10px 0 4px;
+        position: relative;
+        top: -2px;
+    }
+    .dont-get-code{
+        margin-top: 23px;
+    }
+    a{
+        margin-left: 2px;
+    }
+    .sending-process{
+        margin-top: 23px;
+    }
+}
+.sms-code-input{
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    height: 36px;
+    border: 1px solid $border-gray;
+    padding: 0 10px;
+    margin: 10px 0 0 0;
+    letter-spacing: 0.6px;
+    font-size: 14px;
+}
+
+
+/* стили футера */
+.modal-footer{
+    border: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    button{
+        text-align: center;
+        padding: 0;
+    }
+}
+
+
+/*  стили шага payment*/
+.step-payment{
+    display: none;
+}
+.step-payment.on{
+    display: block;
+}
+h2.step-payment{
+    margin: 50px auto 8px auto;
+//    display: block;
+}
+.phone-number{
+    max-width: 170px;
+    display: inline-block;
+    position: absolute;
+    background-color: #fff;
+    z-index: 3;
+    bottom: -16px;
+    right: auto;
+    padding: 3px 10px;
+    text-align: center;
+    margin: auto;
+    left: 0;
+    right: 0;
+    font-size: 15px;
+    border-radius: 20px;
+    border: 1px solid $border-gray;
+}

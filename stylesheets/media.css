@@ -1,0 +1,59 @@
+/*==========  Mobile First Method  ==========*/
+/*        ****** ******         */
+@media only screen and (max-width: 1024px) {
+  /* line 61, ../sass/media.scss */
+  .hint-container__text {
+    width: 200px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* line 67, ../sass/media.scss */
+  .hint-container__text {
+    width: 150px;
+  }
+}
+@media only screen and (max-width: 630px) {
+  /* line 73, ../sass/media.scss */
+  .hint-container__text {
+    width: 125px;
+  }
+}
+@media only screen and (max-width: 580px) {
+  /* line 80, ../sass/media.scss */
+  .hint-container__text {
+    width: 105%;
+    top: 30px;
+    transform: translate(0, 0);
+    left: -2.5%;
+    box-shadow: 1px 1px 2px 1.5px #777;
+  }
+  /* line 86, ../sass/media.scss */
+  .hint-container__text:after {
+    top: -1px;
+    margin-top: -5px;
+    left: auto;
+    right: 13px;
+    background: #FFFFFF;
+    border-left: 1px solid #999;
+    border-bottom: 1px solid #999;
+    -moz-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    opacity: 0.99;
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* line 104, ../sass/media.scss */
+  .card-container {
+    margin-top: 20%;
+  }
+}
+/* Smartphones (portrait and landscape) ----------- */
+/* iPads (portrait and landscape) ----------- */
+/* iPads (landscape) ----------- */
+/* iPads (portrait) ----------- */
+/* The New iPad (iPad 3) ----------- */
+/* iPhone 4 ----------- */
+/* iPads (portrait and landscape) ----------- */
+/* iPads (landscape) ----------- */
+/* iPads (portrait) ----------- */
+/* The New iPad (iPad 3) ----------- */
