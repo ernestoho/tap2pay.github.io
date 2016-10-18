@@ -717,24 +717,26 @@ h2.step-payment {
   font-size: 15px; }
   /* line 710, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
   #btn-country > .flag {
-    position: relative;
-    top: -1px;
-    line-height: 34px; }
+    line-height: 34px;
+    vertical-align: text-bottom; }
 
-/* line 720, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+/* line 719, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
 .dropdown-menu .flag {
   position: relative;
   top: -1px; }
 
-/* line 725, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+/* line 724, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
 .popover-content {
   color: #000; }
 
-/* line 730, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+/* line 729, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
 .input-phone .form-control {
-  padding: 2px 10px 0 10px;
+  padding: 3px 10px 0 10px;
   height: 34px;
   line-height: 34px;
-  font-size: 15px; }
+  font-size: 15px;
+  box-shadow: none;
+  display: table-cell;
+  vertical-align: middle; }
 
 /*# sourceMappingURL=screen.css.map */
