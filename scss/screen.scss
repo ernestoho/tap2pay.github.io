@@ -444,15 +444,14 @@ h3{
     color: white;
     background: linear-gradient(rgb(54, 174, 226) 20%, rgb(76, 183, 229) 80%);
     border-color: transparent;
-    letter-spacing: 0.3px;
-    font-size: 14px;
+    letter-spacing: 0.1px;
 }
 .step-choose-method .skype-button{
     margin-top: 10px;
 }
 .skype-button{
     background-color: $sky-blue;
-    letter-spacing: -0.1px;
+    letter-spacing: 0.1px;
     i{
         font-size: 18px;
         line-height: 36px;
@@ -509,8 +508,8 @@ h3{
 //    outline: 1px solid red;
 }
 .phone-number-input{
-    padding: 0 10px 0 8px;
-    font-size: 14px;
+    padding: 2px 10px 0 8px;
+    font-size: 15px;
     letter-spacing: 0.5px;
     display: block;
     width: 100%;
