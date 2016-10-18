@@ -14,34 +14,35 @@
 
   /* line 70, ../scss/media.scss */
   .popover.right {
-    margin-left: -270px;
+    margin-left: -268px;
     margin-top: 45px;
     opacity: 0.99;
+    width: 300px;
   }
 
-  /* line 75, ../scss/media.scss */
+  /* line 76, ../scss/media.scss */
   .popover.right > .arrow {
-    margin-top: -47px;
+    margin-top: -37px;
     left: auto;
     right: 10px;
     z-index: 100;
     transform: rotate(90deg);
   }
 
-  /* line 83, ../scss/media.scss */
+  /* line 84, ../scss/media.scss */
   .phoneNumber {
     box-shadow: none !important;
     border: 1px solid #ccc !important;
   }
 }
 @media only screen and (max-width: 630px) {
-  /* line 90, ../scss/media.scss */
+  /* line 91, ../scss/media.scss */
   .hint-container__text {
     width: 125px;
   }
 }
 @media only screen and (max-width: 580px) {
-  /* line 97, ../scss/media.scss */
+  /* line 98, ../scss/media.scss */
   .hint-container__text {
     width: 105%;
     top: 30px;
@@ -49,7 +50,7 @@
     left: -2.5%;
     box-shadow: 1px 1px 2px 1.5px #777;
   }
-  /* line 103, ../scss/media.scss */
+  /* line 104, ../scss/media.scss */
   .hint-container__text:after {
     top: -1px;
     margin-top: -5px;
@@ -64,19 +65,19 @@
   }
 }
 @media only screen and (max-width: 480px) {
-  /* line 121, ../scss/media.scss */
+  /* line 122, ../scss/media.scss */
   .card-container {
     margin-top: 20%;
   }
 }
 @media only screen and (max-width: 425px) {
-  /* line 129, ../scss/media.scss */
+  /* line 130, ../scss/media.scss */
   .input-group-btn .dropdown-menu {
     width: 260px;
     max-height: 300px;
   }
 
-  /* line 134, ../scss/media.scss */
+  /* line 135, ../scss/media.scss */
   .dropdown-menu > li > a {
     padding-left: 10px;
   }
