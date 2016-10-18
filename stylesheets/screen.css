@@ -807,9 +807,34 @@ h2.step-payment {
   border-top-left-radius: 5px !important;
   border-bottom-left-radius: 5px !important;
   border-right: none;
+  height: 34px;
+  line-height: 34px;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 15px;
+}
+/* line 710, ../scss/screen.scss */
+#btn-country > .flag {
+  position: relative;
+  top: -1px;
+  line-height: 34px;
 }
 
-/* line 706, ../scss/screen.scss */
+/* line 720, ../scss/screen.scss */
+.dropdown-menu .flag {
+  position: relative;
+  top: -1px;
+}
+
+/* line 725, ../scss/screen.scss */
 .popover-content {
   color: #000;
+}
+
+/* line 730, ../scss/screen.scss */
+.input-phone .form-control {
+  padding: 2px 10px 0 10px;
+  height: 34px;
+  line-height: 34px;
+  font-size: 15px;
 }
