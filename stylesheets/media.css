@@ -27,15 +27,21 @@
     z-index: 100;
     transform: rotate(90deg);
   }
+
+  /* line 83, ../scss/media.scss */
+  .phoneNumber {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
 }
 @media only screen and (max-width: 630px) {
-  /* line 86, ../scss/media.scss */
+  /* line 90, ../scss/media.scss */
   .hint-container__text {
     width: 125px;
   }
 }
 @media only screen and (max-width: 580px) {
-  /* line 93, ../scss/media.scss */
+  /* line 97, ../scss/media.scss */
   .hint-container__text {
     width: 105%;
     top: 30px;
@@ -43,7 +49,7 @@
     left: -2.5%;
     box-shadow: 1px 1px 2px 1.5px #777;
   }
-  /* line 99, ../scss/media.scss */
+  /* line 103, ../scss/media.scss */
   .hint-container__text:after {
     top: -1px;
     margin-top: -5px;
@@ -58,9 +64,21 @@
   }
 }
 @media only screen and (max-width: 480px) {
-  /* line 117, ../scss/media.scss */
+  /* line 121, ../scss/media.scss */
   .card-container {
     margin-top: 20%;
+  }
+}
+@media only screen and (max-width: 425px) {
+  /* line 129, ../scss/media.scss */
+  .input-group-btn .dropdown-menu {
+    width: 260px;
+    max-height: 300px;
+  }
+
+  /* line 134, ../scss/media.scss */
+  .dropdown-menu > li > a {
+    padding-left: 10px;
   }
 }
 /* Smartphones (portrait and landscape) ----------- */

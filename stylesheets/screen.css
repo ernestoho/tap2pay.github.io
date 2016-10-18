@@ -797,6 +797,19 @@ h2.step-payment {
 }
 
 /* line 697, ../scss/screen.scss */
+.phoneNumber {
+  border-top-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+}
+
+/* line 701, ../scss/screen.scss */
+#btn-country {
+  border-top-left-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
+  border-right: none;
+}
+
+/* line 706, ../scss/screen.scss */
 .popover-content {
   color: #000;
 }

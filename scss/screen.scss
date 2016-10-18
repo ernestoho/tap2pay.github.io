@@ -694,6 +694,15 @@ h2.step-payment{
     border: 1px solid $border-gray;
 }
 
+.phoneNumber{
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+}
+#btn-country{
+    border-top-left-radius: 5px !important;
+    border-bottom-left-radius: 5px !important;
+    border-right: none;
+}
 .popover-content{
     color: #000;
 }
