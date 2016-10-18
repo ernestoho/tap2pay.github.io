@@ -669,15 +669,15 @@ input[type="tel"]:valid {
 .step-payment {
   display: none; }
 
-/* line 667, F:/HTML_CSS_JS/Sites/tap2pay project/sass/screen.scss */
+/* line 668, F:/HTML_CSS_JS/Sites/tap2pay project/sass/screen.scss */
 .step-payment.on {
   display: block; }
 
-/* line 670, F:/HTML_CSS_JS/Sites/tap2pay project/sass/screen.scss */
+/* line 671, F:/HTML_CSS_JS/Sites/tap2pay project/sass/screen.scss */
 h2.step-payment {
   margin: 50px auto 8px auto; }
 
-/* line 674, F:/HTML_CSS_JS/Sites/tap2pay project/sass/screen.scss */
+/* line 675, F:/HTML_CSS_JS/Sites/tap2pay project/sass/screen.scss */
 .phone-number {
   max-width: 170px;
   position: absolute;

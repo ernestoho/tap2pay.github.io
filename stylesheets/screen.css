@@ -763,17 +763,17 @@ input[type="tel"]:valid {
   display: none;
 }
 
-/* line 667, ../sass/screen.scss */
+/* line 668, ../sass/screen.scss */
 .step-payment.on {
   display: block;
 }
 
-/* line 670, ../sass/screen.scss */
+/* line 671, ../sass/screen.scss */
 h2.step-payment {
   margin: 50px auto 8px auto;
 }
 
-/* line 674, ../sass/screen.scss */
+/* line 675, ../sass/screen.scss */
 .phone-number {
   max-width: 170px;
   position: absolute;
