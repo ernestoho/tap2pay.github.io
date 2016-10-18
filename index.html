@@ -11,6 +11,7 @@
     <link href="stylesheets/normalize.min.css" type="text/css" rel="stylesheet">
     <link href="stylesheets/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="stylesheets/fonts.css" type="text/css" rel="stylesheet">
+    <link href="stylesheets/font-awesome.min.css" type="text/css" rel="stylesheet">
     <link  href="build/css/intlTelInput.css" rel="stylesheet"  type="text/css">
     <link href="stylesheets/screen.css" type="text/css" rel="stylesheet">
     <link href="stylesheets/media.css" type="text/css" rel="stylesheet">
@@ -60,9 +61,9 @@
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-   <div class="watermark">
+   <a href="https://sandbox.tap2pay.me/demo" class="watermark">
        <img src="images/watermark.png" alt="Powered by tap2pay" class="watermark__img">
-   </div>
+   </a>
     <div class="modal-dialog card-container">
        
         <div class="modal-content">
@@ -84,7 +85,6 @@
                     <span class="step-back" id="backToStepAuthorization"></span>Payment
                 </h2><!-- класс для активации платежа  -->
                 <p id="phone-number" class="phone-number step-payment">+ 375 (29) 12-34-567</p>
-<!--                <p id="phone-number" class="phone-number">+ 375 (29) 12-34-567</p>-->
                 
             </div>
             <div class="modal-body">
@@ -102,11 +102,13 @@
                         <span class="hint-container__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum magnam reprehenderit similique optio numquam commodi unde, obcaecati pariatur.</span>
                     </div>
                     
-                    <button type="button" class="modal-button icon-button messenger-button"><span>Send to Messenger</span></button>
+                    <a target="_blank" href="#" class="btn btn-send-to btn-telegram modal-button icon-button messenger-button"><i class="fa fa-messenger"></i>Send to Messenger</a>
+<!--                    <button type="button" class="modal-button icon-button messenger-button"><span>Send to Messenger</span></button>-->
                     <p class="account-icon"><i></i><span>Виталий Поляков</span><a href="#">Not you ?</a></p>
-                    <button type="button" class="modal-button icon-button telegram-button"><span>Send to Telegram</span></button>
-
-                        <button type="button" class="modal-button icon-button skype-button"><span>Send to Skype</span></button>
+                    <a target="_blank" href="https://telegram.me/Tap2PaySandboxBot?start=aW52b2ljZTo0YjVlZTJmMQ==" class="btn btn-send-to btn-telegram telegram-button"><i class="fa fa-paper-plane"></i>Send to Telegram</a>
+<!--                    <button type="button" class="modal-button icon-button telegram-button"><span>Send to Telegram</span></button>-->
+                    <a target="_blank" href="https://telegram.me/Tap2PaySandboxBot?start=aW52b2ljZTo0YjVlZTJmMQ==" class="btn btn-send-to modal-button icon-button skype-button"><i class="fa fa-skype"></i>Send to Skype</a>
+<!--                        <button type="button" class="modal-button icon-button skype-button"><span>Send to Skype</span></button>-->
                 </div>
                 
                 <div class="step-authorization" id="step-authorization">
