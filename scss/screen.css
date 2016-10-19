@@ -654,8 +654,43 @@ input[type="tel"]:valid {
   letter-spacing: 0.6px;
   font-size: 14px; }
 
+/* line 650, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+#btn-country {
+  border-top-left-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
+  border-right: none;
+  height: 34px;
+  line-height: 34px;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 15px; }
+  /* line 659, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+  #btn-country > .flag {
+    line-height: 34px;
+    vertical-align: text-bottom; }
+
+/* line 668, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+.dropdown-menu .flag {
+  vertical-align: sub; }
+
+/* line 672, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+.popover-content {
+  color: #000; }
+
+/* line 676, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+.input-phone .form-control {
+  padding: 2px 10px 0 10px;
+  height: 34px;
+  line-height: 34px;
+  font-size: 15px;
+  box-shadow: none;
+  display: table-cell;
+  vertical-align: middle;
+  border-top-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important; }
+
 /* стили футера */
-/* line 653, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+/* line 692, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
 .modal-footer {
   border: none;
   position: absolute;
@@ -663,25 +698,25 @@ input[type="tel"]:valid {
   left: 0;
   width: 100%;
   text-align: center; }
-  /* line 660, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+  /* line 699, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
   .modal-footer button {
     text-align: center;
     padding: 0; }
 
 /*  стили шага payment*/
-/* line 668, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+/* line 709, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
 .step-payment {
   display: none; }
 
-/* line 671, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+/* line 712, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
 .step-payment.on {
   display: block; }
 
-/* line 674, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+/* line 715, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
 h2.step-payment {
   margin: 47px auto 3px auto; }
 
-/* line 678, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+/* line 719, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
 .phone-number {
   max-width: 170px;
   position: absolute;
@@ -696,46 +731,165 @@ h2.step-payment {
   margin: auto;
   left: 0;
   right: 0;
+  color: #474747;
   font-size: 15px;
   border-radius: 20px;
   border: 1px solid #cbcbcb; }
 
-/* line 697, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
-.phoneNumber {
-  border-top-right-radius: 5px !important;
-  border-bottom-right-radius: 5px !important; }
+/* line 741, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+.payment-tabs-container {
+  margin-top: 28px; }
 
-/* line 701, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
-#btn-country {
-  border-top-left-radius: 5px !important;
-  border-bottom-left-radius: 5px !important;
-  border-right: none;
-  height: 34px;
-  line-height: 34px;
-  padding-top: 0;
-  padding-bottom: 0;
-  font-size: 15px; }
-  /* line 710, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
-  #btn-country > .flag {
-    line-height: 34px;
-    vertical-align: text-bottom; }
+/* line 745, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+.payment-tabs {
+  border: 1px solid #afafaf;
+  border-radius: 5px;
+  overflow: hidden;
+  letter-spacing: -0.36em; }
+  /* line 750, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+  .payment-tabs li {
+    height: 29px;
+    line-height: 29px;
+    letter-spacing: normal;
+    text-align: center;
+    width: 33.333%;
+    border-right: 1px solid #afafaf; }
+    /* line 762, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+    .payment-tabs li:nth-child(2) a {
+      background-image: url("../images/paypal-color.png");
+      background-position: 14px 7px;
+      background-repeat: no-repeat;
+      width: 100%;
+      position: relative;
+      top: 0px;
+      margin-left: 10px;
+      margin: 0;
+      height: 29px; }
+    /* line 776, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+    .payment-tabs li:nth-child(2).active a {
+      background-image: url("../images/paypal.png");
+      background-position: 12px 6px;
+      background-color: #d5d5d5; }
+    /* line 784, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+    .payment-tabs li:nth-child(3) a {
+      background-image: url("../images/erip-color.png");
+      background-position: 28px 6px;
+      background-repeat: no-repeat;
+      width: 100%;
+      position: relative;
+      top: 0px;
+      margin-left: 10px;
+      margin: 0;
+      height: 29px; }
+    /* line 798, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+    .payment-tabs li:nth-child(3).active a {
+      background-image: url("../images/erip.png");
+      background-position: 26px 4px;
+      background-color: #d5d5d5; }
+    /* line 805, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+    .payment-tabs li:last-child {
+      border-right: none; }
+    /* line 808, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+    .payment-tabs li:first-child.active {
+      font-size: 16px;
+      font-weight: 600;
+      font-family: "HelveticaNeueCyr-Bold", Arial;
+      text-shadow: 1px 1px 2px #333; }
+      /* line 814, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+      .payment-tabs li:first-child.active a {
+        background: #d5d5d5; }
+  /* line 819, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+  .payment-tabs > li {
+    margin: 0; }
+  /* line 822, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+  .payment-tabs > li > a {
+    padding: 0;
+    color: #474747;
+    line-height: 29px;
+    font-size: 15px;
+    display: block;
+    margin: 0;
+    border: none;
+    border-radius: 0px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f5f5f5+100 */
+    background: #ffffff;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%, #f5f5f5 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f5f5f5',GradientType=0 );
+    /* IE6-9 */ }
 
-/* line 719, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
-.dropdown-menu .flag {
-  vertical-align: sub; }
+/* line 842, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+.payment-tabs-container__tab-content {
+  border-top: 1px transparent; }
 
-/* line 723, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
-.popover-content {
-  color: #000; }
+/*change bootstrap styles*/
+/* line 848, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+  color: #fff;
+  margin: 0;
+  border: none;
+  background-color: #d5d5d5;
+  border-bottom-color: #afafaf;
+  border-bottom-color: transparent; }
 
-/* line 728, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
-.input-phone .form-control {
-  padding: 2px 10px 0 10px;
-  height: 34px;
-  line-height: 34px;
-  font-size: 15px;
-  box-shadow: none;
-  display: table-cell;
-  vertical-align: middle; }
+/* стили card-tab вкладки */
+/* line 863, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+.card-tab h3 {
+  font-family: "HelveticaNeueCyr-Medium", Arial; }
+
+/* line 867, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+.tab-content {
+  padding-top: 1px;
+  border: 1px solid transparent; }
+
+/*стили paypal вкладки*/
+/*стили erip вкладки*/
+/* line 878, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+.erip-input-container {
+  position: relative;
+  padding-top: 1px;
+  margin-top: 16px;
+  border: 1px solid #fff; }
+  /* line 883, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+  .erip-input-container:after {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: block;
+    content: "";
+    width: 15px;
+    height: 13px;
+    background-image: url("../images/icons.png");
+    background-position: -485px -20px;
+    background-repeat: no-repeat;
+    z-index: 1000; }
+
+/* line 898, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+.erip-input {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  margin: 0px 0 0 0;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 0 0 38px;
+  letter-spacing: 0.4px;
+  border-radius: 5px;
+  box-shadow: none !important;
+  border: 1px solid #cbcbcb; }
+
+/* шаг доставки */
+/* line 915, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+.step-shipment {
+  display: none; }
+
+/* line 918, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
+.step-shipment.on {
+  display: block; }
 
 /*# sourceMappingURL=screen.css.map */

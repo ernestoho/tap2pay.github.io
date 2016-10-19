@@ -1,5 +1,96 @@
 $( document ).ready(function() {
 
+    /*перейти к авторизации через смс */
+    $("#signup-button").click(function(){
+        $(".step-authorization").addClass("on");
+        $(".step-choose-method").removeClass("on");
+    });
+
+    /*вернуться к выбору метода*/
+    $("#backToChooseMetod").click(function(){
+        $(".step-authorization").removeClass("on");
+        $(".step-choose-method").addClass("on");
+    });
+
+    /* перейти к оплате */
+    $("#authorization-continue").click(function(){
+        $(".step-authorization").removeClass("on");
+        $(".step-payment").addClass("on");
+    });
+    
+    /* перейти к оплате */
+    $("#payment-continue").click(function(){
+        $(".step-payment").removeClass("on");
+        $(".step-shipment").addClass("on");
+    });
+
+     /*вернуться к шагу авторизации*/
+    $("#backToStepAuthorization").click(function(){
+        $(".step-payment").removeClass("on");
+        $(".step-authorization").addClass("on");
+    });
+
+    /* активация кнопок подсказки*/
+    $(".modal-hint span").click(function () {
+        $(".hint-container__text").removeClass("on");
+            var block =$(this).closest('.hint-container').find('.hint-container__text');
+            block.addClass("on");
+          return false;
+      });
+      $(function(){
+        $(document).click(function(event) {
+    //      $(".hint-container__text").hide("fast");
+            $(".hint-container__text").removeClass("on");
+          event.stopPropagation();
+        });
+      });
+
+    $("#btn-country").click(function(){
+        $(".input-group-btn").addClass("open");
+    //    $(".step-authorization").addClass("on");
+    });
+
+
+    /* бутстрап табы */
+    $('#my-tabs a').click(function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+    })
+    
+    $('#my-tabs a[href="#life"]').tab('show') // селектор по имени
+    $('#my-tabs a:first').tab('show') // выбор первой вкладки
+    $('#my-tabs a:last').tab('show') // последняя вкладка
+//    $('#my-tabs li:eq(2) a').tab('show') // выбор вкладки по номеру
+
+
+    $(".step-back").click(function(){
+        $(".popover").css("display","none");
+    });
+    $("#authorization-continue").click(function(){
+        $(".popover").css("display","none");
+    });
+
+    
+    
+    $(function() {
+      var $form = $('#payment-form');
+      $form.submit(function(event) {
+        // Disable the submit button to prevent repeated clicks:
+        $form.find('.submit').prop('disabled', true);
+
+        // Request a token from Stripe:
+        Stripe.card.createToken($form, stripeResponseHandler);
+
+        // Prevent the form from being submitted:
+        return false;
+      });
+    });
+    
+
+ /*close jQuery*/   
+});
+
+
 
 ///* проверка валидности номера */
 //function validateComments(input) {
@@ -14,51 +105,7 @@ $( document ).ready(function() {
 //	   }
 //}
 
-/*перейти к авторизации через смс */
-$("#signup-button").click(function(){
-    $(".step-authorization").addClass("on");
-    $(".step-choose-method").removeClass("on");
-});
 
-/*вернуться к выбору метода*/
-$("#backToChooseMetod").click(function(){
-    $(".step-authorization").removeClass("on");
-    $(".step-choose-method").addClass("on");
-});
-
-/* перейти к оплате */
-$("#authorization-continue").click(function(){
-    $(".step-authorization").removeClass("on");
-    $(".step-payment").addClass("on");
-});
-    
- /*вернуться к шагу авторизации*/
-$("#backToStepAuthorization").click(function(){
-    $(".step-payment").removeClass("on");
-    $(".step-authorization").addClass("on");
-});
-
-/* активация кнопок подсказки*/
-$(".modal-hint span").click(function () {
-    $(".hint-container__text").removeClass("on");
-        var block =$(this).closest('.hint-container').find('.hint-container__text');
-        block.addClass("on");
-      return false;
-  });
-  $(function(){
-    $(document).click(function(event) {
-//      $(".hint-container__text").hide("fast");
-        $(".hint-container__text").removeClass("on");
-      event.stopPropagation();
-    });
-  });
-
-$("#btn-country").click(function(){
-    $(".input-group-btn").addClass("open");
-//    $(".step-authorization").addClass("on");
-});
-    
-    
 
 /* проверка валидности номера */
 //function validateComments(input) {
@@ -92,9 +139,6 @@ $("#btn-country").click(function(){
 
 
 
-
- /*close jQuery*/   
-});
 
 
 //var jVForms = (function() {
