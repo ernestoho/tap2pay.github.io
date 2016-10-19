@@ -70,22 +70,11 @@ $( document ).ready(function() {
         $(".popover").css("display","none");
     });
 
-    
-    
-    $(function() {
-      var $form = $('#payment-form');
-      $form.submit(function(event) {
-        // Disable the submit button to prevent repeated clicks:
-        $form.find('.submit').prop('disabled', true);
-
-        // Request a token from Stripe:
-        Stripe.card.createToken($form, stripeResponseHandler);
-
-        // Prevent the form from being submitted:
-        return false;
-      });
+    $("#button-save-card-InFooter").click(function(){
+        $("#button-save-card").click();
+//        alert("работает");
     });
-    
+
 
  /*close jQuery*/   
 });

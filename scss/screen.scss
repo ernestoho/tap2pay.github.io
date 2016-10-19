@@ -699,6 +699,7 @@ input[type="tel"]:valid {
     button{
         text-align: center;
         padding: 0;
+        font-size: 15px;
     }
 }
 
@@ -868,6 +869,88 @@ h2.step-payment{
     padding-top: 1px;
     border: 1px solid transparent;
 }
+.creditly-card-form{
+    
+}
+.creditly-wrapper{
+    width: 100%;
+    margin-top: 16px;
+}
+
+.choose-card{
+    display: none;
+}
+
+.card-number-input{
+    input{
+        border-color: #c5c5c5;
+        border-bottom: 1px solid #c5c5c5;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        box-shadow: none !important;
+        height: 35px;
+        padding-left: 37px;
+        &:focus{
+            box-shadow: none !important;
+            border-color: #ccc;
+        }
+    }
+}
+.half-input{
+    width: 50%;
+    float: left;
+    input{
+        border-color: #c5c5c5;
+        border-top: none !important;
+        box-shadow: none !important;
+        height: 35px;
+        padding-left: 37px;
+        &:focus{
+            box-shadow: none !important;
+            border-color: #ccc;
+        }
+    }
+}
+.half-input_left{
+    input{
+        border-color: #c5c5c5;
+        border-top-right-radius: 0px !important;
+        border-top-left-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+    }
+}
+.half-input_right{
+    input{
+        border-top-left-radius: 0px !important;
+        border-top-right-radius: 0px !important;
+        border-bottom-left-radius: 0px !important;
+        border-left: none !important;
+    }
+}
+.control-label{
+    margin: 21px 0 5px 0;
+    letter-spacing: -0.2px;
+    font-size: 15px;
+}
+.creditly-blue-theme-submit{
+    display: block;
+    width: 100%;
+}
+.button-save-card{
+    display: none;
+}
+.button-save-card-InFooter{
+    
+}
+.button-save-card-InFooter{
+    
+}
+
+
+
+
+
+
 
 /*стили paypal вкладки*/
 .paypal-big-icon{
@@ -908,6 +991,7 @@ h2.step-payment{
     box-shadow: none !important;
     border: 1px solid $border-gray;
 }
+
 
 
 
