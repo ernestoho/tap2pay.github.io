@@ -243,56 +243,55 @@ $( document ).ready(function() {
                         <div class="tab-content payment-tabs-container__tab-content">
                             <div role="tabpanel" class="tab-pane card-tab active" id="card-tab">
                                 
-                                <div class="choose-card">
+                                <div class="choose-card choose-card-open">
                                     <h3>Select a credit card</h3>
-                                    
-                                    <!--
-                                        <a href="#">Mom’s Card</a>
-                                        <a href="#">My Card</a>
-                                        <a href="#">Add new card</a>
-                                    -->
+                                        <a href="#" class="choose-card__button"><i class="visa-ico-card"></i>Mom’s Card</a>
+<!--                                        <div class="gray-line"></div>-->
+                                        <a href="#" class="choose-card__button"><i class="masterCard-ico-card"></i>My Card</a>
+<!--                                        <div class="gray-line"></div>-->
+                                        <a href="#" class="addNewCard-button" id="addNewCard-button"><span>&#43;</span> Add new card</a>
                                 </div>
                                 
-                                <form class="creditly-card-form">
-                            <section class="creditly-wrapper">
-                                <div class="credit-card-wrapper">
-                                    <div class="first-row form-group">
-                                        <div class="card-number-input controls">
-    <!--                                        <label class="control-label">Card Number</label>-->
-                                            <input class="number credit-card-number form-control" type="text" name="number" pattern="(\d*\s){3}\d*" inputmode="numeric" autocomplete="cc-number" autocompletetype="cc-number" x-autocompletetype="cc-number" placeholder="Card number">
-                                        </div>
-                                        <div class="half-input half-input_left controls">
-    <!--                                        <label class="control-label">Expiration</label>-->
-                                            <input class="expiration-month-and-year form-control"
-                                        type="text" name="expiration-month-and-year"
-                                        placeholder="MM / YY">
-                                        </div>
-                                        <div class="half-input half-input_right controls">
-    <!--                                        <label class="control-label">CVV</label>-->
-                                            <input class="security-code form-control"·
-                                            inputmode="numeric"
-                                            pattern="\d*"
-                                            type="text" name="security-code"
-                                            placeholder="CCV">
-                                        </div>
+                                <form class="creditly-card-form creditly-card-form_closed">
+                                    <section class="creditly-wrapper">
+                                        <div class="credit-card-wrapper">
+                                            <div class="first-row form-group">
+                                                <div class="card-number-input controls">
+            <!--                                        <label class="control-label">Card Number</label>-->
+                                                    <input class="number credit-card-number form-control" type="text" name="number" pattern="(\d*\s){3}\d*" inputmode="numeric" autocomplete="cc-number" autocompletetype="cc-number" x-autocompletetype="cc-number" placeholder="Card number">
+                                                </div>
+                                                <div class="half-input half-input_left controls">
+            <!--                                        <label class="control-label">Expiration</label>-->
+                                                    <input class="expiration-month-and-year form-control"
+                                                type="text" name="expiration-month-and-year"
+                                                placeholder="MM / YY">
+                                                </div>
+                                                <div class="half-input half-input_right controls">
+            <!--                                        <label class="control-label">CVV</label>-->
+                                                    <input class="security-code form-control"·
+                                                    inputmode="numeric"
+                                                    pattern="\d*"
+                                                    type="text" name="security-code"
+                                                    placeholder="CCV">
+                                                </div>
 
-                                    <div class="second-row form-group">
-                                        <div class="controls">
-                                            <label class="control-label">Name this card to use it in future.</label>
-                                            <input class="billing-address-name form-control"
-                                            type="text" name="name"
-                                            placeholder="Enter card name...">
-                                        </div>
+                                            <div class="second-row form-group">
+                                                <div class="controls">
+                                                    <label class="control-label">Name this card to use it in future.</label>
+                                                    <input class="billing-address-name form-control"
+                                                    type="text" name="name"
+                                                    placeholder="Enter card name...">
+                                                </div>
 
+                                                </div>
+                                            </div>
+                                            <div class="card-type">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="card-type">
-                                    </div>
-                                </div>
-<!--                                <input type="submit">-->
-                                <button class="creditly-blue-theme-submit button-save-card" id="button-save-card" ><span>Submit</span></button>
-                            </section>
-                        </form>
+        <!--                                <input type="submit">-->
+                                        <button class="creditly-blue-theme-submit button-save-card" id="button-save-card" ><span>Submit</span></button>
+                                    </section>
+                                </form>
 
                                 <!--
                                     <form id="payment-form" action="buy.php" method="POST">

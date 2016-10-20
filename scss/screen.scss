@@ -700,6 +700,7 @@ input[type="tel"]:valid {
         text-align: center;
         padding: 0;
         font-size: 15px;
+        line-height: 35px;
     }
 }
 
@@ -824,7 +825,7 @@ h2.step-payment{
 //        padding: 0 5px;
         padding: 0;
         color: $dark-gray-text;
-        line-height: 29px;
+        line-height: 31px;
         font-size: 15px;
         display: block;
         margin: 0;
@@ -869,18 +870,117 @@ h2.step-payment{
     padding-top: 1px;
     border: 1px solid transparent;
 }
+.choose-card{
+//    display: none;
+    h3{
+        margin: 23px 0 8px 0;
+    }
+    .gray-line{
+        margin: 9px 0 0 0;    
+    }
+    a:hover, a:focus, a:visited, a:active{
+        text-decoration: none;
+    }
+}
+.choose-card__button{
+    color: $dark-gray-text;
+    font-size: 15px;
+    display: block;
+    width: calc(100% + 20px);
+    margin: 1px 0 0 0;
+    padding: 5px 0 5px 0px;
+    padding: 0;
+    position: relative;
+    border-bottom: 1px solid #e3e3e3;
+    text-align: left;
+    height: 51px;
+    line-height: 51px;
+    &:after{
+        position: absolute;
+        right: 19px;
+        top: 50%;
+        margin-top: -5px;
+        display: block;
+        content: "";
+        width: 6px;
+        height: 10px;
+//        outline: 1px solid red;
+        background-image: url("../images/icons.png");
+        background-position: -440px -14px;
+//        background-position: -387px -14px;
+        background-repeat:  no-repeat;
+    }
+    i{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    &:hover{
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9f9f9+0,f1f0f1+100 */
+        background: #f9f9f9; /* Old browsers */
+        background: -moz-linear-gradient(left,  #f9f9f9 0%, #f1f0f1 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left,  #f9f9f9 0%,#f1f0f1 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right,  #f9f9f9 0%,#f1f0f1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#f1f0f1',GradientType=1 ); /* IE6-9 */
+    }
+}
+/*переделать что бы margin не влиял на смещение имени карточки */
+.visa-ico-card{
+    width: 49px;
+    height: 15px;
+    margin: 0 14px 0 0;
+    position: relative;
+    top: -2px;
+    background-image: url("../images/icons.png");
+    background-position: -233px 0px;
+    background-repeat:  no-repeat;
+}
+.masterCard-ico-card{
+    width: 50px;
+    height: 30px;
+    position: relative;
+    top: -1px;
+    margin: 0 13px 0 0;
+    background-image: url("../images/icons.png");
+    background-position: -285px 0px;
+    background-repeat:  no-repeat;
+}
+.addNewCard-button{
+    display: inline-block;
+    padding: 7px 20px 7px 0;
+    font-size: 14px;
+    margin-top: 8px;
+    color: #097fd2;
+    font-family: "HelveticaNeueCyr-Medium", Arial;
+    &:hover{
+        color: #097fd2;
+        opacity: 0.8;
+    }
+    span{
+        font-size: 18px;
+        line-height: 1;
+        margin: 0 8px 0 1px;
+        font-weight: bold;
+    }
+}
 .creditly-card-form{
-    
+    display: none;
+}
+.choose-card.choose-card-open{
+    display: block;
+}
+.choose-card.choose-card-closed{
+    display: none;
+}
+.creditly-card-form.creditly-card-form_open{
+    display: block;
+}
+.creditly-card-form.creditly-card-form_closed{
+    display: none;
 }
 .creditly-wrapper{
     width: 100%;
     margin-top: 16px;
 }
-
-.choose-card{
-    display: none;
-}
-
 .card-number-input{
     position: relative;
     &:after{
@@ -902,7 +1002,8 @@ h2.step-payment{
         border-bottom-right-radius: 0px;
         box-shadow: none !important;
         height: 35px;
-        padding-left: 37px;
+        font-size: 15px;
+        padding: 8px 12px 6px 37px;
         &:focus{
             box-shadow: none !important;
             border-color: #ccc;
@@ -917,7 +1018,8 @@ h2.step-payment{
         border-top: none !important;
         box-shadow: none !important;
         height: 35px;
-        padding-left: 37px;
+        font-size: 15px;
+        padding: 8px 12px 6px 37px;
         &:focus{
             box-shadow: none !important;
             border-color: #ccc;
@@ -977,6 +1079,7 @@ h2.step-payment{
 .billing-address-name{
     height: 37px;
     line-height: 37px;
+    font-size: 15px;
 }
 .paypal-button{
     display: block;
@@ -1054,11 +1157,11 @@ h2.step-payment{
 .erip-input{
     display: block;
     width: 100%;
-    font-size: 14px;
+    font-size: 15px;
     margin: 0px 0 0 0;
     height: 36px;
     line-height: 36px;
-    padding: 0 0 0 38px;
+    padding: 2px 0 0 38px;
     letter-spacing: 0.4px;
     border-radius: 5px;
     box-shadow: none !important;

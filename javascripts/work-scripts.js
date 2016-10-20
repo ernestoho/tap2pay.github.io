@@ -45,24 +45,32 @@ $( document ).ready(function() {
         });
       });
 
+    
     $("#btn-country").click(function(){
         $(".input-group-btn").addClass("open");
     //    $(".step-authorization").addClass("on");
     });
-
+    
+    
+    /* перейти на добавление новой карты по клике на  + Add new card */
+    $("#addNewCard-button").click(function(){
+        $(".choose-card ").removeClass("choose-card-open");
+        $(".choose-card ").addClass("choose-card-closed");
+        $(".creditly-card-form").removeClass("creditly-card-form_closed");
+        $(".creditly-card-form").addClass("creditly-card-form_open");
+    });
+    
 
     /* бутстрап табы */
     $('#my-tabs a').click(function (e) {
       e.preventDefault()
       $(this).tab('show')
     })
-    
     $('#my-tabs a[href="#life"]').tab('show') // селектор по имени
     $('#my-tabs a:first').tab('show') // выбор первой вкладки
     $('#my-tabs a:last').tab('show') // последняя вкладка
-//    $('#my-tabs li:eq(2) a').tab('show') // выбор вкладки по номеру
 
-
+    /*убрать всплывающую подскаку от валидации  при переходе на предыдущий шаг*/
     $(".step-back").click(function(){
         $(".popover").css("display","none");
     });
@@ -70,13 +78,14 @@ $( document ).ready(function() {
         $(".popover").css("display","none");
     });
 
+    
+    /* связать клик по кнопке в футере с кликом по кнопке в форме, которая скрыта , сделано для того, что бы не переносить кнопку из формы в футер */
     $("#button-save-card-InFooter").click(function(){
         $("#button-save-card").click();
-//        alert("работает");
     });
 
 
- /*close jQuery*/   
+/*close jQuery*/   
 });
 
 
