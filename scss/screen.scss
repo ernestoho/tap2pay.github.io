@@ -100,6 +100,8 @@ h3{
     border-top-right-radius: 9px;
     border-bottom-left-radius: 9px;
     border-bottom-right-radius: 9px;
+    /* добавить паддинг из-за футера */
+    //    padding-bottom: 67px;
 }
 .modal-header{
     position: relative;
@@ -703,7 +705,9 @@ input[type="tel"]:valid {
         line-height: 35px;
     }
 }
-
+.modal-footer.step-authorization{
+    margin-bottom: 0;
+}
 
 
 
@@ -732,7 +736,7 @@ h2.step-payment{
     margin: auto;
     left: 0;
     right: 0;
-    color: $dark-gray-text;
+    color: $dark-gray-text !important;
     font-size: 15px;
     border-radius: 20px;
     border: 1px solid $border-gray;
@@ -750,8 +754,8 @@ h2.step-payment{
     overflow: hidden;
     letter-spacing: -0.36em;
     li{
-        height: 29px;
-        line-height: 29px;
+        height: 30px;
+        line-height: 30px;
         letter-spacing: normal;
 //        outline: 1px solid green;
         text-align: center;
@@ -772,7 +776,7 @@ h2.step-payment{
                 top: 0px;
                 margin-left: 10px;
                 margin: 0;
-                height: 29px;
+                height: 30px;
             }
             &.active{
                 a{
@@ -794,7 +798,7 @@ h2.step-payment{
                 top: 0px;
                 margin-left: 10px;
                 margin: 0;
-                height: 29px;
+                height: 30px;
             }
             &.active{
                 a{
@@ -882,6 +886,9 @@ h2.step-payment{
         text-decoration: none;
     }
 }
+#backToSelectCreditCard{
+    display: none;
+}
 .choose-card__button{
     color: $dark-gray-text;
     font-size: 15px;
@@ -925,9 +932,9 @@ h2.step-payment{
 }
 /*переделать что бы margin не влиял на смещение имени карточки */
 .visa-ico-card{
-    width: 49px;
+    width: 50px;
     height: 15px;
-    margin: 0 14px 0 0;
+    margin: 0 13px 0 0;
     position: relative;
     top: -2px;
     background-image: url("../images/icons.png");
@@ -965,10 +972,10 @@ h2.step-payment{
 .creditly-card-form{
     display: none;
 }
-.choose-card.choose-card-open{
+.choose-card.choose-card_open{
     display: block;
 }
-.choose-card.choose-card-closed{
+.choose-card.choose-card_closed{
     display: none;
 }
 .creditly-card-form.creditly-card-form_open{
@@ -1112,6 +1119,14 @@ h2.step-payment{
     display: block;
     width: 100%;
 }
+.payment-continue{
+    display: none;
+}
+/* кнопка в футере*/
+.button-save-card-InFooter{
+    display: none;
+}
+/* кнопка в форме */
 .button-save-card{
     display: none;
 }

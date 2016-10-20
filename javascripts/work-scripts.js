@@ -24,10 +24,14 @@ $( document ).ready(function() {
         $(".step-shipment").addClass("on");
     });
 
-     /*вернуться к шагу авторизации*/
-    $("#backToStepAuthorization").click(function(){
-        $(".step-payment").removeClass("on");
-        $(".step-authorization").addClass("on");
+     /*вернуться к выбору сохраненной карты*/
+    $("#backToSelectCreditCard").click(function(){
+        $(".creditly-card-form").removeClass("creditly-card-form_open");
+        $(".creditly-card-form").addClass("creditly-card-form_closed");
+        $(".choose-card").removeClass("choose-card_closed");
+        $(".choose-card ").addClass("choose-card_open");
+        /* спрятать стрелку */
+        $("#backToSelectCreditCard").hide();
     });
 
     /* активация кнопок подсказки*/
@@ -45,21 +49,32 @@ $( document ).ready(function() {
         });
       });
 
-    
+
+    /* чиню поломанный дропдаун для выбора кода страны*/
     $("#btn-country").click(function(){
         $(".input-group-btn").addClass("open");
     //    $(".step-authorization").addClass("on");
     });
-    
-    
+
+
     /* перейти на добавление новой карты по клике на  + Add new card */
     $("#addNewCard-button").click(function(){
-        $(".choose-card ").removeClass("choose-card-open");
-        $(".choose-card ").addClass("choose-card-closed");
+        $(".choose-card ").removeClass("choose-card_open");
+        $(".choose-card ").addClass("choose-card_closed");
         $(".creditly-card-form").removeClass("creditly-card-form_closed");
         $(".creditly-card-form").addClass("creditly-card-form_open");
+        /* показать стрелку */
+        $("#backToSelectCreditCard").show();
+        /* показать кнопку "сохранить карту" */
+        $("#button-save-card-InFooter").show();
     });
     
+    
+    /* на данном этапе по клику на неё перейти к послед шагу - костыль (пропущен шаг) */
+    $("#button-save-card-InFooter").click(function(){
+        $(".finalCheck").addClass("finalCheck_open");
+    });
+
 
     /* бутстрап табы */
     $('#my-tabs a').click(function (e) {
@@ -78,13 +93,22 @@ $( document ).ready(function() {
         $(".popover").css("display","none");
     });
 
-    
+
     /* связать клик по кнопке в футере с кликом по кнопке в форме, которая скрыта , сделано для того, что бы не переносить кнопку из формы в футер */
     $("#button-save-card-InFooter").click(function(){
         $("#button-save-card").click();
     });
 
-
+    /* показать или скрыть стрелочку вернуться к выбору карт */
+//    $("#addNewCard-button").click(function(){
+//        if( $("#choose-card").hasClass("choose-card_closed") )
+//            { 
+//                alert("Открыт");
+//            } else {
+//                alert("Закрыт");
+//            }
+//    });
+    
 /*close jQuery*/   
 });
 

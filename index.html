@@ -162,7 +162,7 @@ $( document ).ready(function() {
                     <span class="step-back" id="backToChooseMetod"></span>Authorization
                 </h2><!-- класс для активации авторизации  -->
                 <h2 class="modal-title step-payment">
-                    <span class="step-back" id="backToStepAuthorization"></span>Payment
+                    <span class="step-back" id="backToSelectCreditCard"></span>Payment
                 </h2><!-- класс для активации платежа  -->
                 <p id="phone-number" class="phone-number step-payment">+ 375 (29) 12-34-567</p>
                 <h2 class="modal-title step-shipment">Shipment</h2>
@@ -243,7 +243,7 @@ $( document ).ready(function() {
                         <div class="tab-content payment-tabs-container__tab-content">
                             <div role="tabpanel" class="tab-pane card-tab active" id="card-tab">
                                 
-                                <div class="choose-card choose-card-open">
+                                <div id="choose-card" class="choose-card choose-card_open">
                                     <h3>Select a credit card</h3>
                                         <a href="#" class="choose-card__button"><i class="visa-ico-card"></i>Mom’s Card</a>
 <!--                                        <div class="gray-line"></div>-->
@@ -355,7 +355,7 @@ $( document ).ready(function() {
                 <button type="button" id="authorization-continue" class="modal-button gradient-bg ">Continue</button>
             </div>
             <div class="modal-footer step-payment">
-                <button type="button" id="payment-continue" class="modal-button gradient-bg">Continue</button>
+                <button type="button" id="payment-continue" class="modal-button gradient-bg payment-continue">Continue</button>
             </div>
             <div class="modal-footer step-payment">
                 <button type="button" id="button-save-card-InFooter" class="modal-button gradient-bg button-save-card-InFooter">Save card</button>
