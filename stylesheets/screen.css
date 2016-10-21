@@ -86,7 +86,6 @@ h3 {
 .modal-body {
   padding-bottom: 20px;
   /* ╨╛╤В ╨╜╨╡╨╢╨╡╨╗╨░╤В╨╡╨╗╤М╨╜╤Л╤Е ╨▓╤Л╨┐╨░╨┤╨░╨╜╨╕╨╣ ╤Н╨╗╨╡╨╝╨╡╨╜╤В╨╛╨▓ */
-  overflow: hidden;
 }
 
 /* line 95, ../scss/screen.scss */
@@ -780,7 +779,7 @@ input[type="tel"]:valid {
   height: 34px;
   line-height: 34px;
   font-size: 15px;
-  box-shadow: none;
+  box-shadow: none !important;
   display: table-cell;
   vertical-align: middle;
   border-top-right-radius: 5px !important;
@@ -993,7 +992,12 @@ h2.step-payment {
   display: none;
 }
 
-/* line 885, ../scss/screen.scss */
+/* line 886, ../scss/screen.scss */
+.step-finalCheck .choose-card__button, .step-finalCheck .shipment-adress_button, .step-finalCheck .shipment-adress_button {
+  width: calc(100% + 19px);
+}
+
+/* line 890, ../scss/screen.scss */
 .choose-card__button, .shipment-adress_button {
   color: #474747;
   font-size: 15px;
@@ -1008,7 +1012,7 @@ h2.step-payment {
   height: 51px;
   line-height: 51px;
 }
-/* line 898, ../scss/screen.scss */
+/* line 903, ../scss/screen.scss */
 .choose-card__button:after, .shipment-adress_button:after {
   position: absolute;
   right: 19px;
@@ -1022,12 +1026,12 @@ h2.step-payment {
   background-position: -440px -14px;
   background-repeat: no-repeat;
 }
-/* line 913, ../scss/screen.scss */
+/* line 918, ../scss/screen.scss */
 .choose-card__button i, .shipment-adress_button i {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 917, ../scss/screen.scss */
+/* line 922, ../scss/screen.scss */
 .choose-card__button:hover, .shipment-adress_button:hover {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9f9f9+0,f1f0f1+100 */
   background: #f9f9f9;
@@ -1041,13 +1045,13 @@ h2.step-payment {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#f1f0f1',GradientType=1 );
   /* IE6-9 */
 }
-/* line 925, ../scss/screen.scss */
+/* line 930, ../scss/screen.scss */
 .choose-card__button:hover, .shipment-adress_button:hover, .choose-card__button:focus, .shipment-adress_button:focus, .choose-card__button:active, .shipment-adress_button:active, .choose-card__button:visited, .shipment-adress_button:visited {
   text-decoration: none;
 }
 
 /*╨┐╨╡╤А╨╡╨┤╨╡╨╗╨░╤В╤М ╤З╤В╨╛ ╨▒╤Л margin ╨╜╨╡ ╨▓╨╗╨╕╤П╨╗ ╨╜╨░ ╤Б╨╝╨╡╤Й╨╡╨╜╨╕╨╡ ╨╕╨╝╨╡╨╜╨╕ ╨║╨░╤А╤В╨╛╤З╨║╨╕ */
-/* line 933, ../scss/screen.scss */
+/* line 938, ../scss/screen.scss */
 .visa-ico-card {
   width: 50px;
   height: 15px;
@@ -1059,7 +1063,7 @@ h2.step-payment {
   background-repeat: no-repeat;
 }
 
-/* line 943, ../scss/screen.scss */
+/* line 948, ../scss/screen.scss */
 .masterCard-ico-card {
   width: 50px;
   height: 30px;
@@ -1071,7 +1075,7 @@ h2.step-payment {
   background-repeat: no-repeat;
 }
 
-/* line 953, ../scss/screen.scss */
+/* line 958, ../scss/screen.scss */
 .shipment-ico-card {
   width: 15px;
   height: 18px;
@@ -1083,7 +1087,7 @@ h2.step-payment {
   background-repeat: no-repeat;
 }
 
-/* line 963, ../scss/screen.scss */
+/* line 968, ../scss/screen.scss */
 .addNewCard-button {
   display: inline-block;
   padding: 7px 20px 7px 0;
@@ -1092,12 +1096,12 @@ h2.step-payment {
   color: #097fd2;
   font-family: "HelveticaNeueCyr-Medium", Arial;
 }
-/* line 970, ../scss/screen.scss */
+/* line 975, ../scss/screen.scss */
 .addNewCard-button:hover {
   color: #097fd2;
   opacity: 0.8;
 }
-/* line 974, ../scss/screen.scss */
+/* line 979, ../scss/screen.scss */
 .addNewCard-button span {
   font-size: 18px;
   line-height: 1;
@@ -1105,42 +1109,42 @@ h2.step-payment {
   font-weight: bold;
 }
 
-/* line 981, ../scss/screen.scss */
+/* line 986, ../scss/screen.scss */
 .creditly-card-form {
   display: none;
 }
 
-/* line 984, ../scss/screen.scss */
+/* line 989, ../scss/screen.scss */
 .choose-card.choose-card_open {
   display: block;
 }
 
-/* line 987, ../scss/screen.scss */
+/* line 992, ../scss/screen.scss */
 .choose-card.choose-card_closed {
   display: none;
 }
 
-/* line 990, ../scss/screen.scss */
+/* line 995, ../scss/screen.scss */
 .creditly-card-form.creditly-card-form_open {
   display: block;
 }
 
-/* line 993, ../scss/screen.scss */
+/* line 998, ../scss/screen.scss */
 .creditly-card-form.creditly-card-form_closed {
   display: none;
 }
 
-/* line 996, ../scss/screen.scss */
+/* line 1001, ../scss/screen.scss */
 .creditly-wrapper {
   width: 100%;
   margin-top: 16px;
 }
 
-/* line 1000, ../scss/screen.scss */
+/* line 1005, ../scss/screen.scss */
 .card-number-input {
   position: relative;
 }
-/* line 1002, ../scss/screen.scss */
+/* line 1007, ../scss/screen.scss */
 .card-number-input:after {
   display: block;
   position: absolute;
@@ -1153,7 +1157,7 @@ h2.step-payment {
   background-position: -337px 0px;
   background-repeat: no-repeat;
 }
-/* line 1014, ../scss/screen.scss */
+/* line 1019, ../scss/screen.scss */
 .card-number-input input {
   border-color: #c5c5c5;
   border-bottom: 1px solid #c5c5c5;
@@ -1164,18 +1168,18 @@ h2.step-payment {
   font-size: 15px;
   padding: 8px 12px 6px 37px;
 }
-/* line 1023, ../scss/screen.scss */
+/* line 1028, ../scss/screen.scss */
 .card-number-input input:focus {
   box-shadow: none !important;
   border-color: #ccc;
 }
 
-/* line 1029, ../scss/screen.scss */
+/* line 1034, ../scss/screen.scss */
 .half-input {
   width: 50%;
   float: left;
 }
-/* line 1032, ../scss/screen.scss */
+/* line 1037, ../scss/screen.scss */
 .half-input input {
   border-color: #c5c5c5;
   border-top: none !important;
@@ -1184,17 +1188,17 @@ h2.step-payment {
   font-size: 15px;
   padding: 8px 12px 6px 37px;
 }
-/* line 1039, ../scss/screen.scss */
+/* line 1044, ../scss/screen.scss */
 .half-input input:focus {
   box-shadow: none !important;
   border-color: #ccc;
 }
 
-/* line 1045, ../scss/screen.scss */
+/* line 1050, ../scss/screen.scss */
 .half-input_left {
   position: relative;
 }
-/* line 1047, ../scss/screen.scss */
+/* line 1052, ../scss/screen.scss */
 .half-input_left:after {
   display: block;
   position: absolute;
@@ -1207,7 +1211,7 @@ h2.step-payment {
   background-position: -355px 0px;
   background-repeat: no-repeat;
 }
-/* line 1059, ../scss/screen.scss */
+/* line 1064, ../scss/screen.scss */
 .half-input_left input {
   border-color: #c5c5c5;
   border-top-right-radius: 0px !important;
@@ -1215,11 +1219,11 @@ h2.step-payment {
   border-bottom-right-radius: 0px !important;
 }
 
-/* line 1066, ../scss/screen.scss */
+/* line 1071, ../scss/screen.scss */
 .half-input_right {
   position: relative;
 }
-/* line 1068, ../scss/screen.scss */
+/* line 1073, ../scss/screen.scss */
 .half-input_right:after {
   display: block;
   position: absolute;
@@ -1232,7 +1236,7 @@ h2.step-payment {
   background-position: -371px 0px;
   background-repeat: no-repeat;
 }
-/* line 1080, ../scss/screen.scss */
+/* line 1085, ../scss/screen.scss */
 .half-input_right input {
   border-top-left-radius: 0px !important;
   border-top-right-radius: 0px !important;
@@ -1240,7 +1244,7 @@ h2.step-payment {
   border-left: none !important;
 }
 
-/* line 1087, ../scss/screen.scss */
+/* line 1092, ../scss/screen.scss */
 .control-label {
   margin: 21px 0 3px 0;
   letter-spacing: -0.2px;
@@ -1250,14 +1254,14 @@ h2.step-payment {
   font-family: "HelveticaNeueCyr-Roman", Arial;
 }
 
-/* line 1095, ../scss/screen.scss */
+/* line 1100, ../scss/screen.scss */
 .billing-address-name {
   height: 37px;
   line-height: 37px;
   font-size: 15px;
 }
 
-/* line 1100, ../scss/screen.scss */
+/* line 1105, ../scss/screen.scss */
 .paypal-button {
   display: block;
   width: 100%;
@@ -1272,12 +1276,12 @@ h2.step-payment {
   font-family: "HelveticaNeueCyr-Medium", Arial;
   border-bottom: 3px solid #cbcbcb;
 }
-/* line 1113, ../scss/screen.scss */
+/* line 1118, ../scss/screen.scss */
 .paypal-button:hover {
   border-bottom: 3px solid #cbcbcb;
 }
 
-/* line 1117, ../scss/screen.scss */
+/* line 1122, ../scss/screen.scss */
 .paypal-button_icon {
   display: inline-block;
   width: 64px;
@@ -1289,39 +1293,39 @@ h2.step-payment {
   background-repeat: no-repeat;
 }
 
-/* line 1127, ../scss/screen.scss */
+/* line 1132, ../scss/screen.scss */
 .creditly-blue-theme-submit {
   display: block;
   width: 100%;
 }
 
-/* line 1131, ../scss/screen.scss */
+/* line 1136, ../scss/screen.scss */
 .payment-continue {
   display: none;
 }
 
 /* ╨║╨╜╨╛╨┐╨║╨░ ╨▓ ╤Д╤Г╤В╨╡╤А╨╡*/
-/* line 1135, ../scss/screen.scss */
+/* line 1140, ../scss/screen.scss */
 .button-save-card-InFooter {
   display: none;
 }
 
 /* ╨║╨╜╨╛╨┐╨║╨░ ╨▓ ╤Д╨╛╤А╨╝╨╡ */
-/* line 1139, ../scss/screen.scss */
+/* line 1144, ../scss/screen.scss */
 .button-save-card {
   display: none;
 }
 
 /*╤Б╤В╨╕╨╗╨╕ paypal ╨▓╨║╨╗╨░╨┤╨║╨╕*/
 /*╤Б╤В╨╕╨╗╨╕ erip ╨▓╨║╨╗╨░╨┤╨║╨╕*/
-/* line 1161, ../scss/screen.scss */
+/* line 1166, ../scss/screen.scss */
 .erip-input-container {
   position: relative;
   padding-top: 1px;
   margin-top: 16px;
   border: 1px solid #fff;
 }
-/* line 1166, ../scss/screen.scss */
+/* line 1171, ../scss/screen.scss */
 .erip-input-container:after {
   position: absolute;
   top: 12px;
@@ -1335,7 +1339,7 @@ h2.step-payment {
   background-repeat: no-repeat;
 }
 
-/* line 1180, ../scss/screen.scss */
+/* line 1185, ../scss/screen.scss */
 .erip-input {
   display: block;
   width: 100%;
@@ -1351,47 +1355,47 @@ h2.step-payment {
 }
 
 /* ╤И╨░╨│ ╨┤╨╛╤Б╤В╨░╨▓╨║╨╕ */
-/* line 1198, ../scss/screen.scss */
+/* line 1203, ../scss/screen.scss */
 .step-step-shipment {
   display: none;
 }
 
-/* line 1201, ../scss/screen.scss */
+/* line 1206, ../scss/screen.scss */
 .step-step-shipment.on {
   display: block;
 }
 
 /* ╤И╨░╨│ ╤Д╨╕╨╜╨░╨╗╤М╨╜╤Л╨╣ ╤И╨░╨│ */
-/* line 1208, ../scss/screen.scss */
+/* line 1213, ../scss/screen.scss */
 .step-finalCheck {
   display: none;
 }
-/* line 1210, ../scss/screen.scss */
+/* line 1215, ../scss/screen.scss */
 .step-finalCheck a:hover, .step-finalCheck a:focus, .step-finalCheck a:visited, .step-finalCheck a:active {
   color: #474747;
 }
 
-/* line 1214, ../scss/screen.scss */
+/* line 1219, ../scss/screen.scss */
 .shipment-adress_title {
   margin-top: 25px;
 }
 
-/* line 1217, ../scss/screen.scss */
+/* line 1222, ../scss/screen.scss */
 .step-finalCheck.on {
   display: block;
 }
 
-/* line 1220, ../scss/screen.scss */
+/* line 1225, ../scss/screen.scss */
 .finalCheck-border {
   border-top: 1px solid #e3e3e3;
 }
 
-/* line 1224, ../scss/screen.scss */
+/* line 1229, ../scss/screen.scss */
 .clickToPay_button {
   display: none;
 }
 
-/* line 1227, ../scss/screen.scss */
+/* line 1232, ../scss/screen.scss */
 .clickToPay_button, .clickToPay_button:hover {
   color: #fff;
   text-shadow: 1px -1px  1px #3b99f0;
@@ -1410,19 +1414,19 @@ h2.step-payment {
   /* IE6-9 */
 }
 
-/* line 1240, ../scss/screen.scss */
+/* line 1245, ../scss/screen.scss */
 .clickToPay_button.on {
   display: block;
 }
 
-/* line 1243, ../scss/screen.scss */
+/* line 1248, ../scss/screen.scss */
 .payment-success {
   display: none;
   vertical-align: 37px;
   letter-spacing: 0.5px;
 }
 
-/* line 1248, ../scss/screen.scss */
+/* line 1253, ../scss/screen.scss */
 .payment-success, .payment-success:hover {
   color: #fff;
   text-shadow: 1px -1px  1px #20b119;
@@ -1441,12 +1445,12 @@ h2.step-payment {
   /* IE6-9 */
 }
 
-/* line 1260, ../scss/screen.scss */
+/* line 1265, ../scss/screen.scss */
 .payment-success.on {
   display: block;
 }
 
-/* line 1263, ../scss/screen.scss */
+/* line 1268, ../scss/screen.scss */
 .icon-success {
   display: inline-block;
   width: 17px;
@@ -1461,7 +1465,7 @@ h2.step-payment {
 }
 
 /* ╨╖╨░╨┐╤А╨╡╤В╨╕╤В╤М ╨▓╤Л╨┤╨╡╨╗╨╡╨╜╨╕╨╡ ╨╡╤А╨╕╨┐ ╨╕ ╨┐╨░╨╣╨┐╨░╨╗ */
-/* line 1281, ../scss/screen.scss */
+/* line 1286, ../scss/screen.scss */
 .select-none {
   user-select: none;
 }

@@ -90,7 +90,7 @@ h3{
 .modal-body{
     padding-bottom: 20px;
     /* от нежелательных выпаданий элементов */
-    overflow: hidden;
+//    overflow: hidden;
 }
 .modal-content{
 //	outline: 1px solid green;
@@ -681,7 +681,7 @@ input[type="tel"]:valid {
         height: 34px;
         line-height: 34px;
         font-size: 15px;
-        box-shadow: none;
+        box-shadow: none !important;
         display: table-cell; 
         vertical-align: middle; 
         border-top-right-radius: 5px !important;
@@ -881,6 +881,11 @@ h2.step-payment{
 }
 #backToSelectCreditCard{
     display: none;
+}
+.step-finalCheck{
+    .choose-card__button, .shipment-adress_button{
+        width: calc(100% + 19px);
+    }
 }
 .choose-card__button{
     color: $dark-gray-text;

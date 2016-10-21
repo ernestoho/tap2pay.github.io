@@ -34,6 +34,7 @@ $( document ).ready(function() {
         $("#backToSelectCreditCard").hide();
     });
 
+
     /* активация кнопок подсказки*/
     $(".modal-hint span").click(function () {
         $(".hint-container__text").removeClass("on");
