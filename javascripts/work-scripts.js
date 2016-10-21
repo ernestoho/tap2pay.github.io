@@ -41,20 +41,35 @@ $( document ).ready(function() {
             var block =$(this).closest('.hint-container').find('.hint-container__text');
             block.addClass("on");
           return false;
+        $(function(){
+            $(document).click(function(event) {
+    //          $(".hint-container__text").hide("fast");
+                $(".hint-container__text").removeClass("on");
+              event.stopPropagation();
+            });
+          });
       });
-      $(function(){
-        $(document).click(function(event) {
-    //      $(".hint-container__text").hide("fast");
-            $(".hint-container__text").removeClass("on");
-          event.stopPropagation();
-        });
-      });
+//      $(function(){
+//        $(document).click(function(event) {
+////          $(".hint-container__text").hide("fast");
+//            $(".hint-container__text").removeClass("on");
+//          event.stopPropagation();
+//        });
+//      });
+    
+//    $("#button").click(function(){
+//        $("#mydiv").show();
+//        $(document.body).click(function() {
+//            if ($(event.target).closest("#mydiv").length == 0)
+//                $("#mydiv").hide();     
+//        });
+//        return false;   
+//    });
 
 
     /* чиню поломанный дропдаун для выбора кода страны*/
     $("#btn-country").click(function(){
         $(".input-group-btn").addClass("open");
-    //    $(".step-authorization").addClass("on");
     });
 
 
