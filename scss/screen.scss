@@ -89,6 +89,8 @@ h3{
 }
 .modal-body{
     padding-bottom: 20px;
+    /* от нежелательных выпаданий элементов */
+    overflow: hidden;
 }
 .modal-content{
 //	outline: 1px solid green;
@@ -367,7 +369,6 @@ h3{
 .step-choose-method .modal-button{
     margin-top: 23px;
 }
-
 
 .step-choose-method .signup-button{
     margin: 23px 0 0px 0;
@@ -720,6 +721,7 @@ input[type="tel"]:valid {
 }
 h2.step-payment{
     margin: 47px auto 3px auto;
+    margin: 47px auto 0px auto;
 //    display: block;
 }
 .phone-number{
@@ -740,12 +742,9 @@ h2.step-payment{
     font-size: 15px;
     border-radius: 20px;
     border: 1px solid $border-gray;
-//    border-top-right-radius: 50% !important;
-//    border-bottom-right-radius: 5px !important;
 }
 
 .payment-tabs-container{
-//    outline: 1px solid red;
     margin-top: 28px;
 }
 .payment-tabs{
@@ -757,20 +756,14 @@ h2.step-payment{
         height: 30px;
         line-height: 30px;
         letter-spacing: normal;
-//        outline: 1px solid green;
         text-align: center;
         width: 33.333%;
         border-right: 1px solid #afafaf;
-//        &:first-child{
-//            width: 88px;
-//        }
         &:nth-child(2){
             a{
                 background-image: url("../images/paypal-color.png");
                 background-position: 14px 7px;
                 background-repeat:  no-repeat;
-//                background-size: 20px 40px;
-//                width: 60px;
                 width: 100%;
                 position: relative;
                 top: 0px;
@@ -929,6 +922,12 @@ h2.step-payment{
         background: linear-gradient(to right,  #f9f9f9 0%,#f1f0f1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#f1f0f1',GradientType=1 ); /* IE6-9 */
     }
+    &:hover, &:focus, &:active, &:visited{
+        text-decoration: none;
+    }
+}
+.shipment-adress_button{
+    @extend .choose-card__button;
 }
 /*переделать что бы margin не влиял на смещение имени карточки */
 .visa-ico-card{
@@ -949,6 +948,16 @@ h2.step-payment{
     margin: 0 13px 0 0;
     background-image: url("../images/icons.png");
     background-position: -285px 0px;
+    background-repeat:  no-repeat;
+}
+.shipment-ico-card{
+    width: 15px;
+    height: 18px;
+    position: relative;
+    top: -1px;
+    margin: 0 13px 0 0;
+    background-image: url("../images/icons.png");
+    background-position: -423px 0px;
     background-repeat:  no-repeat;
 }
 .addNewCard-button{
@@ -1166,7 +1175,6 @@ h2.step-payment{
         background-image: url("../images/icons.png");
         background-position: -485px -20px;
         background-repeat:  no-repeat;
-        z-index: 1000;
     }
 }
 .erip-input{
@@ -1187,9 +1195,89 @@ h2.step-payment{
 
 
 /* шаг доставки */
-.step-shipment{
+.step-step-shipment{
     display: none;
 }
-.step-shipment.on{
+.step-step-shipment.on{
     display: block;
+}
+
+
+
+/* шаг финальный шаг */
+.step-finalCheck{
+    display: none;
+    a:hover, a:focus, a:visited, a:active{
+        color: $dark-gray-text;
+    }
+}
+.shipment-adress_title{
+    margin-top: 25px;
+}
+.step-finalCheck.on{
+    display: block;
+}
+.finalCheck-border{
+    border-top: 1px solid #e3e3e3;
+}
+
+.clickToPay_button{
+    display: none;
+}
+.clickToPay_button, .clickToPay_button:hover{
+    color: #fff;
+    text-shadow:  1px -1px  1px #3b99f0;
+    
+    border-color: #4ea8fb;
+    border-bottom-color: #2c94f5;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4ea8fb+0,2c94f5+100 */
+    background: #4ea8fb; /* Old browsers */
+    background: -moz-linear-gradient(top,  #4ea8fb 0%, #2c94f5 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #4ea8fb 0%,#2c94f5 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #4ea8fb 0%,#2c94f5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4ea8fb', endColorstr='#2c94f5',GradientType=0 ); /* IE6-9 */
+}
+.clickToPay_button.on{
+    display: block;
+}
+.payment-success{
+    display: none;
+    vertical-align: 37px;
+    letter-spacing: 0.5px;
+}
+.payment-success, .payment-success:hover{
+    color: #fff;
+    text-shadow: 1px -1px  1px #20b119;
+    border-color: #45e548;
+    border-bottom-color: #37c72c;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#45e548+0,37c72c+100 */
+    background: #45e548; /* Old browsers */
+    background: -moz-linear-gradient(top,  #45e548 0%, #37c72c 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #45e548 0%,#37c72c 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #45e548 0%,#37c72c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45e548', endColorstr='#37c72c',GradientType=0 ); /* IE6-9 */
+}
+.payment-success.on{
+    display: block;
+}
+.icon-success{
+    display: inline-block;
+    width: 17px;
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
+    left: 0px;
+    height: 13px;
+    background-image: url("../images/icons.png");
+    background-position: -447px 0px;
+    background-repeat:  no-repeat;
+}
+
+
+
+
+
+/* запретить выделение ерип и пайпал */
+.select-none{
+    user-select: none;
 }

@@ -72,9 +72,22 @@ $( document ).ready(function() {
     
     /* на данном этапе по клику на неё перейти к послед шагу - костыль (пропущен шаг) */
     $("#button-save-card-InFooter").click(function(){
-        $(".finalCheck").addClass("finalCheck_open");
+        $(".step-payment").removeClass("on");
+        $(".step-finalCheck").addClass("on");
+//        $(".step-payment").addClass("step-payment_closed");
     });
-
+    
+    /*назад в шаг оплаты(доставка пропущена)*/
+    $("#backToPayment").click(function(){
+        $(".step-finalCheck").removeClass("on");
+        $(".step-payment").addClass("on");
+    });
+    $("#clickToPay_button").click(function(){
+        $(".clickToPay_button").removeClass("on");
+        $(".payment-success").addClass("on");
+    });
+    
+    
 
     /* бутстрап табы */
     $('#my-tabs a').click(function (e) {
@@ -95,9 +108,13 @@ $( document ).ready(function() {
 
 
     /* связать клик по кнопке в футере с кликом по кнопке в форме, которая скрыта , сделано для того, что бы не переносить кнопку из формы в футер */
-    $("#button-save-card-InFooter").click(function(){
-        $("#button-save-card").click();
-    });
+//    $("#button-save-card-InFooter").click(function(){
+//        $("#button-save-card").click();
+//    });
+
+    
+    
+    
 
     /* показать или скрыть стрелочку вернуться к выбору карт */
 //    $("#addNewCard-button").click(function(){

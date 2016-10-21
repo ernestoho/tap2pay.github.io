@@ -164,10 +164,11 @@ $( document ).ready(function() {
                 <h2 class="modal-title step-payment">
                     <span class="step-back" id="backToSelectCreditCard"></span>Payment
                 </h2><!-- класс для активации платежа  -->
-                <p id="phone-number" class="phone-number step-payment">+ 375 (29) 12-34-567</p>
-                <h2 class="modal-title step-shipment">Shipment</h2>
-                
+                <h2 class="modal-title step-finalCheck"><span class="step-back" id="backToPayment"></span>Final check</h2><!-- класс активации шага final check -->
+                <p id="phone-number" class="phone-number step-payment step-finalCheck">+ 375 (29) 12-34-567</p>
+<!--                <h2 class="modal-title step-shipment">Shipment</h2>-->
             </div>
+            
             <div class="modal-body">
                
                 <div class="step-choose-method on"><!-- класс для активации первого шага выбора способа оплаты  -->
@@ -192,7 +193,7 @@ $( document ).ready(function() {
 
                 </div>
                 
-                <div class="step-authorization" id="step-authorization">
+                <div class="step-authorization">
                     <form action="#" id="formsID" name="formsName" class="phone-number-form" method="POST" accept-charset="utf8">
                         <div class="phone-input-container">
 <!--                           <input type="text" name="name" required="required" pattern="^[0123456789+]+$" title="Required & Pattern" />-->
@@ -236,8 +237,8 @@ $( document ).ready(function() {
                         <!-- Навигация -->
                         <ul class="nav nav-tabs payment-tabs" role="tablist">
                             <li class="active"><a href="#card-tab" aria-controls="card-tab" role="tab" data-toggle="tab">Card</a></li>
-                            <li><a href="#paypal-tab" aria-controls="paypal-tab" role="tab" data-toggle="tab"></a></li>
-                            <li><a href="#erip-tab" aria-controls="erip-tab" role="tab" data-toggle="tab"></a></li>
+                            <li class="select-none"><a href="#paypal-tab" aria-controls="paypal-tab" role="tab" data-toggle="tab"></a></li>
+                            <li class="select-none"><a href="#erip-tab" aria-controls="erip-tab" role="tab" data-toggle="tab"></a></li>
                         </ul>
                         <!-- Содержимое вкладок -->
                         <div class="tab-content payment-tabs-container__tab-content">
@@ -349,19 +350,33 @@ $( document ).ready(function() {
                         </div>
                 </div>
                 
+                <div class="step-finalCheck step-finalCheck_closed">
+                    <h3>Payment method</h3>
+                    <a href="#" class="choose-card__button finalCheck-border"><i class="masterCard-ico-card"></i>My Card</a>
+                    <h3 class="shipment-adress_title">Shipment address</h3>
+                    <a href="#" class="shipment-adress_button finalCheck-border"><i class="shipment-ico-card"></i>Minsk, Kuprevicha st, 1/5</a>
+                </div>
+                
             </div>
       
-            <div class="modal-footer step-authorization">
-                <button type="button" id="authorization-continue" class="modal-button gradient-bg ">Continue</button>
+            <div class="modal-footer">
+                <div class="step-authorization">
+                    <button type="button" id="authorization-continue" class="modal-button gradient-bg ">Continue</button>
+                </div>
+                <div class="step-payment">
+                    <button type="button" id="payment-continue" class="modal-button gradient-bg payment-continue">Continue</button>
+                </div>
+                <div class="step-payment">
+                    <button type="button" id="button-save-card-InFooter" class="modal-button gradient-bg button-save-card-InFooter">Save card</button>
+                </div>
+                <div class="step-finalCheck">
+                    <button type="button" id="clickToPay_button" class="modal-button gradient-bg clickToPay_button on">Pay 800$</button>
+                    <button type="button" id="payment-success" class="modal-button gradient-bg payment-success"><i class="icon-success"></i>Success!</button>
+                </div>
             </div>
-            <div class="modal-footer step-payment">
-                <button type="button" id="payment-continue" class="modal-button gradient-bg payment-continue">Continue</button>
-            </div>
-            <div class="modal-footer step-payment">
-                <button type="button" id="button-save-card-InFooter" class="modal-button gradient-bg button-save-card-InFooter">Save card</button>
-            </div>
-            
+                
         </div>
+        
     </div>
 </div>
 
