@@ -45,7 +45,6 @@
   <script type="text/javascript">
 $( document ).ready(function() {
 
-
     $(function() {
       // For the gray theme
       var grayThemeCreditly = Creditly.initialize(
@@ -150,12 +149,11 @@ $( document ).ready(function() {
             <div class="modal-header">
                 <div class="modal-header__container">
                 <!-- меняет заставку магазина -->
-<!--                <div class="modal-header__container without-img">-->
-<!--                    <span>Fifth element store</span>-->
+        <!--    <div class="modal-header__container without-img">        -->
+        <!-- <span>Fifth element store</span> -->
                     <img src="images/head-logo.jpg" class="modal-header__img" alt="logo of site">
                 </div>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                
                 
                 <h1 class="modal-title step-choose-method on">Choose payment method</h1>
                 <h2 class="modal-title step-authorization">
@@ -164,8 +162,15 @@ $( document ).ready(function() {
                 <h2 class="modal-title step-payment">
                     <span class="step-back" id="backToSelectCreditCard"></span>Payment
                 </h2><!-- класс для активации платежа  -->
-                <h2 class="modal-title step-finalCheck"><span class="step-back" id="backToPayment"></span>Final check</h2><!-- класс активации шага final check -->
-                <p id="phone-number" class="phone-number step-payment step-finalCheck">+ 375 (29) 12-34-567</p>
+                
+                <h2 class="modal-title step-shipment">
+                    <span class="step-back backToPayment on" id="backToPayment"></span><span class="step-back backToSavedLocations" id="backToSavedLocations"></span>Shipment
+                </h2> <!-- класс для активации доставки  --> 
+                
+                <h2 class="modal-title step-finalCheck">
+                    <span class="step-back" id="backToShipment"></span>Final check
+                </h2><!-- класс активации шага final check -->
+                <p id="phone-number" class="phone-number step-payment step-shipment step-finalCheck">+ 375 (29) 12-34-567</p>
 <!--                <h2 class="modal-title step-shipment">Shipment</h2>-->
             </div>
             
@@ -259,21 +264,21 @@ $( document ).ready(function() {
                                             <div class="first-row form-group">
                                                 <div class="card-number-input controls">
             <!--                                        <label class="control-label">Card Number</label>-->
-                                                    <input class="number credit-card-number form-control" type="text" name="number" pattern="(\d*\s){3}\d*" inputmode="numeric" autocomplete="cc-number" autocompletetype="cc-number" x-autocompletetype="cc-number" placeholder="Card number">
+                                                    <input id="credit-card-number" class="number credit-card-number form-control" type="text" name="number" pattern="(\d*\s){3}\d*" inputmode="numeric" autocomplete="cc-number" autocompletetype="cc-number" x-autocompletetype="cc-number" placeholder="Card number" required>
                                                 </div>
                                                 <div class="half-input half-input_left controls">
             <!--                                        <label class="control-label">Expiration</label>-->
                                                     <input class="expiration-month-and-year form-control"
                                                 type="text" name="expiration-month-and-year"
-                                                placeholder="MM / YY">
+                                                placeholder="MM / YY" pattern="[0-9]{2}.*[0-9]{2}" required>
                                                 </div>
                                                 <div class="half-input half-input_right controls">
             <!--                                        <label class="control-label">CVV</label>-->
                                                     <input class="security-code form-control"·
                                                     inputmode="numeric"
-                                                    pattern="\d*"
+                                                    pattern="[0-9]{3}"
                                                     type="text" name="security-code"
-                                                    placeholder="CCV">
+                                                    placeholder="CCV" required>
                                                 </div>
 
                                             <div class="second-row form-group">
@@ -281,7 +286,7 @@ $( document ).ready(function() {
                                                     <label class="control-label">Name this card to use it in future.</label>
                                                     <input class="billing-address-name form-control"
                                                     type="text" name="name"
-                                                    placeholder="Enter card name...">
+                                                    placeholder="Enter card name..." required>
                                                 </div>
 
                                                 </div>
@@ -350,11 +355,32 @@ $( document ).ready(function() {
                         </div>
                 </div>
                 
+                <div class="step-shipment">
+                    <div class="saved-locations on">
+                        <h3>What addres use for shipment?</h3>
+                    <a href="#" class="shipment-address_button special-underline-border"><img src="images/location-icon.png" alt="loaction" class="location-icon"> <span>Minsk, Kuprevicha st, 1/5</span></a>
+                    <a href="#" class="shipment-address_button special-underline-border"><img src="images/location-icon.png" alt="loaction" class="location-icon"> <span> Saint Petersburg, Admiralteyskaya st., 44 </span></a>
+                    <a href="#" class="addNewAddress-button" id="addNewAddress-button"><span>&#43;</span> Add new address</a>
+                    </div>
+                    <form action="#" class="new-address" method="post">
+                        <h3>New address</h3>
+                        <input type="text" class="new-address-input form-control" placeholder="Enter address..." required>
+                        <label class="new-address-label">
+                            <input type='checkbox' name="new-address" class="new-address-input">
+                            <span></span>
+                            Save this address
+                        </label>
+                    </form>
+                    
+                </div>
+                
                 <div class="step-finalCheck step-finalCheck_closed">
                     <h3>Payment method</h3>
-                    <a href="#" class="choose-card__button finalCheck-border"><i class="masterCard-ico-card"></i>My Card</a>
-                    <h3 class="shipment-adress_title">Shipment address</h3>
-                    <a href="#" class="shipment-adress_button finalCheck-border"><i class="shipment-ico-card"></i>Minsk, Kuprevicha st, 1/5</a>
+                    <a href="#" class="choose-card__button special-underline-border"><i class="masterCard-ico-card"></i>My Card</a>
+                    <p class="not-enough-money">Not enough money on this account. Please,
+choose another payment method.</p>
+                    <h3 class="shipment-address_title">Shipment address</h3>
+                    <a href="#" class="shipment-address_button special-underline-border"><img src="images/location-icon.png" alt="loaction" class="location-icon"><span>Minsk, Kuprevicha st, 1/5</span></a>
                 </div>
                 
             </div>
@@ -368,6 +394,9 @@ $( document ).ready(function() {
                 </div>
                 <div class="step-payment">
                     <button type="button" id="button-save-card-InFooter" class="modal-button gradient-bg button-save-card-InFooter">Save card</button>
+                </div>
+                <div class="step-shipment">
+                    <button type="button" id="button-shipment-continue" class="modal-button gradient-bg button-shipment-continue">Continue</button>
                 </div>
                 <div class="step-finalCheck">
                     <button type="button" id="clickToPay_button" class="modal-button gradient-bg clickToPay_button on">Pay 800$</button>

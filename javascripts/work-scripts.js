@@ -1,5 +1,22 @@
 $( document ).ready(function() {
 
+    /* активация кнопок подсказки*/
+    $(".modal-hint span").click(function () {
+        $(".hint-container__text").removeClass("on");
+            var block =$(this).closest('.hint-container').find('.hint-container__text');
+            block.addClass("on");
+          return false;
+      });
+    $(document).click(function(event) {
+        $(".hint-container__text").removeClass("on");
+      event.stopPropagation();
+    });/* спрятать кнопку подсказки */
+
+    /* чиню поломанный дропдаун для выбора кода страны*/
+    $("#btn-country").click(function(){
+        $(".input-group-btn").addClass("open");
+    });
+
     /*перейти к авторизации через смс */
     $("#signup-button").click(function(){
         $(".step-authorization").addClass("on");
@@ -10,15 +27,15 @@ $( document ).ready(function() {
     $("#backToChooseMetod").click(function(){
         $(".step-authorization").removeClass("on");
         $(".step-choose-method").addClass("on");
-    });
+    }); 
 
-    /* перейти к оплате */
+    /* перейти к оплате payment */
     $("#authorization-continue").click(function(){
         $(".step-authorization").removeClass("on");
         $(".step-payment").addClass("on");
     });
     
-    /* перейти к оплате */
+    /* перейти к shipment из erip (скрыта)  */
     $("#payment-continue").click(function(){
         $(".step-payment").removeClass("on");
         $(".step-shipment").addClass("on");
@@ -34,25 +51,6 @@ $( document ).ready(function() {
         $("#backToSelectCreditCard").hide();
     });
 
-
-    /* активация кнопок подсказки*/
-    $(".modal-hint span").click(function () {
-        $(".hint-container__text").removeClass("on");
-            var block =$(this).closest('.hint-container').find('.hint-container__text');
-            block.addClass("on");
-          return false;
-      });
-        $(document).click(function(event) {
-            $(".hint-container__text").removeClass("on");
-          event.stopPropagation();
-        });
-
-    /* чиню поломанный дропдаун для выбора кода страны*/
-    $("#btn-country").click(function(){
-        $(".input-group-btn").addClass("open");
-    });
-
-
     /* перейти на добавление новой карты по клике на  + Add new card */
     $("#addNewCard-button").click(function(){
         $(".choose-card ").removeClass("choose-card_open");
@@ -64,26 +62,54 @@ $( document ).ready(function() {
         /* показать кнопку "сохранить карту" */
         $("#button-save-card-InFooter").show();
     });
-    
-    
-    /* на данном этапе по клику на неё перейти к послед шагу - костыль (пропущен шаг) */
+
+    /* переход на шаг shipment*/
     $("#button-save-card-InFooter").click(function(){
         $(".step-payment").removeClass("on");
-        $(".step-finalCheck").addClass("on");
-//        $(".step-payment").addClass("step-payment_closed");
+        $(".step-shipment").addClass("on");
     });
     
-    /*назад в шаг оплаты(доставка пропущена)*/
+    /* переход внутри step-shipment = добавить новый адрес и скрыть сохраненные */
+    $("#addNewAddress-button").click(function(){
+        $(".saved-locations").removeClass("on");
+        $(".new-address").addClass("on");
+        $("#backToPayment").removeClass("on");
+        $("#backToSavedLocations").addClass("on");
+    });
+
+    /* переход внутри step-shipment = вернуться к сохраненным адресам*/
+    $("#backToSavedLocations").click(function(){
+        $(".backToPayment").addClass("on");
+        $(".backToSavedLocations").removeClass("on");
+        $(".saved-locations").addClass("on");
+        $(".new-address").removeClass("on");
+    });
+
+    /* переход на шаг final-check */
+    $("#button-shipment-continue").click(function(){
+        $(".step-shipment").removeClass("on");
+        $(".step-finalCheck").addClass("on");
+    });
+
+
+    /* назад в шаг оплаты */
     $("#backToPayment").click(function(){
-        $(".step-finalCheck").removeClass("on");
+        $(".step-shipment").removeClass("on");
         $(".step-payment").addClass("on");
     });
+    
+     /*назад в шаг доставки */
+    $("#backToShipment").click(function(){
+        $(".step-finalCheck").removeClass("on");
+        $(".step-shipment").addClass("on");
+    });
+
+    /* меняю кнопку на оплата успешно прошла */
     $("#clickToPay_button").click(function(){
         $(".clickToPay_button").removeClass("on");
         $(".payment-success").addClass("on");
     });
-    
-    
+
 
     /* бутстрап табы */
     $('#my-tabs a').click(function (e) {
