@@ -9,7 +9,7 @@
     <title>tap2pay</title>
 
     <link href="stylesheets/normalize.min.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" rel="stylesheet" href="stylesheets/intlInputPhone.min.css">
+    <link type="text/css" rel="stylesheet" href="stylesheets/intlInputPhone.min.css">
     <link href="stylesheets/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="stylesheets/fonts.css" type="text/css" rel="stylesheet">
     <link href="stylesheets/font-awesome.min.css" type="text/css" rel="stylesheet">
@@ -18,7 +18,8 @@
     <link href="stylesheets/screen.css" type="text/css" rel="stylesheet">
     <link href="stylesheets/media.css" type="text/css" rel="stylesheet">
        
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>-->
+<script src="javascripts/jquery-2.2.2.js"></script>
 <!--    <script src="build/js/intlTelInput.js"></script>-->
 <!--
     <script>
@@ -41,26 +42,11 @@
     </script>
 -->
 
-  <script type="text/javascript" src="javascripts/creditly.js"></script>
-  <script type="text/javascript">
-$( document ).ready(function() {
+<script type="text/javascript" src="javascripts/creditly.js"></script>
 
+<script type="text/javascript">
+$( document ).ready(function() {    
     $(function() {
-      // For the gray theme
-      var grayThemeCreditly = Creditly.initialize(
-          '.creditly-wrapper.gray-theme .expiration-month-and-year',
-          '.creditly-wrapper.gray-theme .credit-card-number',
-          '.creditly-wrapper.gray-theme .security-code',
-          '.creditly-wrapper.gray-theme .card-type');
-
-      $(".creditly-gray-theme-submit").click(function(e) {
-        e.preventDefault();
-        var output = grayThemeCreditly.validate();
-        if (output) {
-          // Your validated credit card output
-          console.log(output);
-        }
-      });
 
       // For the blue theme
       var blueThemeCreditly = Creditly.initialize(
@@ -78,43 +64,8 @@ $( document ).ready(function() {
         }
       });
     });
-  
-    
-    var creditly = Creditly.initialize(
-    '.creditly-wrapper .expiration-month-and-year',
-    '.creditly-wrapper .credit-card-number',
-    '.creditly-wrapper .security-code',
-    '.creditly-wrapper .card-type');
-
-    $(".creditly-card-form .submit").click(function(e) {
-      e.preventDefault();
-      var output = creditly.validate();
-      if (output) {
-        // Do something with your credit card output.
-        console.log(output["number"]);
-        console.log(output["security_code"]);
-        console.log(output["expiration_month"]);
-        console.log(output["expiration_year"]);
-      }
-    });
-    
-    });
-  </script>
-  
-  <script type="text/javascript">
-    $(function() {
-      var switchThemes = function(e) {
-        $(".theme-navigation .nav").find("li").removeClass("active");
-        $(e.currentTarget).closest("li").addClass("active");
-        var target = $(e.currentTarget).attr("data-target");
-        $(".top-level-wrapper").hide();
-        $("." + target).show();
-      };
-
-      $(".blue-theme-switch").click(switchThemes);
-      $(".gray-theme-switch").click(switchThemes);
-    });
-  </script>
+});
+</script>
 
 
 <!--[if lt IE 9]>
@@ -251,10 +202,21 @@ $( document ).ready(function() {
                                 
                                 <div id="choose-card" class="choose-card choose-card_open">
                                     <h3>Select a credit card</h3>
-                                        <a href="#" class="choose-card__button"><i class="visa-ico-card"></i>Mom’s Card</a>
-<!--                                        <div class="gray-line"></div>-->
-                                        <a href="#" class="choose-card__button"><i class="masterCard-ico-card"></i>My Card</a>
-<!--                                        <div class="gray-line"></div>-->
+                                        <a href="#" class="choose-card__button"><p class="arrow-edit"></p><i class="visa-ico-card"></i>Mom’s Card</a>
+                                        <div class="edit-saved-card">
+                                            <p>4255 2345 1111 2222</p>
+                                            <p>02/16</p>
+                                            <p>123</p>
+                                            <p>Mom’s Card</p>
+                                        </div>
+                                        
+                                        <a href="#" class="choose-card__button"><p class="arrow-edit"></p><i class="masterCard-ico-card"></i>My Card</a>
+                                        <div class="edit-saved-card">
+                                            <p>4255 2345 1111 2222</p>
+                                            <p>02/16</p>
+                                            <p>123</p>
+                                            <p>Mom’s Card</p>
+                                        </div>
                                         <a href="#" class="addNewCard-button" id="addNewCard-button"><span>&#43;</span> Add new card</a>
                                 </div>
                                 
@@ -263,18 +225,16 @@ $( document ).ready(function() {
                                         <div class="credit-card-wrapper">
                                             <div class="first-row form-group">
                                                 <div class="card-number-input controls">
-            <!--                                        <label class="control-label">Card Number</label>-->
                                                     <input id="credit-card-number" class="number credit-card-number form-control" type="text" name="number" pattern="(\d*\s){3}\d*" inputmode="numeric" autocomplete="cc-number" autocompletetype="cc-number" x-autocompletetype="cc-number" placeholder="Card number" required>
                                                 </div>
-                                                <div class="half-input half-input_left controls">
-            <!--                                        <label class="control-label">Expiration</label>-->
+                                                <div class="half-input half-input_left controls"> 
+
                                                     <input class="expiration-month-and-year form-control"
                                                 type="text" name="expiration-month-and-year"
                                                 placeholder="MM / YY" pattern="[0-9]{2}.*[0-9]{2}" required>
                                                 </div>
                                                 <div class="half-input half-input_right controls">
-            <!--                                        <label class="control-label">CVV</label>-->
-                                                    <input class="security-code form-control"·
+                                                    <input class="security-code form-control"
                                                     inputmode="numeric"
                                                     pattern="[0-9]{3}"
                                                     type="text" name="security-code"
@@ -358,8 +318,14 @@ $( document ).ready(function() {
                 <div class="step-shipment">
                     <div class="saved-locations on">
                         <h3>What addres use for shipment?</h3>
-                    <a href="#" class="shipment-address_button special-underline-border"><img src="images/location-icon.png" alt="loaction" class="location-icon"> <span>Minsk, Kuprevicha st, 1/5</span></a>
-                    <a href="#" class="shipment-address_button special-underline-border"><img src="images/location-icon.png" alt="loaction" class="location-icon"> <span> Saint Petersburg, Admiralteyskaya st., 44 </span></a>
+                    <a href="#" class="shipment-address_button special-underline-border"><img src="images/location-icon.png" alt="loaction" class="location-icon"><span>Minsk, Kuprevicha st, 1/5</span><p class="arrow-edit"></p></a>
+                    <p class="edit-shipment-address">
+                        Minsk, Kuprevicha st, 1/5 <span>edit</span>
+                    </p>
+                    <a href="#" class="shipment-address_button special-underline-border"><img src="images/location-icon.png" alt="loaction" class="location-icon"><span>Saint Petersburg, Admiralteyskaya st., 44 </span><p class="arrow-edit"></p></a>
+                    <p class="edit-shipment-address">
+                        Saint Petersburg, Admiralteyskaya st., 44 <span>edit</span>
+                    </p>
                     <a href="#" class="addNewAddress-button" id="addNewAddress-button"><span>&#43;</span> Add new address</a>
                     </div>
                     <form action="#" class="new-address" method="post">
@@ -376,11 +342,11 @@ $( document ).ready(function() {
                 
                 <div class="step-finalCheck step-finalCheck_closed">
                     <h3>Payment method</h3>
-                    <a href="#" class="choose-card__button special-underline-border"><i class="masterCard-ico-card"></i>My Card</a>
+                    <a href="#" class="choose-card__button special-underline-border"><i class="masterCard-ico-card"></i>My Card<p class="arrow-edit"></p></a>
                     <p class="not-enough-money">Not enough money on this account. Please,
 choose another payment method.</p>
                     <h3 class="shipment-address_title">Shipment address</h3>
-                    <a href="#" class="shipment-address_button special-underline-border"><img src="images/location-icon.png" alt="loaction" class="location-icon"><span>Minsk, Kuprevicha st, 1/5</span></a>
+                    <a href="#" class="shipment-address_button special-underline-border"><img src="images/location-icon.png" alt="loaction" class="location-icon"><span>Minsk, Kuprevicha st, 1/5</span><p class="arrow-edit"></p></a>
                 </div>
                 
             </div>

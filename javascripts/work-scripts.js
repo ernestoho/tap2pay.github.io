@@ -1,3 +1,4 @@
+
 $( document ).ready(function() {
 
     /* активация кнопок подсказки*/
@@ -77,8 +78,29 @@ $( document ).ready(function() {
         $("#backToSavedLocations").addClass("on");
     });
 
+    //
+    //    /* перейти на сохраненную карту */
+    //    $(".choose-card__button .arrow-edit").click(function(){
+    //        $(".choose-card__button").hide();
+    //        $(this).parent().next(".edit-saved-card").show();
+    //    });
+
+    /* перейти на сохраненный адрес доставки */
+    $(".arrow-edit").click(function(){
+        $(".saved-locations h3").hide();
+        $(".saved-locations a").hide();
+        $(".saved-locations a").hide();
+        $(this).parent().next(".edit-shipment-address").addClass("on");
+        $("#backToPayment").removeClass("on");
+        $("#backToSavedLocations").addClass("on");
+    });
+
     /* переход внутри step-shipment = вернуться к сохраненным адресам*/
     $("#backToSavedLocations").click(function(){
+        $(".saved-locations h3").show();
+        $(".saved-locations a").show();
+        $(".saved-locations a").show();
+        $(".edit-shipment-address").removeClass("on");
         $(".backToPayment").addClass("on");
         $(".backToSavedLocations").removeClass("on");
         $(".saved-locations").addClass("on");
@@ -102,6 +124,8 @@ $( document ).ready(function() {
     $("#backToShipment").click(function(){
         $(".step-finalCheck").removeClass("on");
         $(".step-shipment").addClass("on");
+        $(".new-address").removeClass("on");
+        $(".saved-locations").addClass("on");
     });
 
     /* меняю кнопку на оплата успешно прошла */
@@ -134,9 +158,6 @@ $( document ).ready(function() {
 //        $("#button-save-card").click();
 //    });
 
-    
-    
-    
 
     /* показать или скрыть стрелочку вернуться к выбору карт */
 //    $("#addNewCard-button").click(function(){

@@ -895,28 +895,12 @@ h2.step-payment{
     display: block;
     width: calc(100% + 20px);
     margin: 0;
-    padding: 5px 0 5px 0px;
-    padding: 0;
+    padding: 0px 45px 0px 0px;
     position: relative;
     border-bottom: 1px solid #e3e3e3;
     text-align: left;
     height: 51px;
     line-height: 51px;
-    &:after{
-        position: absolute;
-        right: 19px;
-        top: 50%;
-        margin-top: -5px;
-        display: block;
-        content: "";
-        width: 6px;
-        height: 10px;
-//        outline: 1px solid red;
-        background-image: url("../images/icons.png");
-        background-position: -440px -14px;
-//        background-position: -387px -14px;
-        background-repeat:  no-repeat;
-    }
     i{
         display: inline-block;
         vertical-align: middle;
@@ -932,6 +916,24 @@ h2.step-payment{
     &:hover, &:focus, &:active, &:visited{
         text-decoration: none;
     }
+}
+.edit-saved-card{
+    display: none;
+    outline: 1px solid red;
+}
+.arrow-edit{
+    position: absolute;
+    right: 0px;
+    top: 0;
+    display: block;
+    content: "";
+    margin: 0;
+    width: 45px;
+    height: 40px;
+    height: 100%;
+    background-image: url("../images/arrow-edit.svg");
+    background-position: center center;
+    background-repeat:  no-repeat;
 }
 .shipment-address_button{
     @extend .choose-card__button;
@@ -1169,7 +1171,6 @@ h2.step-payment{
     position: relative;
     padding-top: 1px;
     margin-top: 16px;
-    border: 1px solid #fff;
     &:after{
         position: absolute;
         top: 12px;
@@ -1228,7 +1229,6 @@ h2.step-payment{
         margin-top: 0px;    
         width: calc(100% + 19px);
         height: 59px;
-        padding: 0px 0;
         height: auto;
         border-top: none;
         img{
@@ -1238,8 +1238,9 @@ h2.step-payment{
 //            display: table-cell;
             display: inline-block;
             vertical-align: middle;
+            text-align: left;
             line-height: 1.2;
-            padding: 0 30px 0 10px;
+            padding: 0 0px 0 10px;
             width: calc(100% - 30px);
         }
     }
@@ -1283,6 +1284,17 @@ h2.step-payment{
     display: none;
 }
 .backToSavedLocations.on{
+    display: block;
+}
+.edit-shipment-address{
+    display: none;
+    width: 100%;
+    outline: 1px solid red;
+    span{
+        color: aqua;
+    }
+}
+.edit-shipment-address.on{
     display: block;
 }
 .new-address-input{
