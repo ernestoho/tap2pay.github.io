@@ -161,12 +161,12 @@ h3{
     }
 }
 .form-control{
-    box-shadow: none;
-    outline: none;
+    box-shadow: none !important;
+    outline: none !important;
     &:focus, &:active{
-        box-shadow: none;
-        outline: none;
-        border-color: #ccc;
+        box-shadow: none !important;
+        outline: none !important;
+        border-color: #ccc !important;
     }
 }
 .modal-title{
@@ -1046,7 +1046,7 @@ h2.step-payment{
         background-position: -337px 0px;
         background-repeat:  no-repeat;
     }
-    input{
+    .credit-card-number{
         border-color: #c5c5c5;
         border-bottom: 1px solid #c5c5c5;
         border-bottom-left-radius: 0px;
@@ -1064,7 +1064,7 @@ h2.step-payment{
 .half-input{
     width: 50%;
     float: left;
-    input{
+    .form-control{
         border-color: #c5c5c5;
         border-top: none !important;
         box-shadow: none !important;
@@ -1091,7 +1091,7 @@ h2.step-payment{
         background-position: -355px 0px;
         background-repeat:  no-repeat;
     }
-    input{
+    .form-control{
         border-color: #c5c5c5;
         border-top-right-radius: 0px !important;
         border-top-left-radius: 0px !important;
@@ -1112,7 +1112,7 @@ h2.step-payment{
         background-position: -371px 0px;
         background-repeat:  no-repeat;
     }
-    input{
+    .form-control{
         border-top-left-radius: 0px !important;
         border-top-right-radius: 0px !important;
         border-bottom-left-radius: 0px !important;
@@ -1122,10 +1122,14 @@ h2.step-payment{
 .control-label{
     margin: 21px 0 3px 0;
     letter-spacing: -0.2px;
-    font-weight: normal;
+    font-weight: normal !important;
     font-size: 15px;
     color: $light-gray-text;
     font-family: "HelveticaNeueCyr-Roman", Arial;
+}
+.creditly-wrapper .form-control:focus{
+	border-color: #ccc;
+	box-shadow: none;
 }
 .billing-address-name{
     height: 37px;
@@ -1162,6 +1166,7 @@ h2.step-payment{
 .creditly-blue-theme-submit{
     display: block;
     width: 100%;
+	
 }
 .payment-continue{
     display: none;
@@ -1179,6 +1184,11 @@ h2.step-payment{
 }
 .button-save-card-InFooter{
     
+}
+
+/*creditly styles change*/
+.creditly-wrapper .first-row{
+	margin-bottom: 0px;
 }
 
 
