@@ -1,3 +1,4 @@
+<!-- saved from url=(0014)about:internet -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -13,64 +14,37 @@
     <link href="stylesheets/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="stylesheets/fonts.css" type="text/css" rel="stylesheet">
     <link href="stylesheets/font-awesome.min.css" type="text/css" rel="stylesheet">
-<!--    <link rel="stylesheet" href="stylesheets/creditly.css" type="text/css">-->
-<!--    <link  href="build/css/intlTelInput.css" rel="stylesheet"  type="text/css">-->
     <link href="stylesheets/screen.css" type="text/css" rel="stylesheet">
     <link href="stylesheets/media.css" type="text/css" rel="stylesheet">
        
-<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>-->
-<script src="javascripts/jquery-2.2.2.js"></script>
-<!--    <script src="build/js/intlTelInput.js"></script>-->
-<!--
-    <script>
-        $(function() {
-            $("#mobile-number").intlTelInput({
-            allowExtensions: true,
-            autoFormat: false,
-            autoHideDialCode: false,
-            autoPlaceholder: false,
-            defaultCountry: "auto",
-            ipinfoToken: "yolo",
-            nationalMode: false,
-            numberType: "MOBILE",
-            //onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
-            //preferredCountries: ['cn', 'jp'],
-            preventInvalidNumbers: true,
-            utilsScript: "lib/libphonenumber/build/utils.js"
-            });
-        });
-    </script>
--->
+	<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>-->
+	<script src="javascripts/jquery-2.2.2.js"></script>
+	<script type="text/javascript" src="javascripts/creditly.js"></script>
+	<script type="text/javascript">	
+	$( document ).ready(function() {    
+		var creditly = Creditly.initialize(
+			'.creditly-wrapper .expiration-month-and-year',
+			'.creditly-wrapper .credit-card-number',
+			'.creditly-wrapper .security-code',
+			'.creditly-wrapper .card-type');
 
-<script type="text/javascript" src="javascripts/creditly.js"></script>
+		$(".creditly-card-form .submit").click(function(e) {
+		  e.preventDefault();
+		  var output = creditly.validate();
+		  if (output) {
+			// Do something with your credit card output.
+			console.log(output["number"]);
+			console.log(output["security_code"]);
+			console.log(output["expiration_month"]);
+			console.log(output["expiration_year"]);
+		  }
+		});	
+	});
+	</script>
 
-<script type="text/javascript">
-$( document ).ready(function() {    
-    $(function() {
-
-      // For the blue theme
-      var blueThemeCreditly = Creditly.initialize(
-          '.creditly-wrapper.blue-theme .expiration-month-and-year',
-          '.creditly-wrapper.blue-theme .credit-card-number',
-          '.creditly-wrapper.blue-theme .security-code',
-          '.creditly-wrapper.blue-theme .card-type');
-
-      $(".creditly-blue-theme-submit").click(function(e) {
-        e.preventDefault();
-        var output = blueThemeCreditly.validate();
-        if (output) {
-          // Your validated credit card output
-          console.log(output);
-        }
-      });
-    });
-});
-</script>
-
-
-<!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
-<![endif]-->
+	<!--[if lt IE 9]>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+	<![endif]-->
    
     <link rel="shortcut icon" href="images/favicon/.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="images/favicon/.png">
@@ -110,8 +84,9 @@ $( document ).ready(function() {
                 <h2 class="modal-title step-authorization">
                     <span class="step-back" id="backToChooseMetod"></span>Authorization
                 </h2><!-- класс для активации авторизации  -->
+                
                 <h2 class="modal-title step-payment">
-                    <span class="step-back" id="backToSelectCreditCard"></span>Payment
+                    <span class="step-back backToAuthorization on" id="backToAuthorization"></span><span class="step-back" id="backToSelectCreditCard"></span>Payment
                 </h2><!-- класс для активации платежа  -->
                 
                 <h2 class="modal-title step-shipment">
@@ -121,8 +96,8 @@ $( document ).ready(function() {
                 <h2 class="modal-title step-finalCheck">
                     <span class="step-back" id="backToShipment"></span>Final check
                 </h2><!-- класс активации шага final check -->
+                
                 <p id="phone-number" class="phone-number step-payment step-shipment step-finalCheck">+ 375 (29) 12-34-567</p>
-<!--                <h2 class="modal-title step-shipment">Shipment</h2>-->
             </div>
             
             <div class="modal-body">
@@ -193,8 +168,8 @@ $( document ).ready(function() {
                         <!-- Навигация -->
                         <ul class="nav nav-tabs payment-tabs" role="tablist">
                             <li class="active"><a href="#card-tab" aria-controls="card-tab" role="tab" data-toggle="tab">Card</a></li>
-                            <li class="select-none"><a href="#paypal-tab" aria-controls="paypal-tab" role="tab" data-toggle="tab"></a></li>
-                            <li class="select-none"><a href="#erip-tab" aria-controls="erip-tab" role="tab" data-toggle="tab"></a></li>
+                            <li class="without-saving-button select-none"><a href="#paypal-tab" aria-controls="paypal-tab" role="tab" data-toggle="tab"></a></li>
+                            <li class="without-saving-button select-none"><a href="#erip-tab" aria-controls="erip-tab" role="tab" data-toggle="tab"></a></li>
                         </ul>
                         <!-- Содержимое вкладок -->
                         <div class="tab-content payment-tabs-container__tab-content">
@@ -204,18 +179,28 @@ $( document ).ready(function() {
                                     <h3>Select a credit card</h3>
                                         <a href="#" class="choose-card__button"><p class="arrow-edit"></p><i class="visa-ico-card"></i>Mom’s Card</a>
                                         <div class="edit-saved-card">
-                                            <p>4255 2345 1111 2222</p>
+                                            <span>Card Number</span>
+                                            <p>1111 1111 1111 1111</p>
+                                            <span>MM/YY</span>
                                             <p>02/16</p>
+                                            <span>CCV</span>
                                             <p>123</p>
+                                            <span>Card Name</span>
                                             <p>Mom’s Card</p>
+                                            <span class="edit-address-span">edit</span>
                                         </div>
                                         
                                         <a href="#" class="choose-card__button"><p class="arrow-edit"></p><i class="masterCard-ico-card"></i>My Card</a>
                                         <div class="edit-saved-card">
+                                            <span>Card Number</span>
                                             <p>4255 2345 1111 2222</p>
+                                            <span>MM/YY</span>
                                             <p>02/16</p>
+                                            <span>CCV</span>
                                             <p>123</p>
-                                            <p>Mom’s Card</p>
+                                            <span>Card Name</span>
+                                            <p>My Card</p>
+                                            <span class="edit-address-span">edit</span>
                                         </div>
                                         <a href="#" class="addNewCard-button" id="addNewCard-button"><span>&#43;</span> Add new card</a>
                                 </div>
@@ -320,11 +305,11 @@ $( document ).ready(function() {
                         <h3>What addres use for shipment?</h3>
                     <a href="#" class="shipment-address_button special-underline-border"><img src="images/location-icon.png" alt="loaction" class="location-icon"><span>Minsk, Kuprevicha st, 1/5</span><p class="arrow-edit"></p></a>
                     <p class="edit-shipment-address">
-                        Minsk, Kuprevicha st, 1/5 <span>edit</span>
+                        <span>Address: </span><span class="address-span">Minsk, Kuprevicha st, 1/5 </span><span class="edit-address-span">edit</span>
                     </p>
                     <a href="#" class="shipment-address_button special-underline-border"><img src="images/location-icon.png" alt="loaction" class="location-icon"><span>Saint Petersburg, Admiralteyskaya st., 44 </span><p class="arrow-edit"></p></a>
                     <p class="edit-shipment-address">
-                        Saint Petersburg, Admiralteyskaya st., 44 <span>edit</span>
+                        <span>Address: </span><span class="address-span">Saint Petersburg, Admiralteyskaya st., 44</span><span class="edit-address-span">edit</span>
                     </p>
                     <a href="#" class="addNewAddress-button" id="addNewAddress-button"><span>&#43;</span> Add new address</a>
                     </div>
@@ -375,18 +360,16 @@ choose another payment method.</p>
     </div>
 </div>
 
+	<script src="javascripts/intlInputPhone.js"></script>
 
+	<script>
+	   $( document ).ready(function() {    
+			$('.input-phone').intlInputPhone();
+		});
+	</script>
 
-<script src="javascripts/intlInputPhone.min.js"></script>
-<script>
-    $(function() {
-        $('.input-phone').intlInputPhone(
-        );
-    });
-</script>
-
-<script src="javascripts/bootstrap.min.js"></script>
-<script src="javascripts/work-scripts.js"></script>
+	<script src="javascripts/bootstrap.min.js"></script>
+	<script src="javascripts/work-scripts.js"></script>
 
 </div>
 </body>

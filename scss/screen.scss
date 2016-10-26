@@ -160,9 +160,18 @@ h3{
         content: "";
     }
 }
-
+.form-control{
+    box-shadow: none;
+    outline: none;
+    &:focus, &:active{
+        box-shadow: none;
+        outline: none;
+        border-color: #ccc;
+    }
+}
 .modal-title{
     margin-top: 47px;
+	margin-bottom: 3px;
     font-family: "HelveticaNeueCyr-Medium", Arial;
     font-size: 18px;
     display: block;
@@ -354,10 +363,11 @@ h3{
 /*стили выбора метода оплаты*/
 .step-choose-method{
     display: none;
-}
-.step-choose-method.on{
     display: block;
 }
+//.step-choose-method.on{
+//    display: block;
+//}
 /* временная активация , деактивация*/
 .modal-header{
     padding-bottom: 13px;
@@ -417,9 +427,9 @@ h3{
     color: #fff;
     font-size: 15px;
     padding: 0 0 0 13px;
-    box-shadow: 0 0 1px 1px #ccc;
+    box-shadow: 0 0 1px 1px #c5c5c5;
     &:hover{
-        box-shadow: 0 0 1px 1px #aaa;
+        box-shadow: 0 0 2px 2px #c5c5c5;
         color: #fff;
     }
     i{
@@ -514,9 +524,9 @@ h3{
     margin-bottom: 3px;
     display: none;
 }
-.step-authorization.on{
-    display: block;
-}
+//.step-authorization.on{
+//    display: block;
+//}
 .phone-number-form{
     margin-top: 5px;
 }
@@ -718,13 +728,11 @@ input[type="tel"]:valid {
 .step-payment{
     display: none;
 }
-.step-payment.on{
-    display: block;
-}
+//.step-payment.on{
+//    display: block;
+//}
 h2.step-payment{
     margin: 47px auto 3px auto;
-    margin: 47px auto 0px auto;
-//    display: block;
 }
 .phone-number{
     max-width: 170px;
@@ -738,8 +746,8 @@ h2.step-payment{
     padding: 0px 10px 0px 10px;
     text-align: center;
     margin: auto;
-    left: 0;
-    right: 0;
+	left: 50%;
+	margin-left: -25%;
     color: $dark-gray-text !important;
     font-size: 15px;
     border-radius: 20px;
@@ -856,6 +864,12 @@ h2.step-payment{
     border-bottom-color: #afafaf;
     border-bottom-color: transparent;
 }
+//.backToAuthorization{
+//    display: none;
+//}
+//.backToAuthorization.on{
+//    display: block;
+//}
 
 
 /* стили card-tab вкладки */
@@ -918,8 +932,17 @@ h2.step-payment{
     }
 }
 .edit-saved-card{
+    padding-top: 15px;
     display: none;
-    outline: 1px solid red;
+    span{
+        display: block;
+        font-size: 14px;
+        font-family: "HelveticaNeueCyr-Medium", Arial;
+    }
+    p{
+        margin: 0px 0 5px 0;
+        font-size: 12px;
+    }
 }
 .arrow-edit{
     position: absolute;
@@ -937,6 +960,9 @@ h2.step-payment{
 }
 .shipment-address_button{
     @extend .choose-card__button;
+    span{
+        padding-left: 5px;
+    }
 }
 /*переделать что бы margin не влиял на смещение имени карточки */
 .visa-ico-card{
@@ -1179,7 +1205,6 @@ h2.step-payment{
         content: "";
         width: 15px;
         height: 13px;
-//        outline: 1px solid red;
         background-image: url("../images/icons.png");
         background-position: -485px -20px;
         background-repeat:  no-repeat;
@@ -1206,9 +1231,9 @@ h2.step-payment{
 .step-shipment{
     display: none;
 }
-.step-shipment.on{
-    display: block;
-}
+//.step-shipment.on{
+//    display: block;
+//}
 .location-icon{
     display: inline-block;
     width: 20px;
@@ -1219,9 +1244,16 @@ h2.step-payment{
     position: relative;
     top: -2px;
 }
-.shipment-address_button{
-    img{
-        margin-right: 10px;
+.shipment-address_button, .choose-card__button{
+    &:focus,&:active{
+//        box-shadow: 1px 2px 2px #ccc;
+        outline: none;
+//        box-shadow: inset 0px 0px 15px #eee;
+//        padding-left: 10px;
+        color: $dark-gray-text;
+    }
+    &:hover{
+        color: $dark-gray-text;
     }
 }
 .step-shipment {
@@ -1264,39 +1296,64 @@ h2.step-payment{
 }
 .saved-locations{
     display: none;
-}
-.saved-locations.on{
     display: block;
 }
+//.saved-locations.on{
+//    display: block;
+//}
 .new-address{
     display: none;
 }
-.new-address.on{
-    display: block;
-}
-.backToPayment{
-    display: none;
-}
-.backToPayment.on{
-    display: block;
-}
+//.new-address.on{
+//    display: block;
+//}
+//.backToPayment{
+//    display: none;
+//}
+//.backToPayment.on{
+//    display: block;
+//}
 .backToSavedLocations{
     display: none;
 }
-.backToSavedLocations.on{
-    display: block;
-}
+//.backToSavedLocations.on{
+//    display: block;
+//}
 .edit-shipment-address{
     display: none;
     width: 100%;
-    outline: 1px solid red;
+    padding: 5px 0;
+    font-size: 14px;
+    letter-spacing: 0.5px;
     span{
-        color: aqua;
+        display: inline-block;
+        margin: 15px 0 0 0;
+        width: 100%;
+        font-family: "HelveticaNeueCyr-Medium", Arial;
     }
 }
-.edit-shipment-address.on{
-    display: block;
+span.address-span{
+    display: inline-block;
+    width: auto;
+    margin: 10px 0 0 0;
+    font-family: "HelveticaNeueCyr-Roman", Arial;
 }
+span.edit-address-span{
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    color: $medium-blue;
+    letter-spacing: 0.5px;
+    text-align: right;
+    font-family: "HelveticaNeueCyr-Roman", Arial;
+    &:hover{
+        cursor: pointer;
+        color: deepskyblue;
+    }
+}
+//.edit-shipment-address.on{
+//    display: block;
+//}
 .new-address-input{
     margin-top: 18px;
 }
@@ -1375,7 +1432,8 @@ h2.step-payment{
 }
 
 .clickToPay_button{
-    display: none;
+//    display: none;
+    display: block;
 }
 .clickToPay_button, .clickToPay_button:hover{
     color: #fff;
@@ -1390,14 +1448,17 @@ h2.step-payment{
     background: linear-gradient(to bottom,  #4ea8fb 0%,#2c94f5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4ea8fb', endColorstr='#2c94f5',GradientType=0 ); /* IE6-9 */
 }
-.clickToPay_button.on{
-    display: block;
-}
+//.clickToPay_button.on{
+//    display: block;
+//}
 .payment-success{
     display: none;
     vertical-align: 37px;
     letter-spacing: 0.5px;
 }
+//.payment-success.on{
+//    display: block;
+//}
 .payment-success, .payment-success:hover{
     color: #fff;
     text-shadow: 1px -1px  1px #20b119;
@@ -1409,9 +1470,6 @@ h2.step-payment{
     background: -webkit-linear-gradient(top,  #45e548 0%,#37c72c 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom,  #45e548 0%,#37c72c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45e548', endColorstr='#37c72c',GradientType=0 ); /* IE6-9 */
-}
-.payment-success.on{
-    display: block;
 }
 .icon-success{
     display: inline-block;
@@ -1428,7 +1486,9 @@ h2.step-payment{
 
 
 
-
+a,a:focus,a:hover,a:active,a.active{
+	outline: none;
+}
 
 /* запретить выделение ерип и пайпал */
 .select-none{
