@@ -1042,7 +1042,7 @@ h2.step-payment{
         content: "";
         width: 16px;
         height: 12px;
-        top: 16px;
+        top: 15px;
         left: 9px;
         background-image: url("../images/icons.png");
         background-position: -337px 0px;
@@ -1074,7 +1074,7 @@ h2.step-payment{
         content: "";
         width: 14px;
         height: 14px;
-        top: 12px;
+        top: 10px;
         left: 9px;
         background-image: url("../images/icons.png");
         background-position: -355px 0px;
@@ -1093,7 +1093,7 @@ h2.step-payment{
         content: "";
         width: 12px;
         height: 13px;
-        top: 12px;
+        top: 10px;
         left: 9px;
         background-image: url("../images/icons.png");
         background-position: -371px 0px;
@@ -1119,6 +1119,8 @@ h2.step-payment{
 .credit-card-section .error input {
 	color: red;
 	border: 1px solid red;
+}
+.half-input_right.error{
 	z-index: 10;
 }
 .Valid-class input{
@@ -1191,23 +1193,6 @@ h2.step-payment{
 .button-save-card{
 //    display: none;
 }
-.button-save-card-InFooter{
-    
-}
-.button-save-card-InFooter{
-    
-}
-
-/*creditly styles change*/
-.creditly-wrapper .first-row{
-	margin-bottom: 0px;
-}
-
-
-
-
-
-
 
 /*стили paypal вкладки*/
 .paypal-big-icon{
@@ -1253,9 +1238,6 @@ h2.step-payment{
 .step-shipment{
     display: none;
 }
-//.step-shipment.on{
-//    display: block;
-//}
 .location-icon{
     display: inline-block;
     width: 20px;
@@ -1268,10 +1250,7 @@ h2.step-payment{
 }
 .shipment-address_button, .choose-card__button{
     &:focus,&:active{
-//        box-shadow: 1px 2px 2px #ccc;
         outline: none;
-//        box-shadow: inset 0px 0px 15px #eee;
-//        padding-left: 10px;
         color: $dark-gray-text;
     }
     &:hover{
@@ -1320,27 +1299,12 @@ h2.step-payment{
     display: none;
     display: block;
 }
-//.saved-locations.on{
-//    display: block;
-//}
 .new-address{
     display: none;
 }
-//.new-address.on{
-//    display: block;
-//}
-//.backToPayment{
-//    display: none;
-//}
-//.backToPayment.on{
-//    display: block;
-//}
 .backToSavedLocations{
     display: none;
 }
-//.backToSavedLocations.on{
-//    display: block;
-//}
 .edit-shipment-address{
     display: none;
     width: 100%;
@@ -1373,9 +1337,6 @@ span.edit-address-span{
         color: deepskyblue;
     }
 }
-//.edit-shipment-address.on{
-//    display: block;
-//}
 .new-address-input{
     margin-top: 18px;
 }
