@@ -559,29 +559,21 @@ h3{
 .intl-tel-input.allow-dropdown{
     width: 100%;
 }
-//.phone-number-input:focus:invalid {
-//    border: 1px solid $red;
-//    &:focus,&:active{
-//        border: 1px solid $red;
-//    }
-//    color: black;
-//}
-//
-//input[type="tel"]:valid {
-//    position: relative;
-//    background-color: #e5f7fd;
-//    background-image: url(../images/ok-blue.png);
-//    background-repeat: no-repeat;
-//    background-position: 230px 11px;
-//    &:focus,&:active{
-//        
-//    }
-//}
+#phoneNumber.Valid-class{
+//	border-color: #40db3e !important;
+	background-color: #e5f7fd;
+	background-image: url('../images/checked.svg');
+	background-repeat: no-repeat;
+	background-position: 122px 7px;
+	padding-right: 35px;
+}
+#phoneNumber.Invalid-class{
+	border-color: red !important;
+}
+
 .phone-helper{
     display: inline-block;
-//    border-right: 1px solid $border-gray;
     padding: 0;
-//    outline: 1px solid red;
     position: absolute;
     height: 36px;
     width: 100px;

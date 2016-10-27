@@ -189,6 +189,18 @@ $( document ).ready(function() {
 		};
 	});
 	
+	$('#phoneNumber').blur(function() {
+		var phoneNumberInput = /^[0123456789+]{9,}/i;
+		if (phoneNumberInput.test(this.value)) {
+			$('.phoneNumber').removeClass("Valid-class Invalid-class");
+			$('.phoneNumber').addClass("Valid-class");
+		} else {
+			$('.phoneNumber').removeClass("Valid-class Invalid-class");
+			$('.phoneNumber').addClass("Invalid-class");
+		};
+	});
+	
+	
     /* связать клик по кнопке в футере с кликом по кнопке в форме, которая скрыта , сделано для того, что бы не переносить кнопку из формы в футер */
 	//    $("#button-save-card-InFooter").click(function(){
 	//        $("#button-save-card").click();

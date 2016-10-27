@@ -25,22 +25,36 @@
   /* line 84, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
   .phoneNumber {
     box-shadow: none !important;
-    border: 1px solid #ccc !important; } }
+    border: 1px solid #ccc !important; }
+  /* line 89, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
+  #phoneNumber.Invalid-class {
+    background-image: url("../images/mob-error.png");
+    background-repeat: no-repeat;
+    background-position: 122px 8px;
+    padding-right: 35px;
+    box-shadow: 0 0px 2px 0px red !important; }
+  /* line 96, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
+  .popover-content, .popover {
+    color: #fff;
+    background-color: red; }
+  /* line 103, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
+  .popover.right > .arrow:after {
+    border-right-color: red; } }
 
 @media only screen and (max-width: 630px) {
-  /* line 91, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
+  /* line 110, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
   .hint-container__text {
     width: 125px; } }
 
 @media only screen and (max-width: 580px) {
-  /* line 98, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
+  /* line 117, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
   .hint-container__text {
     width: 105%;
     top: 30px;
     transform: translate(0, 0);
     left: -2.5%;
     box-shadow: 1px 1px 2px 1.5px #777; }
-    /* line 104, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
+    /* line 123, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
     .hint-container__text:after {
       top: -1px;
       margin-top: -5px;
@@ -54,16 +68,16 @@
       opacity: 0.99; } }
 
 @media only screen and (max-width: 480px) {
-  /* line 122, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
+  /* line 141, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
   .card-container {
     margin-top: 20%; } }
 
 @media only screen and (max-width: 425px) {
-  /* line 130, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
+  /* line 149, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
   .input-group-btn .dropdown-menu {
     width: 260px;
     max-height: 300px; }
-  /* line 135, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
+  /* line 154, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
   .dropdown-menu > li > a {
     padding-left: 10px; } }
 

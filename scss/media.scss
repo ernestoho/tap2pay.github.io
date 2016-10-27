@@ -85,6 +85,25 @@
         box-shadow: none !important;
         border: 1px solid #ccc !important;
     }
+
+	#phoneNumber.Invalid-class{
+		background-image: url('../images/mob-error.png');
+		background-repeat: no-repeat;
+		background-position: 122px 8px;
+		padding-right: 35px;
+		box-shadow: 0 0px 2px 0px red !important;
+	}
+	.popover-content,.popover{
+		color: #fff;
+		background-color: red;
+	}
+	.popover.right > .arrow{
+		
+	}
+	.popover.right>.arrow:after{
+		border-right-color: red;
+	}
+	
 }
 
 @media only screen and (max-width : 630px){
