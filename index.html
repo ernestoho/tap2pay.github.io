@@ -14,7 +14,6 @@
     <link href="stylesheets/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="stylesheets/fonts.css" type="text/css" rel="stylesheet">
     <link href="stylesheets/font-awesome.min.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="stylesheets/styles.css">
 	<link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <link href="stylesheets/screen.css" type="text/css" rel="stylesheet">
     <link href="stylesheets/media.css" type="text/css" rel="stylesheet">
@@ -111,26 +110,17 @@
                             	<div class="send-container">
                             		<input type="submit" value="Send SMS-Code" id="phone-validation-submit" class="submit-button gradient-bg step-authorization-submit" name="name008">
                             	</div>
-                            	
-                            <!--  1) отправка sending либо подменяется на инпут, либо заменяется кнопкой 2) button -->
-<!--
-                            <div class="send-container sending">
-                                <input type="submit" value="Sending..." class="submit-button gradient-bg step-authorization-submit">
-                            </div>
--->
-                            <!-- 2) кнопка  button-->
-<!--                            <button type="button" class="modal-button icon-button gradient-bg sending"> <img src="images/loading1.gif" alt="loading" class="load"> Sending...</button>                         -->
-<!--
+
+                            <button type="button" class="modal-button icon-button gradient-bg sending"> <img src="images/loading-gif.gif" alt="loading" class="load"> Sending...</button>                         
                             <div class="enter-sms-code" >
                                 <input type="text" class="sms-code-input" id="sms-code" placeholder="Enter SMS-Code..." required>
                                 <p>SMS-Code has been successfully sended to you.</p>
-  <p>You will get a SMS-Code on your phone in a few seconds.</p>
+								<!--  <p>You will get a SMS-Code on your phone in a few seconds.</p>-->
 
                               <p class="sending-process"><img src="images/loading-gif.gif" alt="loading">Sending SMS to your phone...</p>
                                
                                 <p class="dont-get-code">Don’t get a SMS-Code? <a href="#">Send it again.</a></p>
                             </div>
--->
                             
                         </div>
                     </form>
@@ -160,7 +150,7 @@
                                             <p>123</p>
                                             <span>Card Name</span>
                                             <p>Mom’s Card</p>
-                                            <span class="edit-address-span">edit</span>
+                                            <span class="delete-address-span">delete</span>
                                         </div>
                                         
                                         <a href="#" class="choose-card__button"><p class="arrow-edit"></p><i class="masterCard-ico-card"></i>My Card</a>
@@ -173,7 +163,7 @@
                                             <p>123</p>
                                             <span>Card Name</span>
                                             <p>My Card</p>
-                                            <span class="edit-address-span">edit</span>
+                                            <span class="delete-address-span">delete</span>
                                         </div>
                                         <a href="#" class="addNewCard-button" id="addNewCard-button"><span>&#43;</span> Add new card</a>
                                 </div>
@@ -231,17 +221,27 @@
                         <h3>What addres use for shipment?</h3>
                     <a href="#" class="shipment-address_button special-underline-border"><img src="images/location-icon.png" alt="loaction" class="location-icon"><span>Minsk, Kuprevicha st, 1/5</span><p class="arrow-edit"></p></a>
                     <p class="edit-shipment-address">
-                        <span>Address: </span><span class="address-span">Minsk, Kuprevicha st, 1/5 </span><span class="edit-address-span">edit</span>
+                        <span>Address: </span><span class="address-span">Minsk, Kuprevicha st, 1/5 </span><span class="delete-address-span">delete</span>
                     </p>
                     <a href="#" class="shipment-address_button special-underline-border"><img src="images/location-icon.png" alt="loaction" class="location-icon"><span>Saint Petersburg, Admiralteyskaya st., 44 </span><p class="arrow-edit"></p></a>
                     <p class="edit-shipment-address">
-                        <span>Address: </span><span class="address-span">Saint Petersburg, Admiralteyskaya st., 44</span><span class="edit-address-span">edit</span>
+                        <span>Address: </span><span class="address-span">Saint Petersburg, Admiralteyskaya st., 44</span><span class="delete-address-span">delete</span>
                     </p>
                     <a href="#" class="addNewAddress-button" id="addNewAddress-button"><span>&#43;</span> Add new address</a>
                     </div>
                     <form action="#" class="new-address" method="post">
                         <h3>New address</h3>
-                        <input type="text" class="new-address-input form-control" placeholder="Enter address..." required>
+                        <input type="text" class="name-of-recipient-input form-control" placeholder="Name of recipient" required>
+<!--                        <h3>Country</h3>-->
+                        <input type="text" class="country-input form-control" placeholder="Country" required>
+<!--                        <h3>Сity</h3>-->
+                        <input type="text" class="city-input form-control" placeholder="Сity" required>
+<!--                        <h3>Street</h3>-->
+<!--                        <input type="text" class="street-input form-control" placeholder="Enter address..." required>-->
+<!--                        <h3>Apartment, house</h3>-->
+                        <input type="text" class="apartment_house-input form-control" placeholder="Street, apartment, house" required>
+<!--                        <h3>Postcode</h3>-->
+                        <input type="text" class="Postcode-input form-control" placeholder="Postcode" required>
                         <label class="new-address-label">
                             <input type='checkbox' name="new-address" class="new-address-input">
                             <span></span>

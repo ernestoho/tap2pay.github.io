@@ -88,7 +88,7 @@ h3{
     border-bottom: 1px solid #d7d7d7;
 }
 .modal-body{
-    padding-bottom: 20px;
+    padding-bottom: 70px;
     /**/
     /* от нежелательных выпаданий элементов */
 //    overflow: hidden;
@@ -348,7 +348,7 @@ h3{
     height: 20px;
 }
 .sending{
-    margin-top: 2px;
+    margin-top: 10px;
     text-align: center;
     padding-left: 0;
 }
@@ -1055,7 +1055,7 @@ h2.step-payment{
 	position: relative;
 	input{
 		border-radius: 0px;
-		padding: 8px 5px 6px 27px;
+		padding: 10px 5px 6px 27px;
     }
 }
 .half-input_left{
@@ -1109,7 +1109,7 @@ h2.step-payment{
 	}
 }
 .credit-card-section .error input {
-	color: red;
+//	color: red;
 	border: 1px solid red;
 }
 .half-input_right.error{
@@ -1122,7 +1122,7 @@ h2.step-payment{
 	border-color: red;
 }
 .button-save-card{
-	display: block;
+	display: none;
 	width: 100%;
 	margin-top: 10px;
 	border: 1px solid #c5c5c5;
@@ -1293,6 +1293,15 @@ h2.step-payment{
 }
 .new-address{
     display: none;
+	h3{
+		margin-top: 5px;
+		&:first-child{
+			margin-top: 25px;
+		}
+	}
+	input{
+		margin-top: 10px;
+	}
 }
 .backToSavedLocations{
     display: none;
@@ -1316,7 +1325,7 @@ span.address-span{
     margin: 10px 0 0 0;
     font-family: "HelveticaNeueCyr-Roman", Arial;
 }
-span.edit-address-span{
+span.delete-address-span{
     display: inline-block;
     width: 100%;
     margin: 0;
@@ -1471,14 +1480,14 @@ a,a:focus,a:hover,a:active,a.active{
 }
 
 ::-webkit-input-placeholder {
-   color: #d3d3d3 !important;
+   color: #c2c2c2 !important;
 }
 :-moz-placeholder { /* Firefox 18- */
-   color: #d3d3d3 !important;  
+   color: #c2c2c2 !important;  
 }
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #d3d3d3 !important;  
+   color: #c2c2c2 !important;  
 }
 :-ms-input-placeholder {  
-   color: #d3d3d3 !important;  
+   color: #c2c2c2 !important;  
 }
