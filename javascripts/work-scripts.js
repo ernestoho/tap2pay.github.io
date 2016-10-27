@@ -63,7 +63,7 @@ $( document ).ready(function() {
 
      /*вернуться к выбору сохраненной карты*/
     $("#backToSelectCreditCard").click(function(){
-        $(".creditly-card-form").hide();
+        $(".credit-card-section").hide();
         $(".choose-card").show();
         /* показать карты */
         $(".choose-card h3").show();
@@ -80,7 +80,7 @@ $( document ).ready(function() {
     $("#addNewCard-button").click(function(){
         $(".choose-card ").hide();
         $(".backToAuthorization").hide();
-        $(".creditly-card-form").show();
+        $(".credit-card-section").show();
         /* показать стрелку */
         $("#backToSelectCreditCard").show();
         $(".choose-card ").hide();
@@ -89,7 +89,7 @@ $( document ).ready(function() {
 
         /* на вкладках paypal и erip убрать кнопку*/
         $(".payment-tabs li:first-child").click(function(){
-            $(".creditly-card-form").hide();
+            $(".credit-card-section").hide();
             $(".choose-card").show();
         });
 
@@ -167,7 +167,28 @@ $( document ).ready(function() {
         $(".popover").css("display","none");
     });
 
-
+	$('#card-email-input').blur(function() {
+		var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+		if (testEmail.test(this.value)) {
+			$('.email-input').removeClass("Valid-class Invalid-class");
+			$('.email-input').addClass("Valid-class");
+		} else {
+			$('.email-input').removeClass("Valid-class Invalid-class");
+			$('.email-input').addClass("Invalid-class");
+		};
+	});
+	
+	$('#cardholder-name-input').blur(function() {
+		var testCardHolderName = /^[a-zA-Z]{3,15}\s[a-zA-Z]{3,15}/i;
+		if (testCardHolderName.test(this.value)) {
+			$('.cardholder-name-input').removeClass("Valid-class Invalid-class");
+			$('.cardholder-name-input').addClass("Valid-class");
+		} else {
+			$('.cardholder-name-input').removeClass("Valid-class Invalid-class");
+			$('.cardholder-name-input').addClass("Invalid-class");
+		};
+	});
+	
     /* связать клик по кнопке в футере с кликом по кнопке в форме, которая скрыта , сделано для того, что бы не переносить кнопку из формы в футер */
 	//    $("#button-save-card-InFooter").click(function(){
 	//        $("#button-save-card").click();

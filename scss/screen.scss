@@ -566,17 +566,17 @@ h3{
 //    }
 //    color: black;
 //}
-
-input[type="tel"]:valid {
-    position: relative;
-    background-color: #e5f7fd;
-    background-image: url(../images/ok-blue.png);
-    background-repeat: no-repeat;
-    background-position: 230px 11px;
-    &:focus,&:active{
-        
-    }
-}
+//
+//input[type="tel"]:valid {
+//    position: relative;
+//    background-color: #e5f7fd;
+//    background-image: url(../images/ok-blue.png);
+//    background-repeat: no-repeat;
+//    background-position: 230px 11px;
+//    &:focus,&:active{
+//        
+//    }
+//}
 .phone-helper{
     display: inline-block;
 //    border-right: 1px solid $border-gray;
@@ -1013,111 +1013,128 @@ h2.step-payment{
         font-weight: bold;
     }
 }
-.creditly-card-form{
-    display: none;
+.credit-card-section{
+	display: none;
+	margin-top: 12px;	
 }
-.choose-card.choose-card_open{
-    display: block;
+.card-input-container{
+	display: block;
+	input{
+		display: inline-block;
+		width: 100%;
+		box-shadow: none !important;
+		border: 1px solid #c5c5c5;
+		border-radius: 5px;
+		height: 35px;
+		font-size: 15px;
+		margin: 0;
+		&:focus{
+			box-shadow: none !important;
+		}
+	}
 }
-.choose-card.choose-card_closed{
-    display: none;
-}
-.creditly-card-form.creditly-card-form_open{
-    display: block;
-}
-.creditly-card-form.creditly-card-form_closed{
-    display: none;
-}
-.creditly-wrapper{
-    width: 100%;
-    margin-top: 16px;
-}
-.card-number-input{
+.credit-card-number{
     position: relative;
+	display: block;
     &:after{
         display: block;
         position: absolute;
         content: "";
         width: 16px;
         height: 12px;
-        top: 11px;
-        left: 11px;
+        top: 16px;
+        left: 9px;
         background-image: url("../images/icons.png");
         background-position: -337px 0px;
         background-repeat:  no-repeat;
     }
-    .credit-card-number{
-        border-color: #c5c5c5;
-        border-bottom: 1px solid #c5c5c5;
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
-        box-shadow: none !important;
-        height: 35px;
-        font-size: 15px;
-        padding: 8px 12px 6px 37px;
-        &:focus{
-            box-shadow: none !important;
-            border-color: #ccc;
-        }
-    }
+}
+.credit-card-number input{
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	margin: 4px 0 -1px 0;
+	padding: 8px 5px 6px 27px;
+	border-bottom: 1px solid transparent;
 }
 .half-input{
     width: 50%;
     float: left;
-    .form-control{
-        border-color: #c5c5c5;
-        border-top: none !important;
-        box-shadow: none !important;
-        height: 35px;
-        font-size: 15px;
-        padding: 8px 12px 6px 37px;
-        &:focus{
-            box-shadow: none !important;
-            border-color: #ccc;
-        }
+	margin: 0;
+	position: relative;
+	input{
+		border-radius: 0px;
+		padding: 8px 5px 6px 27px;
     }
 }
 .half-input_left{
-    position: relative;
+	z-index: 2;
     &:after{
         display: block;
         position: absolute;
         content: "";
         width: 14px;
         height: 14px;
-        top: 10px;
-        left: 12px;
+        top: 12px;
+        left: 9px;
         background-image: url("../images/icons.png");
         background-position: -355px 0px;
         background-repeat:  no-repeat;
     }
-    .form-control{
-        border-color: #c5c5c5;
-        border-top-right-radius: 0px !important;
-        border-top-left-radius: 0px !important;
-        border-bottom-right-radius: 0px !important;
+    input{
+        border-bottom-left-radius: 5px;
     }
 }
 .half-input_right{
-    position: relative;
+	margin-left: -1px;
+	width: calc(50% + 1px);
     &:after{
         display: block;
         position: absolute;
         content: "";
         width: 12px;
         height: 13px;
-        top: 10px;
-        left: 14px;
+        top: 12px;
+        left: 9px;
         background-image: url("../images/icons.png");
         background-position: -371px 0px;
         background-repeat:  no-repeat;
     }
-    .form-control{
-        border-top-left-radius: 0px !important;
-        border-top-right-radius: 0px !important;
-        border-bottom-left-radius: 0px !important;
-        border-left: none !important;
+    input{
+		border-bottom-right-radius: 5px;
+        border-left: 1px solid transparent;
     }
+}
+.email-input{
+	margin-top: 10px;
+	input{
+		padding: 8px 5px 6px 10px;
+	}
+}
+.cardholder-name-input{
+	margin-top: 50px;
+	input{
+		padding: 8px 5px 6px 10px;
+	}
+}
+.credit-card-section .error input {
+	color: red;
+	border: 1px solid red;
+	z-index: 10;
+}
+.Valid-class input{
+	border-color: #40db3e;
+}
+.Invalid-class input{
+	border-color: red;
+}
+.button-save-card{
+	display: block;
+	width: 100%;
+	margin-top: 10px;
+	border: 1px solid #c5c5c5;
+}
+.valid-check{
+	display: none;
 }
 .control-label{
     margin: 21px 0 3px 0;
@@ -1162,11 +1179,6 @@ h2.step-payment{
     background-position: -100px -18px;
     margin-left: 7px;
     background-repeat:  no-repeat;
-}
-.creditly-blue-theme-submit{
-    display: block;
-    width: 100%;
-	
 }
 .payment-continue{
     display: none;

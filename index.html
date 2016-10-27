@@ -14,34 +14,13 @@
     <link href="stylesheets/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="stylesheets/fonts.css" type="text/css" rel="stylesheet">
     <link href="stylesheets/font-awesome.min.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="stylesheets/creditly.css" type="text/css">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+	<link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <link href="stylesheets/screen.css" type="text/css" rel="stylesheet">
     <link href="stylesheets/media.css" type="text/css" rel="stylesheet">
        
 	<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>-->
 	<script src="javascripts/jquery-2.2.2.js"></script>
-	<script type="text/javascript" src="javascripts/creditly.js"></script>
-	<script type="text/javascript">	
-	$( document ).ready(function() {    
-		var creditly = Creditly.initialize(
-			'.creditly-wrapper .expiration-month-and-year',
-			'.creditly-wrapper .credit-card-number',
-			'.creditly-wrapper .security-code',
-			'.creditly-wrapper .card-type');
-
-		$(".creditly-card-form .submit").click(function(e) {
-		  e.preventDefault();
-		  var output = creditly.validate();
-		  if (output) {
-			// Do something with your credit card output.
-			console.log(output["number"]);
-			console.log(output["security_code"]);
-			console.log(output["expiration_month"]);
-			console.log(output["expiration_year"]);
-		  }
-		});	
-	});
-	</script>
 
 	<!--[if lt IE 9]>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
@@ -206,85 +185,38 @@
                                         <a href="#" class="addNewCard-button" id="addNewCard-button"><span>&#43;</span> Add new card</a>
                                 </div>
                                 
-                                <form class="creditly-card-form creditly-card-form_closed">
-                                    <section class="creditly-wrapper">
-                                        <div class="credit-card-wrapper">
-                                            <div class="first-row form-group">
-                                                <div class="card-number-input controls">
-                                                    <input id="credit-card-number" class="number credit-card-number form-control" type="text" name="number" pattern="(\d*\s){3}\d*" inputmode="numeric" autocomplete="cc-number" autocompletetype="cc-number" x-autocompletetype="cc-number" placeholder="Card number" required>
-                                                </div>
-                                                <div class="half-input half-input_left controls"> 
+                                <section class="credit-card-section">
+									<div>
+										<span class="card-input-container credit-card-number field">
+											<input placeholder="Card number •••• •••• •••• ••••" type="tel" size="19" name="ccnum" value="" id="ccnum">
+										</span>
+										<div class="valid-check"><small>type: <strong id="ccnum-type">invalid</strong></small></div>
+										</div>
 
-                                                    <input class="expiration-month-and-year form-control"
-                                                type="text" name="expiration-month-and-year"
-                                                placeholder="MM / YY" pattern="[0-9]{2}.*[0-9]{2}" required>
-                                                </div>
-                                                <div class="half-input half-input_right controls">
-                                                    <input class="security-code form-control"
-                                                    inputmode="numeric"
-                                                    pattern="[0-9]{3}"
-                                                    type="text" name="security-code"
-                                                    placeholder="CCV" required>
-                                                </div>
+										<div>
+											<span class="card-input-container half-input half-input_left field">
+												<input placeholder="•• / ••" size="7" type="tel" name="expiry" value="" id="expiry">
+											</span>
 
-                                            <div class="second-row form-group">
-                                                <div class="controls">
-                                                    <label class="control-label">Name this card to use it in future.</label>
-                                                    <input class="billing-address-name form-control"
-                                                    type="text" name="name"
-                                                    placeholder="Enter card name..." required>
-                                                </div>
+											<span class="card-input-container half-input half-input_right cvc field">
+												<input placeholder="•••" size="4" type="tel" name="cvc" value="" id="cvc">
+											</span>
+										</div>
 
-                                                </div>
-                                            </div>
-                                            <div class="card-type">
-                                            </div>
-                                        </div>
-        <!--                                <input type="submit">-->
-                                        <button class="creditly-blue-theme-submit button-save-card" id="button-save-card" ><span>Submit</span></button>
-                                    </section>
-                                </form>
+										<div>
+										<span class="card-input-container cardholder-name-input field">
+											<input placeholder="CARDHOLDER NAME" type="email"  name="cardholder-name-input" id="cardholder-name-input">
+										</span>
+										<span class="card-input-container email-input field">
+											<input placeholder="Your email address" type="email" multiple name="card-email-input" id="card-email-input">
+										</span>
+									</div>
 
-                                <!--
-                                    <form id="payment-form" action="buy.php" method="POST">
-                                        <div id="payment-errors"></div>
+									<div>
+									  <button id="submit" class="button-save-card gradient-bg">Validate</button>
+									</div>
+							  </section>
 
-                                        <label>Card Number</label>
-                                        <input type="tel" min="0" inputmode="numeric" pattern="[0-9]*" size="20" autocomplete="off">
-                                        <input class="number credit-card-number form-control" type="text" name="number" pattern="\d*" inputmode="numeric" autocomplete="cc-number" autocompletetype="cc-number" x-autocompletetype="cc-number" placeholder="•••• •••• •••• ••••">
-                                        <span>Enter the number without spaces or hyphens.</span>
-                                        <label>CVC</label>
-                                        <input type="text" size="4" autocomplete="off">
-                                        <label>Expiration (MM/YYYY)</label>
-                                        <input type="text" size="2">
-                                        <span> / </span>
-                                        <input type="text" size="4">
-
-                                    </form>
-
-                                -->
-                                <!--
-                                    <form action="#" method="POST" id="payment-form">
-
-                                        <div id="payment-errors"></div>
-
-                                        <span class="help-block">You can pay using: Mastercard, Visa, American Express, JCB, Discover, and Diners Club.</span>
-
-                                        <div class="alert alert-info"><h4>JavaScript Required!</h4>For security purposes, JavaScript is required in order to complete an order.</div>
-
-                                        <label>Card Number</label>
-                                        <input type="text" size="20" autocomplete="off" class="card-number input-medium">
-                                        <span class="help-block">Enter the number without spaces or hyphens.</span>
-                                        <label>CVC</label>
-                                        <input type="text" size="4" autocomplete="off" class="card-cvc input-mini">
-                                        <label>Expiration (MM/YYYY)</label>
-                                        <input type="text" size="2" class="card-expiry-month input-mini">
-                                        <span> / </span>
-                                        <input type="text" size="4" class="card-expiry-year input-mini">
-
-                                        <button type="submit" class="btn" id="submitBtn">Submit Payment</button>
-                                    </form>
-                                -->
  
                             </div>
                             
@@ -368,7 +300,9 @@ choose another payment method.</p>
 			$('.input-phone').intlInputPhone();
 		});
 	</script>
-
+	
+	<script src="javascripts/payform.js" charset="utf-8"></script>
+	<script src="javascripts/form.js"></script>
 	<script src="javascripts/bootstrap.min.js"></script>
 	<script src="javascripts/work-scripts.js"></script>
 
