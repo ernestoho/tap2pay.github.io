@@ -1297,11 +1297,12 @@ h2.step-payment{
 	h3{
 		margin-top: 5px;
 		&:first-child{
-			margin-top: 25px;
+			margin-top: 15px;
 		}
 	}
 	input{
 		margin-top: 10px;
+		padding-top: 8px;
 	}
 }
 .backToSavedLocations{
@@ -1345,7 +1346,7 @@ span.delete-address-span{
 .new-address-label{
     font-family: "HelveticaNeueCyr-Roman", Arial;
     font-weight: normal;
-    margin: 20px 0 0 0;
+    margin: 20px 0 20 0;
     line-height: 20px;
     color: $dark-gray-text;
     font-size: 16px;

@@ -1492,19 +1492,20 @@ h2.step-payment {
 }
 /* line 1299, ../scss/screen.scss */
 .new-address h3:first-child {
-  margin-top: 25px;
+  margin-top: 15px;
 }
 /* line 1303, ../scss/screen.scss */
 .new-address input {
   margin-top: 10px;
+  padding-top: 8px;
 }
 
-/* line 1307, ../scss/screen.scss */
+/* line 1308, ../scss/screen.scss */
 .backToSavedLocations {
   display: none;
 }
 
-/* line 1310, ../scss/screen.scss */
+/* line 1311, ../scss/screen.scss */
 .edit-shipment-address {
   display: none;
   width: 100%;
@@ -1512,7 +1513,7 @@ h2.step-payment {
   font-size: 14px;
   letter-spacing: 0.5px;
 }
-/* line 1316, ../scss/screen.scss */
+/* line 1317, ../scss/screen.scss */
 .edit-shipment-address span {
   display: inline-block;
   margin: 15px 0 0 0;
@@ -1520,7 +1521,7 @@ h2.step-payment {
   font-family: "HelveticaNeueCyr-Medium", Arial;
 }
 
-/* line 1323, ../scss/screen.scss */
+/* line 1324, ../scss/screen.scss */
 span.address-span {
   display: inline-block;
   width: auto;
@@ -1528,7 +1529,7 @@ span.address-span {
   font-family: "HelveticaNeueCyr-Roman", Arial;
 }
 
-/* line 1329, ../scss/screen.scss */
+/* line 1330, ../scss/screen.scss */
 span.delete-address-span {
   display: inline-block;
   width: 100%;
@@ -1538,22 +1539,22 @@ span.delete-address-span {
   text-align: right;
   font-family: "HelveticaNeueCyr-Roman", Arial;
 }
-/* line 1337, ../scss/screen.scss */
+/* line 1338, ../scss/screen.scss */
 span.delete-address-span:hover {
   cursor: pointer;
   color: deepskyblue;
 }
 
-/* line 1342, ../scss/screen.scss */
+/* line 1343, ../scss/screen.scss */
 .new-address-input {
   margin-top: 18px;
 }
 
-/* line 1345, ../scss/screen.scss */
+/* line 1346, ../scss/screen.scss */
 .new-address-label {
   font-family: "HelveticaNeueCyr-Roman", Arial;
   font-weight: normal;
-  margin: 20px 0 0 0;
+  margin: 20px 0 20 0;
   line-height: 20px;
   color: #474747;
   font-size: 16px;
@@ -1561,12 +1562,12 @@ span.delete-address-span:hover {
   vertical-align: middle;
 }
 
-/* line 1355, ../scss/screen.scss */
+/* line 1356, ../scss/screen.scss */
 .new-address-label input {
   display: none;
 }
 
-/* line 1358, ../scss/screen.scss */
+/* line 1359, ../scss/screen.scss */
 .new-address-label span {
   height: 19px;
   width: 19px;
@@ -1577,26 +1578,26 @@ span.delete-address-span:hover {
   vertical-align: top;
   box-shadow: inset 0 1px 1px #ddd;
 }
-/* line 1367, ../scss/screen.scss */
+/* line 1368, ../scss/screen.scss */
 .new-address-label span:hover {
   border-color: #5caef9;
   cursor: pointer;
 }
 
-/* line 1372, ../scss/screen.scss */
+/* line 1373, ../scss/screen.scss */
 .new-address-input:checked + span {
   background-color: #41a2fa;
   box-shadow: none;
   box-shadow: inset 0 1px 1px #41a2fa;
   border-color: #5caef9;
 }
-/* line 1377, ../scss/screen.scss */
+/* line 1378, ../scss/screen.scss */
 .new-address-input:checked + span:hover {
   background-color: #62b2fb;
   box-shadow: inset 0 3px 1px #41a2fa;
 }
 
-/* line 1382, ../scss/screen.scss */
+/* line 1383, ../scss/screen.scss */
 .new-address-input:checked + span:before {
   content: '\2714';
   position: absolute;
@@ -1606,7 +1607,7 @@ span.delete-address-span:hover {
   left: 3px;
 }
 
-/* line 1390, ../scss/screen.scss */
+/* line 1391, ../scss/screen.scss */
 .not-enough-money {
   display: none;
   color: red;
@@ -1614,42 +1615,42 @@ span.delete-address-span:hover {
   letter-spacing: 0.4px;
 }
 
-/* line 1396, ../scss/screen.scss */
+/* line 1397, ../scss/screen.scss */
 .not-enough-money.on {
   display: block;
 }
 
 /* ╤И╨░╨│ ╤Д╨╕╨╜╨░╨╗╤М╨╜╤Л╨╣ ╤И╨░╨│ */
-/* line 1403, ../scss/screen.scss */
+/* line 1404, ../scss/screen.scss */
 .step-finalCheck {
   display: none;
 }
-/* line 1405, ../scss/screen.scss */
+/* line 1406, ../scss/screen.scss */
 .step-finalCheck a:hover, .step-finalCheck a:focus, .step-finalCheck a:visited, .step-finalCheck a:active {
   color: #474747;
 }
 
-/* line 1409, ../scss/screen.scss */
+/* line 1410, ../scss/screen.scss */
 .shipment-address_title {
   margin-top: 25px;
 }
 
-/* line 1412, ../scss/screen.scss */
+/* line 1413, ../scss/screen.scss */
 .step-finalCheck.on {
   display: block;
 }
 
-/* line 1415, ../scss/screen.scss */
+/* line 1416, ../scss/screen.scss */
 .special-underline-border {
   border-top: 1px solid #e3e3e3;
 }
 
-/* line 1419, ../scss/screen.scss */
+/* line 1420, ../scss/screen.scss */
 .clickToPay_button {
   display: block;
 }
 
-/* line 1423, ../scss/screen.scss */
+/* line 1424, ../scss/screen.scss */
 .clickToPay_button, .clickToPay_button:hover {
   color: #fff;
   text-shadow: 1px -1px  1px #3b99f0;
@@ -1668,14 +1669,14 @@ span.delete-address-span:hover {
   /* IE6-9 */
 }
 
-/* line 1439, ../scss/screen.scss */
+/* line 1440, ../scss/screen.scss */
 .payment-success {
   display: none;
   vertical-align: 37px;
   letter-spacing: 0.5px;
 }
 
-/* line 1447, ../scss/screen.scss */
+/* line 1448, ../scss/screen.scss */
 .payment-success, .payment-success:hover {
   color: #fff;
   text-shadow: 1px -1px  1px #20b119;
@@ -1694,7 +1695,7 @@ span.delete-address-span:hover {
   /* IE6-9 */
 }
 
-/* line 1459, ../scss/screen.scss */
+/* line 1460, ../scss/screen.scss */
 .icon-success {
   display: inline-block;
   width: 17px;
@@ -1708,35 +1709,35 @@ span.delete-address-span:hover {
   background-repeat: no-repeat;
 }
 
-/* line 1474, ../scss/screen.scss */
+/* line 1475, ../scss/screen.scss */
 a, a:focus, a:hover, a:active, a.active {
   outline: none;
 }
 
 /* ╨╖╨░╨┐╤А╨╡╤В╨╕╤В╤М ╨▓╤Л╨┤╨╡╨╗╨╡╨╜╨╕╨╡ ╨╡╤А╨╕╨┐ ╨╕ ╨┐╨░╨╣╨┐╨░╨╗ */
-/* line 1479, ../scss/screen.scss */
+/* line 1480, ../scss/screen.scss */
 .select-none {
   user-select: none;
 }
 
-/* line 1483, ../scss/screen.scss */
+/* line 1484, ../scss/screen.scss */
 ::-webkit-input-placeholder {
   color: #c2c2c2 !important;
 }
 
-/* line 1486, ../scss/screen.scss */
+/* line 1487, ../scss/screen.scss */
 :-moz-placeholder {
   /* Firefox 18- */
   color: #c2c2c2 !important;
 }
 
-/* line 1489, ../scss/screen.scss */
+/* line 1490, ../scss/screen.scss */
 ::-moz-placeholder {
   /* Firefox 19+ */
   color: #c2c2c2 !important;
 }
 
-/* line 1492, ../scss/screen.scss */
+/* line 1493, ../scss/screen.scss */
 :-ms-input-placeholder {
   color: #c2c2c2 !important;
 }
