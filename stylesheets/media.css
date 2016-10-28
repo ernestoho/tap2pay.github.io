@@ -105,6 +105,12 @@
 /* Smartphones (portrait and landscape) ----------- */
 /* iPads (portrait and landscape) ----------- */
 /* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* line 188, ../scss/media.scss */
+  .card-container {
+    margin-top: 6%;
+  }
+}
 /* iPads (portrait) ----------- */
 /* The New iPad (iPad 3) ----------- */
 /* iPhone 4 ----------- */
