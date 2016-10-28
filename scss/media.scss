@@ -103,6 +103,15 @@
 	.popover.right>.arrow:after{
 		border-right-color: red;
 	}
+	.modal-open{
+		overflow-y: visible;
+	}
+	.modal-open .modal{
+		overflow: visible;
+	}
+	.card-container{
+		margin-top: 50px;
+	}
 	
 }
 
@@ -142,6 +151,14 @@
         margin-top: 20%;
 //        transform: translateY(-25%) !important;
     }
+	#myModal{
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+	}
+	
 }
 
 @media only screen and (max-width : 425px){
