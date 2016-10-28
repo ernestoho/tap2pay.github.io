@@ -110,9 +110,15 @@
 		overflow: visible;
 	}
 	.card-container{
-		margin-top: 50px;
+		margin-top: 30px;
 	}
 	
+}
+
+@media only screen and (max-width : 768px) and (orientation : portrait){
+	.card-container{
+		margin-top: 20%;
+	}
 }
 
 @media only screen and (max-width : 630px){
