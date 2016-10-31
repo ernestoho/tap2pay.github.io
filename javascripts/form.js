@@ -6,13 +6,13 @@
       submit = document.getElementById('submit'),
       result = document.getElementById('result');
 
-  payform.cardNumberInput(ccnum);
-  payform.expiryInput(expiry);
-  payform.cvcInput(cvc);
+	payform.cardNumberInput(ccnum);
+	payform.expiryInput(expiry);
+	payform.cvcInput(cvc);
 
-  ccnum.addEventListener('input',   updateType);
+	ccnum.addEventListener('input',   updateType);
 
-  submit.addEventListener('click', function() {
+	submit.addEventListener('click', function() {
     var valid     = [],
         expiryObj = payform.parseCardExpiry(expiry.value);
 
@@ -50,3 +50,18 @@
     }
   }
 })();
+
+
+
+$( document ).ready(function() {    
+	
+	$("input.focus").focus(function () {
+		var val = this.value;
+		var $this = $(this);
+		$this.val("");
+		setTimeout(function () {
+		$this.val(val);
+		}, 1);
+	});
+
+});
