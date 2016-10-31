@@ -50,14 +50,10 @@
     }
   }
 	
-//	$("#ccnum").focus(function () {
-//		var val = this.value;
-//		var $this = $(this);
-//		$this.val("");
-//		setTimeout(function () {
-//		$this.val(val);
-//		}, 1);
-//	});
+$('#ccnum').focus(function(){
+  var that = this;
+  setTimeout(function(){ that.selectionStart = that.selectionEnd = 10000; }, 0);
+});
 	
 	
 })();
