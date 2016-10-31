@@ -1,6 +1,4 @@
-
 $( document ).ready(function() {
-
     /* активация кнопок подсказки*/
     $(".modal-hint span").click(function () {
         $(".hint-container__text").removeClass("on");
@@ -12,7 +10,7 @@ $( document ).ready(function() {
         $(".hint-container__text").removeClass("on");
       event.stopPropagation();
     });/* спрятать кнопку подсказки */
-
+	
     /* чиню поломанный дропдаун для выбора кода страны*/
     $("#btn-country").click(function(){
         $(".input-group-btn").addClass("open");
@@ -99,10 +97,10 @@ $( document ).ready(function() {
     //    });
 
     /* переход на шаг shipment*/
-//    $("#button-save-card-InFooter").click(function(){
-//        $(".step-payment").hide();
-//        $(".step-shipment").show();
-//    });
+	//    $("#button-save-card-InFooter").click(function(){
+	//        $(".step-payment").hide();
+	//        $(".step-shipment").show();
+	//    });
     
     /* переход внутри step-shipment = добавить новый адрес и скрыть сохраненные */
     $("#addNewAddress-button").click(function(){
@@ -189,18 +187,18 @@ $( document ).ready(function() {
 		};
 	});
 	
-	$('#phoneNumber').blur(function() {
-		var phoneNumberInput = /^[0123456789+]{9,}/i;
-		if (phoneNumberInput.test(this.value)) {
-			$('.phoneNumber').removeClass("Valid-class error");
-			$('.phoneNumber').addClass("Valid-class");
-		} else {
-			$('.phoneNumber').removeClass("Valid-class error");
-			$('.phoneNumber').addClass("error");
-		};
-	});
+	/* не нужен */
+//	$('#phoneNumber').blur(function() {
+//		var phoneNumberInput = /^[0123456789+]{9,}/i;
+//		if (phoneNumberInput.test(this.value)) {
+//			$('.phoneNumber').removeClass("Valid-class error");
+//			$('.phoneNumber').addClass("Valid-class");
+//		} else {
+//			$('.phoneNumber').removeClass("Valid-class error");
+//			$('.phoneNumber').addClass("error");
+//		};
+//	});
 
-	
 	/* переход на шаг shipment */
 //    $("#button-save-card-InFooter").click(function(){
 //        $(".step-payment").hide();
@@ -224,7 +222,6 @@ $( document ).ready(function() {
 		} else {
 			
 		}
-		
 		$('#submit').click();
 		
 		if ( $(".card-input-container").hasClass("error") ){
@@ -233,8 +230,6 @@ $( document ).ready(function() {
 				$(".step-shipment").show();
 			}
 	});
-	
-	
 	/* анимация ошибок */
 	$('.button-save-card-InFooter').click(function(){
 		if ( $(".card-input-container" ).hasClass("error") ){
@@ -244,15 +239,10 @@ $( document ).ready(function() {
 	$('.button-save-card-InFooter').mouseup(function(){
 		$(".card-container" ).removeClass("animated shake");
 	});
-	
-	
-	
     /* связать клик по кнопке в футере с кликом по кнопке в форме, которая скрыта , сделано для того, что бы не переносить кнопку из формы в футер */
 	//    $("#button-save-card-InFooter").click(function(){
 	//        $("#button-save-card").click();
 	//    });
-
-    
 /*close jQuery*/   
 });
 
