@@ -55,7 +55,7 @@
 
 $( document ).ready(function() {    
 	
-	$("input.focus").focus(function () {
+	$("#ccnum").focus(function () {
 		var val = this.value;
 		var $this = $(this);
 		$this.val("");
