@@ -199,41 +199,54 @@ $( document ).ready(function() {
 			$('.phoneNumber').addClass("error");
 		};
 	});
-	
-	
-	/* переход на шаг shipment*/
-    $("#button-save-card-InFooter").click(function(){
-        $(".step-payment").hide();
-        $(".step-shipment").show();
-    });
-	
-//	/* проверка валидации карты и емэйла и имени */
-//	$('.button-save-card-InFooter').click(function(){
-//		
-//		if (( $("#cardholder-name-input").val().length === 0 ) && ( $("#card-email-input").val().length === 0 )) {
-//			$(".email-input").removeClass('Valid-class error');
-//			$(".cardholder-name-input").removeClass('Valid-class error');
-//			$(".cardholder-name-input").addClass('error');
-//			$(".email-input").addClass('error');
-//		} else if (( $("#card-email-input").val().length === 0 ) && !( $("#card-email-input").val().length === 0 )){
-//			$(".cardholder-name-input").removeClass('Valid-class error');
-//			$(".cardholder-name-input").addClass('error');
-//		} else if ( !( $("#card-email-input").val().length === 0 ) && ( $("#card-email-input").val().length === 0 )){
-//			$(".email-input").removeClass('Valid-class error');
-//			$(".email-input").addClass('error');
-//		} else {
-//			
-//		}
-//		
-//		$('#submit').click();
-//		
-//		if ( $(".card-input-container").hasClass("error") ){
-//			} else {
-//				$(".step-payment").hide();
-//				$(".step-shipment").show();
-//			}
-//	});
 
+	
+	/* переход на шаг shipment */
+//    $("#button-save-card-InFooter").click(function(){
+//        $(".step-payment").hide();
+//        $(".step-shipment").show();
+//    });
+	
+//	/* проверка валидации карты и емэйла и имени , раскомментировав его - удалить другое событие на эту кнопку , которое описано выше  */
+	$('.button-save-card-InFooter').click(function(){
+		
+		if (( $("#cardholder-name-input").val().length === 0 ) && ( $("#card-email-input").val().length === 0 )) {
+			$(".email-input").removeClass('Valid-class error');
+			$(".cardholder-name-input").removeClass('Valid-class error');
+			$(".cardholder-name-input").addClass('error');
+			$(".email-input").addClass('error');
+		} else if (( $("#cardholder-name-input").val().length === 0 ) && !( $("#card-email-input").val().length === 0 )){
+			$(".cardholder-name-input").removeClass('Valid-class error');
+			$(".cardholder-name-input").addClass('error');
+		} else if ( !( $("#cardholder-name-input").val().length === 0 ) && ( $("#card-email-input").val().length === 0 )){
+			$(".email-input").removeClass('Valid-class error');
+			$(".email-input").addClass('error');
+		} else {
+			
+		}
+		
+		$('#submit').click();
+		
+		if ( $(".card-input-container").hasClass("error") ){
+			} else {
+				$(".step-payment").hide();
+				$(".step-shipment").show();
+			}
+	});
+	
+	
+	/* анимация ошибок */
+	$('.button-save-card-InFooter').click(function(){
+		if ( $(".card-input-container" ).hasClass("error") ){
+			$(".card-container" ).addClass("animated shake");
+		}
+	});
+	$('.button-save-card-InFooter').mouseup(function(){
+		$(".card-container" ).removeClass("animated shake");
+	});
+	
+	
+	
     /* связать клик по кнопке в футере с кликом по кнопке в форме, которая скрыта , сделано для того, что бы не переносить кнопку из формы в футер */
 	//    $("#button-save-card-InFooter").click(function(){
 	//        $("#button-save-card").click();

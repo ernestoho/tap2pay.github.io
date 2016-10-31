@@ -652,9 +652,9 @@ input{
     display: block;
     width: 100%;
     border-radius: 5px;
-    height: 36px;
+    height: 35px;
     border: 1px solid $border-gray;
-    padding: 0 10px;
+    padding: 8px 5px 6px 10px;
     margin: 10px 0 0 0;
     letter-spacing: 0.6px;
     font-size: 14px;
@@ -867,7 +867,9 @@ h2.step-payment{
 //.backToAuthorization.on{
 //    display: block;
 //}
-
+.payment-tabs > li {
+	overflow: hidden;
+}
 
 /* стили card-tab вкладки */
 
@@ -1019,14 +1021,18 @@ h2.step-payment{
 	input{
 		display: inline-block;
 		width: 100%;
-		box-shadow: none !important;
+//		box-shadow: none !important;
 		border: 1px solid #c5c5c5;
 		border-radius: 5px;
 		height: 35px;
 		font-size: 15px;
 		margin: 0;
 		&:focus{
-			box-shadow: none !important;
+//			box-shadow: none !important;
+			background-color: #fff;
+		}
+		&:valid{
+			background-color: #fff;
 		}
 	}
 }
@@ -1115,7 +1121,16 @@ h2.step-payment{
 }
 .credit-card-section .error input {
 //	color: red;
-	border: 1px solid red;
+	border: 1px solid red !important;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0),0 1px 0 rgba(255,255,255,0),0 0 2px 0 rgba(255,0,0,0.5);
+	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0),0 1px 0 rgba(255,255,255,0),0 0 2px 0 rgba(255,0,0,0.5);
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0),0 1px 0 rgba(255,255,255,0),0 0 2px 0 rgba(255,0,0,0.5);
+	-ms-box-shadow: inset 0 1px 2px rgba(0,0,0,0),0 1px 0 rgba(255,255,255,0),0 0 2px 0 rgba(255,0,0,0.5);
+	-o-box-shadow: inset 0 1px 2px rgba(0,0,0,0),0 1px 0 rgba(255,255,255,0),0 0 2px 0 rgba(255,0,0,0.5);
+}
+.credit-card-number.error input{
+	margin-bottom: 0;
+	z-index: 20;
 }
 .half-input_right.error{
 	z-index: 10;
@@ -1125,6 +1140,12 @@ h2.step-payment{
 }
 .Invalid-class input{
 	border-color: red;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0),0 1px 0 rgba(255,255,255,0),0 0 2px 0 rgba(255,0,0,0.5);
+	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0),0 1px 0 rgba(255,255,255,0),0 0 2px 0 rgba(255,0,0,0.5);
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0),0 1px 0 rgba(255,255,255,0),0 0 2px 0 rgba(255,0,0,0.5);
+	-ms-box-shadow: inset 0 1px 2px rgba(0,0,0,0),0 1px 0 rgba(255,255,255,0),0 0 2px 0 rgba(255,0,0,0.5);
+	-o-box-shadow: inset 0 1px 2px rgba(0,0,0,0),0 1px 0 rgba(255,255,255,0),0 0 2px 0 rgba(255,0,0,0.5);
+	
 }
 .button-save-card{
 	display: none;
@@ -1164,9 +1185,9 @@ h2.step-payment{
     color: $dark-gray-text;
     padding-right: 0px;
     font-family: "HelveticaNeueCyr-Medium", Arial;
-    border-bottom: 3px solid $border-gray;
+    border-bottom: 2px solid $border-gray;
     &:hover{
-        border-bottom: 3px solid $border-gray;
+        border-bottom: 2px solid $border-gray;
     }
 }
 .paypal-button_icon{
