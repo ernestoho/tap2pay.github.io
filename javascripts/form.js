@@ -49,19 +49,16 @@
       ele.className = ele.className.replace(_class, '');
     }
   }
+	
+//	$("#ccnum").focus(function () {
+//		var val = this.value;
+//		var $this = $(this);
+//		$this.val("");
+//		setTimeout(function () {
+//		$this.val(val);
+//		}, 1);
+//	});
+	
+	
 })();
 
-
-
-$( document ).ready(function() {    
-	
-	$("#ccnum").focus(function () {
-		var val = this.value;
-		var $this = $(this);
-		$this.val("");
-		setTimeout(function () {
-		$this.val(val);
-		}, 1);
-	});
-
-});
