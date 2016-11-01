@@ -67,6 +67,13 @@
     .hint-container__text{
         width: 150px;
     }
+	.popover{
+		background-color: #fd1f39;
+		min-height: 56px;
+	}
+	.popover.right>.arrow:after{
+		border-right-color: #fd1f39;
+	}
     .popover.right{
         margin-left: -268px;
         margin-top: 45px;
@@ -74,12 +81,12 @@
         width: 300px;
     }
     .popover.right>.arrow{
-        margin-top: -47px;
-//        opacity: 0.99;
+        margin: -21px 0 0 0;
+        opacity: 0.99;
         left: auto;
         right: 10px;
         z-index: 100;
-        transform: rotate(90deg);
+		transform: translate(0, -100%) rotate(90deg) ;
     }
     .phoneNumber{
         box-shadow: none !important;
@@ -96,9 +103,7 @@
 	.popover-content,.popover{
 		color: #fff;
 		background-color: red;
-	}
-	.popover.right > .arrow{
-		
+		opacity: 1;
 	}
 	.popover.right>.arrow:after{
 		border-right-color: red;

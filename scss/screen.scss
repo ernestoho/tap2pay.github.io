@@ -64,6 +64,7 @@ h3{
     position: fixed;
     bottom: 5px;
     left: 5px;
+	z-index: 5;
 }
 .card-container{
 	display: block;
@@ -78,6 +79,7 @@ h3{
 	max-width: 300px;
 	min-height: 500px;
     border-radius: 5px;
+	z-index: 6;
 }
 
 .modal-header, .modal-body, .modal-footer{
@@ -100,7 +102,7 @@ h3{
 //	outline: 1px solid green;
     background-color: #f9f9f9;
     position: relative;
-    margin: 0 auto;
+    margin: 0 auto 10px auto;
     min-height: 465px;
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
@@ -231,7 +233,6 @@ h3{
     }
 }
 .hint-container__text{
-//    position: absolute;
     display: none;
     margin: 20px 0;
 }
@@ -254,7 +255,7 @@ h3{
     border-radius: 5px;
     box-shadow: 1px 1px 2px 1px #444;
     width: 100%;
-    z-index: 5;
+    z-index: 7;
     &:after {
         content: '';
         display: block;
@@ -683,6 +684,12 @@ input{
         vertical-align: sub;
     }
 }
+.popover{
+	background-color: #fff;
+}
+.popover.right>.arrow:after {
+	border-right-color: #fff;
+}
 .popover-content{
     color: #000;
 }
@@ -746,11 +753,13 @@ h2.step-payment{
     text-align: center;
     margin: auto;
 	left: 50%;
-	margin-left: -25%;
+//	margin-left: -25%;
+	transform:  translateX(-50%);
     color: $dark-gray-text !important;
     font-size: 15px;
     border-radius: 20px;
     border: 1px solid $border-gray;
+	white-space: nowrap;
 }
 
 .payment-tabs-container{

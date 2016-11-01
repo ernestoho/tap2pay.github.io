@@ -13,6 +13,17 @@
   }
 
   /* line 70, ../scss/media.scss */
+  .popover {
+    background-color: #fd1f39;
+    min-height: 56px;
+  }
+
+  /* line 74, ../scss/media.scss */
+  .popover.right > .arrow:after {
+    border-right-color: #fd1f39;
+  }
+
+  /* line 77, ../scss/media.scss */
   .popover.right {
     margin-left: -268px;
     margin-top: 45px;
@@ -20,22 +31,23 @@
     width: 300px;
   }
 
-  /* line 76, ../scss/media.scss */
+  /* line 83, ../scss/media.scss */
   .popover.right > .arrow {
-    margin-top: -47px;
+    margin: -21px 0 0 0;
+    opacity: 0.99;
     left: auto;
     right: 10px;
     z-index: 100;
-    transform: rotate(90deg);
+    transform: translate(0, -100%) rotate(90deg);
   }
 
-  /* line 84, ../scss/media.scss */
+  /* line 91, ../scss/media.scss */
   .phoneNumber {
     box-shadow: none !important;
     border: 1px solid #ccc !important;
   }
 
-  /* line 89, ../scss/media.scss */
+  /* line 96, ../scss/media.scss */
   #phoneNumber.Invalid-class {
     background-image: url("../images/mob-error.png");
     background-repeat: no-repeat;
@@ -44,46 +56,47 @@
     box-shadow: 0 0px 2px 0px red !important;
   }
 
-  /* line 96, ../scss/media.scss */
+  /* line 103, ../scss/media.scss */
   .popover-content, .popover {
     color: #fff;
     background-color: red;
+    opacity: 1;
   }
 
-  /* line 103, ../scss/media.scss */
+  /* line 108, ../scss/media.scss */
   .popover.right > .arrow:after {
     border-right-color: red;
   }
 
-  /* line 106, ../scss/media.scss */
+  /* line 111, ../scss/media.scss */
   .modal-open {
     overflow-y: visible;
   }
 
-  /* line 109, ../scss/media.scss */
+  /* line 114, ../scss/media.scss */
   .modal-open .modal {
     overflow: visible;
   }
 
-  /* line 112, ../scss/media.scss */
+  /* line 117, ../scss/media.scss */
   .card-container {
     margin-top: 30px;
   }
 }
 @media only screen and (max-width: 768px) and (orientation: portrait) {
-  /* line 119, ../scss/media.scss */
+  /* line 124, ../scss/media.scss */
   .card-container {
     margin-top: 20%;
   }
 }
 @media only screen and (max-width: 630px) {
-  /* line 125, ../scss/media.scss */
+  /* line 130, ../scss/media.scss */
   .hint-container__text {
     width: 125px;
   }
 }
 @media only screen and (max-width: 580px) {
-  /* line 132, ../scss/media.scss */
+  /* line 137, ../scss/media.scss */
   .hint-container__text {
     width: 105%;
     top: 30px;
@@ -91,7 +104,7 @@
     left: -2.5%;
     box-shadow: 1px 1px 2px 1.5px #777;
   }
-  /* line 138, ../scss/media.scss */
+  /* line 143, ../scss/media.scss */
   .hint-container__text:after {
     top: -1px;
     margin-top: -5px;
@@ -106,12 +119,12 @@
   }
 }
 @media only screen and (max-width: 480px) {
-  /* line 156, ../scss/media.scss */
+  /* line 161, ../scss/media.scss */
   .card-container {
     margin-top: 20%;
   }
 
-  /* line 160, ../scss/media.scss */
+  /* line 165, ../scss/media.scss */
   #myModal {
     position: absolute;
     left: 0;
@@ -121,13 +134,13 @@
   }
 }
 @media only screen and (max-width: 425px) {
-  /* line 172, ../scss/media.scss */
+  /* line 177, ../scss/media.scss */
   .input-group-btn .dropdown-menu {
     width: 260px;
     max-height: 300px;
   }
 
-  /* line 177, ../scss/media.scss */
+  /* line 182, ../scss/media.scss */
   .dropdown-menu > li > a {
     padding-left: 10px;
   }
@@ -136,7 +149,7 @@
 /* iPads (portrait and landscape) ----------- */
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* line 211, ../scss/media.scss */
+  /* line 216, ../scss/media.scss */
   .card-container {
     margin-top: 6%;
   }
