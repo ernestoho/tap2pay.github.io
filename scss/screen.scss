@@ -66,7 +66,7 @@ h3{
     position: fixed;
     bottom: 5px;
     left: 5px;
-	z-index: 5;
+	z-index: 1045;
 	opacity: 0.95;
 	img{
 		opacity: 0.96;
@@ -90,7 +90,7 @@ h3{
 	max-width: 300px;
 	min-height: 500px;
     border-radius: 5px;
-	z-index: 6;
+	z-index: 1050;
 }
 
 .modal-header, .modal-body, .modal-footer{

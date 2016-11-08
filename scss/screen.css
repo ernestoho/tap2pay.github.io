@@ -54,7 +54,7 @@ h3 {
   position: fixed;
   bottom: 5px;
   left: 5px;
-  z-index: 5;
+  z-index: 1045;
   opacity: 0.95; }
   /* line 71, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
   .watermark img {
@@ -78,7 +78,7 @@ h3 {
   max-width: 300px;
   min-height: 500px;
   border-radius: 5px;
-  z-index: 6; }
+  z-index: 1050; }
 
 /* line 96, F:/HTML_CSS_JS/Sites/tap2pay project/scss/screen.scss */
 .modal-header, .modal-body, .modal-footer {
