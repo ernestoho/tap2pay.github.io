@@ -779,13 +779,15 @@ h2.step-payment{
     border: 1px solid #afafaf;
     border-radius: 5px;
     overflow: hidden;
+	width: 260px;
+	white-space: nowrap;
     letter-spacing: -0.36em;
     li{
         height: 30px;
         line-height: 30px;
         letter-spacing: normal;
         text-align: center;
-        width: 33.333%;
+        width: 86px;
         border-right: 1px solid #afafaf;
         &:nth-child(2){
             a{
@@ -1153,11 +1155,16 @@ h2.step-payment{
 	margin-bottom: 0;
 	z-index: 20;
 }
+.credit-card-number.error{
+	top: 1px;
+	z-index: 22;
+}
 .half-input_right.error{
 	z-index: 10;
 }
 .Valid-class input{
 	border-color: #40db3e;
+	box-shadow: none !important;
 }
 .Invalid-class input{
 	border-color: red;
@@ -1423,7 +1430,7 @@ span.delete-address-span{
     border-color: #5caef9;
     &:hover{
         background-color: #62b2fb;
-        box-shadow: inset 0 3px 1px #41a2fa;
+//        box-shadow: inset 0 3px 1px #41a2fa;
     }
 }
 .new-address-input:checked + span:before {
