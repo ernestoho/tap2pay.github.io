@@ -73,11 +73,6 @@
     overflow-y: visible;
   }
 
-  /* line 114, ../scss/media.scss */
-  .modal-open .modal {
-    overflow: visible;
-  }
-
   /* line 117, ../scss/media.scss */
   .card-container {
     margin-top: 30px;
