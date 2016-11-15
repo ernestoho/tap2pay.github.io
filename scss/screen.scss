@@ -108,12 +108,19 @@ h3{
     /* от нежелательных выпаданий элементов */
 //    overflow: hidden;
     overflow: visible;
+	&>div{
+		padding-bottom: 50px;
+	}
+	.step-choose-method{
+		padding-bottom: 20px;
+	}
 }
+
 .modal-content{
 //	outline: 1px solid green;
     background-color: #f9f9f9;
     position: relative;
-	padding-bottom: 50px;
+//	padding-bottom: 50px;
     margin: 0 auto 10px auto;
     min-height: 465px;
     border-top-left-radius: 9px;
@@ -1446,7 +1453,7 @@ span.delete-address-span{
 .new-address-label{
     font-family: "HelveticaNeueCyr-Roman", Arial;
     font-weight: normal;
-    margin: 25px 0 65px 0;
+    margin: 25px 0 10px 0;
     line-height: 20px;
     color: $dark-gray-text;
     font-size: 16px;
