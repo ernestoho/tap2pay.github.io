@@ -1,7 +1,7 @@
 /*==========  Mobile First Method  ==========*/
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   /* line 40, ../scss/media.scss */
-  .credit-card-number input {
+  .credit-card-number input, #cardholder-name-input, #card-email-input {
     padding: 2px 5px 2px 27px;
     line-height: 35px;
     font-size: 15px;
@@ -103,7 +103,7 @@
 
   /* line 138, ../scss/media.scss */
   .modal-body .step-payment {
-    padding-bottom: 40px;
+    padding-bottom: 60px;
   }
 
   /* line 141, ../scss/media.scss */
