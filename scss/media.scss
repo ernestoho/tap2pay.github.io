@@ -36,7 +36,11 @@
 }
 
 
-
+@media screen and (-webkit-min-device-pixel-ratio:0) {  
+	.credit-card-number input{
+		padding: 2px 5px 2px 27px;
+	} 
+}
 
 /*        ****** ******         */
 @media only screen and (max-width : 1599px){

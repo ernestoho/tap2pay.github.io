@@ -1310,24 +1310,24 @@ h2.step-payment {
   border-bottom: 1px solid transparent;
 }
 
-/* line 1143, ../scss/screen.scss */
+/* line 1144, ../scss/screen.scss */
 .half-input {
   width: 50%;
   float: left;
   margin: 0;
   position: relative;
 }
-/* line 1148, ../scss/screen.scss */
+/* line 1149, ../scss/screen.scss */
 .half-input input {
   border-radius: 0px;
   padding: 10px 5px 6px 27px;
 }
 
-/* line 1153, ../scss/screen.scss */
+/* line 1154, ../scss/screen.scss */
 .half-input_left {
   z-index: 2;
 }
-/* line 1155, ../scss/screen.scss */
+/* line 1156, ../scss/screen.scss */
 .half-input_left:after {
   display: block;
   position: absolute;
@@ -1340,17 +1340,17 @@ h2.step-payment {
   background-position: -355px 0px;
   background-repeat: no-repeat;
 }
-/* line 1167, ../scss/screen.scss */
+/* line 1168, ../scss/screen.scss */
 .half-input_left input {
   border-bottom-left-radius: 5px;
 }
 
-/* line 1171, ../scss/screen.scss */
+/* line 1172, ../scss/screen.scss */
 .half-input_right {
   margin-left: -1px;
   width: calc(50% + 1px);
 }
-/* line 1174, ../scss/screen.scss */
+/* line 1175, ../scss/screen.scss */
 .half-input_right:after {
   display: block;
   position: absolute;
@@ -1363,31 +1363,31 @@ h2.step-payment {
   background-position: -371px 0px;
   background-repeat: no-repeat;
 }
-/* line 1186, ../scss/screen.scss */
+/* line 1187, ../scss/screen.scss */
 .half-input_right input {
   border-bottom-right-radius: 5px;
   border-left: 1px solid transparent;
 }
 
-/* line 1191, ../scss/screen.scss */
+/* line 1192, ../scss/screen.scss */
 .email-input {
   margin-top: 10px;
 }
-/* line 1193, ../scss/screen.scss */
+/* line 1194, ../scss/screen.scss */
 .email-input input {
   padding: 8px 5px 6px 10px;
 }
 
-/* line 1197, ../scss/screen.scss */
+/* line 1198, ../scss/screen.scss */
 .cardholder-name-input {
   margin-top: 50px;
 }
-/* line 1199, ../scss/screen.scss */
+/* line 1200, ../scss/screen.scss */
 .cardholder-name-input input {
   padding: 8px 5px 6px 10px;
 }
 
-/* line 1203, ../scss/screen.scss */
+/* line 1204, ../scss/screen.scss */
 .credit-card-section .error input {
   border: 1px solid red !important;
   box-shadow: inset 0 1px 2px transparent, 0 1px 0 rgba(255, 255, 255, 0), 0 0 2px 0 rgba(255, 0, 0, 0.5);
@@ -1397,30 +1397,30 @@ h2.step-payment {
   -o-box-shadow: inset 0 1px 2px transparent, 0 1px 0 rgba(255, 255, 255, 0), 0 0 2px 0 rgba(255, 0, 0, 0.5);
 }
 
-/* line 1212, ../scss/screen.scss */
+/* line 1213, ../scss/screen.scss */
 .credit-card-number.error input {
   margin-bottom: 0;
   z-index: 20;
 }
 
-/* line 1216, ../scss/screen.scss */
+/* line 1217, ../scss/screen.scss */
 .credit-card-number.error {
   top: 1px;
   z-index: 22;
 }
 
-/* line 1220, ../scss/screen.scss */
+/* line 1221, ../scss/screen.scss */
 .half-input_right.error {
   z-index: 10;
 }
 
-/* line 1223, ../scss/screen.scss */
+/* line 1224, ../scss/screen.scss */
 .Valid-class input {
   border-color: #40db3e;
   box-shadow: none !important;
 }
 
-/* line 1227, ../scss/screen.scss */
+/* line 1228, ../scss/screen.scss */
 .Invalid-class input {
   border-color: red;
   box-shadow: inset 0 1px 2px transparent, 0 1px 0 rgba(255, 255, 255, 0), 0 0 2px 0 rgba(255, 0, 0, 0.5);
@@ -1430,7 +1430,7 @@ h2.step-payment {
   -o-box-shadow: inset 0 1px 2px transparent, 0 1px 0 rgba(255, 255, 255, 0), 0 0 2px 0 rgba(255, 0, 0, 0.5);
 }
 
-/* line 1236, ../scss/screen.scss */
+/* line 1237, ../scss/screen.scss */
 .button-save-card {
   display: none;
   width: 100%;
@@ -1438,12 +1438,12 @@ h2.step-payment {
   border: 1px solid #c5c5c5;
 }
 
-/* line 1242, ../scss/screen.scss */
+/* line 1243, ../scss/screen.scss */
 .valid-check {
   display: none;
 }
 
-/* line 1245, ../scss/screen.scss */
+/* line 1246, ../scss/screen.scss */
 .control-label {
   margin: 21px 0 3px 0;
   letter-spacing: -0.2px;
@@ -1453,20 +1453,20 @@ h2.step-payment {
   font-family: "HelveticaNeueCyr-Roman", Arial;
 }
 
-/* line 1253, ../scss/screen.scss */
+/* line 1254, ../scss/screen.scss */
 .creditly-wrapper .form-control:focus {
   border-color: #ccc;
   box-shadow: none;
 }
 
-/* line 1257, ../scss/screen.scss */
+/* line 1258, ../scss/screen.scss */
 .billing-address-name {
   height: 37px;
   line-height: 37px;
   font-size: 15px;
 }
 
-/* line 1262, ../scss/screen.scss */
+/* line 1263, ../scss/screen.scss */
 .paypal-button {
   display: block;
   width: 100%;
@@ -1481,12 +1481,12 @@ h2.step-payment {
   font-family: "HelveticaNeueCyr-Medium", Arial;
   border-bottom: 2px solid #cbcbcb;
 }
-/* line 1275, ../scss/screen.scss */
+/* line 1276, ../scss/screen.scss */
 .paypal-button:hover {
   border-bottom: 2px solid #cbcbcb;
 }
 
-/* line 1279, ../scss/screen.scss */
+/* line 1280, ../scss/screen.scss */
 .paypal-button_icon {
   display: inline-block;
   width: 64px;
@@ -1498,13 +1498,13 @@ h2.step-payment {
   background-repeat: no-repeat;
 }
 
-/* line 1289, ../scss/screen.scss */
+/* line 1290, ../scss/screen.scss */
 .payment-continue {
   display: none;
 }
 
 /* ╨║╨╜╨╛╨┐╨║╨░ ╨▓ ╤Д╤Г╤В╨╡╤А╨╡*/
-/* line 1293, ../scss/screen.scss */
+/* line 1294, ../scss/screen.scss */
 .button-save-card-InFooter {
   display: none;
 }
@@ -1512,13 +1512,13 @@ h2.step-payment {
 /* ╨║╨╜╨╛╨┐╨║╨░ ╨▓ ╤Д╨╛╤А╨╝╨╡ */
 /*╤Б╤В╨╕╨╗╨╕ paypal ╨▓╨║╨╗╨░╨┤╨║╨╕*/
 /*╤Б╤В╨╕╨╗╨╕ erip ╨▓╨║╨╗╨░╨┤╨║╨╕*/
-/* line 1307, ../scss/screen.scss */
+/* line 1308, ../scss/screen.scss */
 .erip-input-container {
   position: relative;
   padding-top: 1px;
   margin-top: 16px;
 }
-/* line 1311, ../scss/screen.scss */
+/* line 1312, ../scss/screen.scss */
 .erip-input-container:after {
   position: absolute;
   top: 12px;
@@ -1532,7 +1532,7 @@ h2.step-payment {
   background-repeat: no-repeat;
 }
 
-/* line 1324, ../scss/screen.scss */
+/* line 1325, ../scss/screen.scss */
 .erip-input {
   display: block;
   width: 100%;
@@ -1548,12 +1548,12 @@ h2.step-payment {
 }
 
 /* ╤И╨░╨│ ╨┤╨╛╤Б╤В╨░╨▓╨║╨╕ */
-/* line 1342, ../scss/screen.scss */
+/* line 1343, ../scss/screen.scss */
 .step-shipment {
   display: none;
 }
 
-/* line 1345, ../scss/screen.scss */
+/* line 1346, ../scss/screen.scss */
 .location-icon {
   display: inline-block;
   width: 20px;
@@ -1565,17 +1565,17 @@ h2.step-payment {
   top: -2px;
 }
 
-/* line 1356, ../scss/screen.scss */
+/* line 1357, ../scss/screen.scss */
 .shipment-address_button:focus, .shipment-address_button:active, .choose-card__button:focus, .shipment-address_button:focus, .choose-card__button:active, .shipment-address_button:active {
   outline: none;
   color: #474747;
 }
-/* line 1360, ../scss/screen.scss */
+/* line 1361, ../scss/screen.scss */
 .shipment-address_button:hover, .choose-card__button:hover, .shipment-address_button:hover {
   color: #474747;
 }
 
-/* line 1365, ../scss/screen.scss */
+/* line 1366, ../scss/screen.scss */
 .step-shipment .shipment-address_button {
   margin-top: 0px;
   width: calc(100% + 19px);
@@ -1583,11 +1583,11 @@ h2.step-payment {
   height: auto;
   border-top: none;
 }
-/* line 1371, ../scss/screen.scss */
+/* line 1372, ../scss/screen.scss */
 .step-shipment .shipment-address_button img {
   margin: 0;
 }
-/* line 1374, ../scss/screen.scss */
+/* line 1375, ../scss/screen.scss */
 .step-shipment .shipment-address_button span {
   display: inline-block;
   vertical-align: middle;
@@ -1596,58 +1596,58 @@ h2.step-payment {
   padding: 0 0px 0 10px;
   width: calc(100% - 30px);
 }
-/* line 1384, ../scss/screen.scss */
+/* line 1385, ../scss/screen.scss */
 .step-shipment h3 {
   margin-top: 28px;
   font-family: "HelveticaNeueCyr-Medium", Arial;
   margin-bottom: 2px;
 }
-/* line 1389, ../scss/screen.scss */
+/* line 1390, ../scss/screen.scss */
 .step-shipment .location-icon {
   vertical-align: middle;
   display: inline-block;
 }
 
-/* line 1395, ../scss/screen.scss */
+/* line 1396, ../scss/screen.scss */
 .addNewAddress-button {
   margin-top: 12px;
 }
-/* line 1397, ../scss/screen.scss */
+/* line 1398, ../scss/screen.scss */
 .addNewAddress-button:hover, .addNewAddress-button:focus, .addNewAddress-button:visited, .addNewAddress-button:active {
   text-decoration: none;
 }
 
-/* line 1402, ../scss/screen.scss */
+/* line 1403, ../scss/screen.scss */
 .saved-locations {
   display: none;
   display: block;
 }
 
-/* line 1406, ../scss/screen.scss */
+/* line 1407, ../scss/screen.scss */
 .new-address {
   display: none;
 }
-/* line 1408, ../scss/screen.scss */
+/* line 1409, ../scss/screen.scss */
 .new-address h3 {
   margin-top: 5px;
 }
-/* line 1410, ../scss/screen.scss */
+/* line 1411, ../scss/screen.scss */
 .new-address h3:first-child {
   margin-top: 15px;
 }
-/* line 1414, ../scss/screen.scss */
+/* line 1415, ../scss/screen.scss */
 .new-address input {
   margin-top: 10px;
   padding-top: 8px;
   font-size: 15px;
 }
 
-/* line 1421, ../scss/screen.scss */
+/* line 1422, ../scss/screen.scss */
 .backToSavedLocations {
   display: none;
 }
 
-/* line 1424, ../scss/screen.scss */
+/* line 1425, ../scss/screen.scss */
 .edit-shipment-address {
   display: none;
   width: 100%;
@@ -1655,7 +1655,7 @@ h2.step-payment {
   font-size: 14px;
   letter-spacing: 0.5px;
 }
-/* line 1430, ../scss/screen.scss */
+/* line 1431, ../scss/screen.scss */
 .edit-shipment-address span {
   display: inline-block;
   margin: 15px 0 0 0;
@@ -1663,7 +1663,7 @@ h2.step-payment {
   font-family: "HelveticaNeueCyr-Medium", Arial;
 }
 
-/* line 1437, ../scss/screen.scss */
+/* line 1438, ../scss/screen.scss */
 span.address-span {
   display: inline-block;
   width: auto;
@@ -1671,7 +1671,7 @@ span.address-span {
   font-family: "HelveticaNeueCyr-Roman", Arial;
 }
 
-/* line 1443, ../scss/screen.scss */
+/* line 1444, ../scss/screen.scss */
 span.delete-address-span {
   display: inline-block;
   width: 100%;
@@ -1681,18 +1681,18 @@ span.delete-address-span {
   text-align: right;
   font-family: "HelveticaNeueCyr-Roman", Arial;
 }
-/* line 1451, ../scss/screen.scss */
+/* line 1452, ../scss/screen.scss */
 span.delete-address-span:hover {
   cursor: pointer;
   color: deepskyblue;
 }
 
-/* line 1456, ../scss/screen.scss */
+/* line 1457, ../scss/screen.scss */
 .new-address-input {
   margin-top: 18px;
 }
 
-/* line 1459, ../scss/screen.scss */
+/* line 1460, ../scss/screen.scss */
 .new-address-label {
   font-family: "HelveticaNeueCyr-Roman", Arial;
   font-weight: normal;
@@ -1704,12 +1704,12 @@ span.delete-address-span:hover {
   vertical-align: middle;
 }
 
-/* line 1469, ../scss/screen.scss */
+/* line 1470, ../scss/screen.scss */
 .new-address-label input {
   display: none;
 }
 
-/* line 1472, ../scss/screen.scss */
+/* line 1473, ../scss/screen.scss */
 .new-address-label span {
   height: 19px;
   width: 19px;
@@ -1720,13 +1720,13 @@ span.delete-address-span:hover {
   vertical-align: top;
   box-shadow: inset 0 1px 1px #ddd;
 }
-/* line 1481, ../scss/screen.scss */
+/* line 1482, ../scss/screen.scss */
 .new-address-label span:hover {
   border-color: #5caef9;
   cursor: pointer;
 }
 
-/* line 1486, ../scss/screen.scss */
+/* line 1487, ../scss/screen.scss */
 .new-address-input:checked + span {
   background-color: #41a2fa;
   box-shadow: none;
@@ -1736,12 +1736,12 @@ span.delete-address-span:hover {
   background-repeat: no-repeat;
   background-position: -466px -18px;
 }
-/* line 1494, ../scss/screen.scss */
+/* line 1495, ../scss/screen.scss */
 .new-address-input:checked + span:hover {
   background-color: #62b2fb;
 }
 
-/* line 1507, ../scss/screen.scss */
+/* line 1508, ../scss/screen.scss */
 .not-enough-money {
   display: none;
   color: red;
@@ -1749,42 +1749,42 @@ span.delete-address-span:hover {
   letter-spacing: 0.4px;
 }
 
-/* line 1513, ../scss/screen.scss */
+/* line 1514, ../scss/screen.scss */
 .not-enough-money.on {
   display: block;
 }
 
 /* ╤И╨░╨│ ╤Д╨╕╨╜╨░╨╗╤М╨╜╤Л╨╣ ╤И╨░╨│ */
-/* line 1520, ../scss/screen.scss */
+/* line 1521, ../scss/screen.scss */
 .step-finalCheck {
   display: none;
 }
-/* line 1522, ../scss/screen.scss */
+/* line 1523, ../scss/screen.scss */
 .step-finalCheck a:hover, .step-finalCheck a:focus, .step-finalCheck a:visited, .step-finalCheck a:active {
   color: #474747;
 }
 
-/* line 1526, ../scss/screen.scss */
+/* line 1527, ../scss/screen.scss */
 .shipment-address_title {
   margin-top: 25px;
 }
 
-/* line 1529, ../scss/screen.scss */
+/* line 1530, ../scss/screen.scss */
 .step-finalCheck.on {
   display: block;
 }
 
-/* line 1532, ../scss/screen.scss */
+/* line 1533, ../scss/screen.scss */
 .special-underline-border {
   border-top: 1px solid #e3e3e3;
 }
 
-/* line 1536, ../scss/screen.scss */
+/* line 1537, ../scss/screen.scss */
 .clickToPay_button {
   display: block;
 }
 
-/* line 1540, ../scss/screen.scss */
+/* line 1541, ../scss/screen.scss */
 .clickToPay_button, .clickToPay_button:hover {
   color: #fff;
   text-shadow: 1px -1px  1px #3b99f0;
@@ -1803,14 +1803,14 @@ span.delete-address-span:hover {
   /* IE6-9 */
 }
 
-/* line 1556, ../scss/screen.scss */
+/* line 1557, ../scss/screen.scss */
 .payment-success {
   display: none;
   vertical-align: 37px;
   letter-spacing: 0.5px;
 }
 
-/* line 1564, ../scss/screen.scss */
+/* line 1565, ../scss/screen.scss */
 .payment-success, .payment-success:hover {
   color: #fff;
   text-shadow: 1px -1px  1px #20b119;
@@ -1829,7 +1829,7 @@ span.delete-address-span:hover {
   /* IE6-9 */
 }
 
-/* line 1576, ../scss/screen.scss */
+/* line 1577, ../scss/screen.scss */
 .icon-success {
   display: inline-block;
   width: 17px;
@@ -1850,7 +1850,7 @@ span.delete-address-span:hover {
  *
  * Copyright (c) 2016 Daniel Eden
  */
-/* line 1599, ../scss/screen.scss */
+/* line 1600, ../scss/screen.scss */
 .animated {
   -webkit-animation-duration: 0.4s;
   animation-duration: 0.4s;
@@ -1858,19 +1858,19 @@ span.delete-address-span:hover {
   animation-fill-mode: both;
 }
 
-/* line 1605, ../scss/screen.scss */
+/* line 1606, ../scss/screen.scss */
 .animated.infinite {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 
-/* line 1609, ../scss/screen.scss */
+/* line 1610, ../scss/screen.scss */
 .animated.hinge {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
 
-/* line 1613, ../scss/screen.scss */
+/* line 1614, ../scss/screen.scss */
 .animated.flipOutX,
 .animated.flipOutY,
 .animated.bounceIn,
@@ -1921,42 +1921,42 @@ span.delete-address-span:hover {
     transform: translate3d(10px, 0, 0);
   }
 }
-/* line 1664, ../scss/screen.scss */
+/* line 1665, ../scss/screen.scss */
 .shake {
   -webkit-animation-name: shake;
   animation-name: shake;
 }
 
 /* disable link styles */
-/* line 1673, ../scss/screen.scss */
+/* line 1674, ../scss/screen.scss */
 a, a:focus, a:hover, a:active, a.active {
   outline: none;
 }
 
 /* ╨╖╨░╨┐╤А╨╡╤В╨╕╤В╤М ╨▓╤Л╨┤╨╡╨╗╨╡╨╜╨╕╨╡ ╨╡╤А╨╕╨┐ ╨╕ ╨┐╨░╨╣╨┐╨░╨╗ */
-/* line 1678, ../scss/screen.scss */
+/* line 1679, ../scss/screen.scss */
 .select-none {
   user-select: none;
 }
 
-/* line 1682, ../scss/screen.scss */
+/* line 1683, ../scss/screen.scss */
 ::-webkit-input-placeholder {
   color: #c2c2c2 !important;
 }
 
-/* line 1685, ../scss/screen.scss */
+/* line 1686, ../scss/screen.scss */
 :-moz-placeholder {
   /* Firefox 18- */
   color: #c2c2c2 !important;
 }
 
-/* line 1688, ../scss/screen.scss */
+/* line 1689, ../scss/screen.scss */
 ::-moz-placeholder {
   /* Firefox 19+ */
   color: #c2c2c2 !important;
 }
 
-/* line 1691, ../scss/screen.scss */
+/* line 1692, ../scss/screen.scss */
 :-ms-input-placeholder {
   color: #c2c2c2 !important;
 }
