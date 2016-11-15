@@ -33,7 +33,40 @@ $( document ).ready(function() {
         $(".step-authorization").hide();
         $(".step-payment").show();
         $(".backToAuthorization").show();
+//		$('#sms-code').addClass('valid-check-smsCode');
+//		/* проверка валидности номера */
+//		var smsCodeInput = $('#sms-code');
+//		function validSMSCode() {
+//			if (smsCodeInput.value.length < 1) {
+//				smsCodeInput.setCustomValidity("Your phone number is invalid");  
+//			} else {
+//				// Длина комментария отвечает требованию, 
+//				// поэтому очищаем сообщение об ошибке
+//			  smsCodeInput.setCustomValidity("");
+//			}
+//		};
     });
+	
+	/* привязал к кнопке отправить = временно*/
+	$("#phone-validation-submit").click(function(){
+		/* проверка валидности номера */
+		var $smsCodeContainer = $('.send-container');
+		var $smsCodeInput = $('#sms-code');
+		
+		$smsCodeContainer.removeClass('valid-check-smsCode');
+		if ($smsCodeInput.val().length < 1) {
+			$('.valid-check-smsCode-alert').show();
+//				smsCodeInput.setCustomValidity("Your phone number is invalid");  
+		} else {
+			// Длина комментария отвечает требованию, 
+			// поэтому очищаем сообщение об ошибке
+//			  smsCodeInput.setCustomValidity("");
+		}
+	});
+	
+	$('#sms-code').focus(function(){
+		$('.valid-check-smsCode-alert').hide();
+	});
 
     /* вернуться к авторизации */
     $("#backToAuthorization").click(function(){
@@ -233,6 +266,9 @@ $( document ).ready(function() {
 	$('.button-save-card-InFooter').mouseup(function(){
 		$(".card-container" ).removeClass("animated shake");
 	});
+	
+	
+	
 
 /*close jQuery*/   
 });

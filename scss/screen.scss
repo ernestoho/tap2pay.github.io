@@ -584,7 +584,6 @@ input{
     appearance: none;
 }
 #phoneNumber.Valid-class{
-//	border-color: #40db3e !important;
 	background-color: #e5f7fd;
 	background-image: url('../images/checked.svg');
 	background-repeat: no-repeat;
@@ -596,6 +595,35 @@ input{
 }
 .form-control.phoneNumber{
 	padding: 2px 10px 0 10px;
+}
+.valid-check-smsCode-alert{
+	display: none;
+	outline: none;
+	border: none;
+	width: 100%;
+	background-color: red;
+	color: #fff;
+	margin: 5px auto 20px auto !important;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	position: relative;
+	&:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0%;
+        margin-top: -5px;
+        left: 16px;
+        width: 10px;
+        height: 10px; 
+        background: red;
+        border-left: 1px solid #999;
+        border-bottom: 1px solid #999;
+        -moz-transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+    }
 }
 .phone-helper{
     display: inline-block;
@@ -659,7 +687,7 @@ input{
     }
     .dont-get-code{
         margin-top: 23px;
-		margin-bottom: 50px;
+		margin-bottom: 20px;
     }
     a{
         margin-left: 2px;
