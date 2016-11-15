@@ -109,10 +109,13 @@ h3{
 //    overflow: hidden;
     overflow: visible;
 	&>div{
-		padding-bottom: 50px;
+		padding-bottom: 60px;
 	}
 	.step-choose-method{
 		padding-bottom: 20px;
+	}
+	.step-finalCheck, .step-payment, .step-shipment, .step-authorization{
+		margin-bottom: 20px;
 	}
 }
 
@@ -776,6 +779,7 @@ input{
     left: 0;
     width: 100%;
     text-align: center;
+	padding: 20px 19px;
     button{
         text-align: center;
         padding: 0;

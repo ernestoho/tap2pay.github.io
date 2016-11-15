@@ -77,21 +77,31 @@
   .card-container {
     margin-top: 30px;
   }
+
+  /* line 123, ../scss/media.scss */
+  .modal-content {
+    min-height: 80%;
+  }
+
+  /* line 126, ../scss/media.scss */
+  .modal-footer button {
+    margin-bottom: 10px;
+  }
 }
 @media only screen and (max-width: 768px) and (orientation: portrait) {
-  /* line 126, ../scss/media.scss */
+  /* line 133, ../scss/media.scss */
   .card-container {
     margin-top: 20%;
   }
 }
 @media only screen and (max-width: 630px) {
-  /* line 132, ../scss/media.scss */
+  /* line 139, ../scss/media.scss */
   .hint-container__text {
     width: 125px;
   }
 }
 @media only screen and (max-width: 580px) {
-  /* line 139, ../scss/media.scss */
+  /* line 146, ../scss/media.scss */
   .hint-container__text {
     width: 105%;
     top: 30px;
@@ -99,7 +109,7 @@
     left: -2.5%;
     box-shadow: 1px 1px 2px 1.5px #777;
   }
-  /* line 145, ../scss/media.scss */
+  /* line 152, ../scss/media.scss */
   .hint-container__text:after {
     top: -1px;
     margin-top: -5px;
@@ -114,12 +124,12 @@
   }
 }
 @media only screen and (max-width: 480px) {
-  /* line 163, ../scss/media.scss */
+  /* line 170, ../scss/media.scss */
   .card-container {
     margin-top: 20%;
   }
 
-  /* line 167, ../scss/media.scss */
+  /* line 174, ../scss/media.scss */
   #myModal {
     position: absolute;
     left: 0;
@@ -129,13 +139,13 @@
   }
 }
 @media only screen and (max-width: 425px) {
-  /* line 179, ../scss/media.scss */
+  /* line 186, ../scss/media.scss */
   .input-group-btn .dropdown-menu {
     width: 260px;
     max-height: 300px;
   }
 
-  /* line 184, ../scss/media.scss */
+  /* line 191, ../scss/media.scss */
   .dropdown-menu > li > a {
     padding-left: 10px;
   }
@@ -144,7 +154,7 @@
 /* iPads (portrait and landscape) ----------- */
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* line 218, ../scss/media.scss */
+  /* line 225, ../scss/media.scss */
   .card-container {
     margin-top: 6%;
   }
