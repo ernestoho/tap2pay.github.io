@@ -95,23 +95,28 @@
 
   /* line 132, ../scss/media.scss */
   .modal-body .step-payment {
+    padding-bottom: 40px;
+  }
+
+  /* line 135, ../scss/media.scss */
+  .modal-body .step-shipment {
     padding-bottom: 60px;
   }
 }
 @media only screen and (max-width: 768px) and (orientation: portrait) {
-  /* line 139, ../scss/media.scss */
+  /* line 142, ../scss/media.scss */
   .card-container {
     margin-top: 20%;
   }
 }
 @media only screen and (max-width: 630px) {
-  /* line 145, ../scss/media.scss */
+  /* line 148, ../scss/media.scss */
   .hint-container__text {
     width: 125px;
   }
 }
 @media only screen and (max-width: 580px) {
-  /* line 152, ../scss/media.scss */
+  /* line 155, ../scss/media.scss */
   .hint-container__text {
     width: 105%;
     top: 30px;
@@ -119,7 +124,7 @@
     left: -2.5%;
     box-shadow: 1px 1px 2px 1.5px #777;
   }
-  /* line 158, ../scss/media.scss */
+  /* line 161, ../scss/media.scss */
   .hint-container__text:after {
     top: -1px;
     margin-top: -5px;
@@ -134,12 +139,12 @@
   }
 }
 @media only screen and (max-width: 480px) {
-  /* line 176, ../scss/media.scss */
+  /* line 179, ../scss/media.scss */
   .card-container {
     margin-top: 20%;
   }
 
-  /* line 180, ../scss/media.scss */
+  /* line 183, ../scss/media.scss */
   #myModal {
     position: absolute;
     left: 0;
@@ -149,13 +154,13 @@
   }
 }
 @media only screen and (max-width: 425px) {
-  /* line 192, ../scss/media.scss */
+  /* line 195, ../scss/media.scss */
   .input-group-btn .dropdown-menu {
     width: 260px;
     max-height: 300px;
   }
 
-  /* line 197, ../scss/media.scss */
+  /* line 200, ../scss/media.scss */
   .dropdown-menu > li > a {
     padding-left: 10px;
   }
@@ -164,7 +169,7 @@
 /* iPads (portrait and landscape) ----------- */
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* line 231, ../scss/media.scss */
+  /* line 234, ../scss/media.scss */
   .card-container {
     margin-top: 6%;
   }
