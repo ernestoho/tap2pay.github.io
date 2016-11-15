@@ -268,7 +268,7 @@ $( document ).ready(function() {
 	});
 	
 	$(".sms-code-input").on( 'click', function(){
-        $("#authorization-continue").detach().appendTo( $(' .modal-body .step-authorization' )).css("margin-top", "20px");
+        $("#authorization-continue").detach().appendTo( $(' .modal-body .step-authorization' )).css("margin-top": "20px", "font-size":"15px", "text-align":"center");
     });
 	
 	$('#phoneNumber').blur(function(){
