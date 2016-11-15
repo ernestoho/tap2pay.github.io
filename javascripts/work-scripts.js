@@ -266,11 +266,7 @@ $( document ).ready(function() {
 	$('.button-save-card-InFooter').mouseup(function(){
 		$(".card-container" ).removeClass("animated shake");
 	});
-	
-	$(".sms-code-input").on( 'click', function(){
-        $("#authorization-continue").detach().appendTo( $(' .modal-body .step-authorization' ) );
-		 $("#authorization-continue").css({"margin-top":"20px", "font-size":"15px", "text-align":"center"});
-    });
+
 	
 	$('#phoneNumber').blur(function(){
 		$(".popover").hide();
@@ -291,3 +287,9 @@ $( document ).ready(function() {
 //			$('.phoneNumber').addClass("error");
 //		};
 //	});
+
+//
+//$(".sms-code-input").on( 'click', function(){
+//        $("#authorization-continue").detach().appendTo( $(' .modal-body .step-authorization' ) );
+//		 $("#authorization-continue").css({"margin-top":"20px", "font-size":"15px", "text-align":"center"});
+//    });
