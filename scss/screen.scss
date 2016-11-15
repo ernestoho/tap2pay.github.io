@@ -670,7 +670,7 @@ input{
     padding: 8px 5px 6px 10px;
     margin: 10px 0 0 0;
     letter-spacing: 0.6px;
-    font-size: 14px;
+    font-size: 15px;
 	outline: none !important;
 	&:hover, &:active, &:active, &:focus{
 		outline: none !important;
@@ -1366,6 +1366,7 @@ h2.step-payment{
 	input{
 		margin-top: 10px;
 		padding-top: 8px;
+		font-size: 15px;
 	}
 }
 .backToSavedLocations{

@@ -188,7 +188,9 @@ $( document ).ready(function() {
 		};
 	});
 	
-
+	$('.card-container').find('.close').click(function(){
+		$('.popover').hide();
+	});
 
 	/* переход на шаг shipment */
 //    $("#button-save-card-InFooter").click(function(){
