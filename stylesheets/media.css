@@ -87,21 +87,31 @@
   .modal-footer button {
     margin-bottom: 10px;
   }
+
+  /* line 129, ../scss/media.scss */
+  .card-container {
+    min-height: 400px;
+  }
+
+  /* line 132, ../scss/media.scss */
+  .modal-body .step-payment {
+    padding-bottom: 60px;
+  }
 }
 @media only screen and (max-width: 768px) and (orientation: portrait) {
-  /* line 133, ../scss/media.scss */
+  /* line 139, ../scss/media.scss */
   .card-container {
     margin-top: 20%;
   }
 }
 @media only screen and (max-width: 630px) {
-  /* line 139, ../scss/media.scss */
+  /* line 145, ../scss/media.scss */
   .hint-container__text {
     width: 125px;
   }
 }
 @media only screen and (max-width: 580px) {
-  /* line 146, ../scss/media.scss */
+  /* line 152, ../scss/media.scss */
   .hint-container__text {
     width: 105%;
     top: 30px;
@@ -109,7 +119,7 @@
     left: -2.5%;
     box-shadow: 1px 1px 2px 1.5px #777;
   }
-  /* line 152, ../scss/media.scss */
+  /* line 158, ../scss/media.scss */
   .hint-container__text:after {
     top: -1px;
     margin-top: -5px;
@@ -124,12 +134,12 @@
   }
 }
 @media only screen and (max-width: 480px) {
-  /* line 170, ../scss/media.scss */
+  /* line 176, ../scss/media.scss */
   .card-container {
     margin-top: 20%;
   }
 
-  /* line 174, ../scss/media.scss */
+  /* line 180, ../scss/media.scss */
   #myModal {
     position: absolute;
     left: 0;
@@ -139,13 +149,13 @@
   }
 }
 @media only screen and (max-width: 425px) {
-  /* line 186, ../scss/media.scss */
+  /* line 192, ../scss/media.scss */
   .input-group-btn .dropdown-menu {
     width: 260px;
     max-height: 300px;
   }
 
-  /* line 191, ../scss/media.scss */
+  /* line 197, ../scss/media.scss */
   .dropdown-menu > li > a {
     padding-left: 10px;
   }
@@ -154,7 +164,7 @@
 /* iPads (portrait and landscape) ----------- */
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* line 225, ../scss/media.scss */
+  /* line 231, ../scss/media.scss */
   .card-container {
     margin-top: 6%;
   }

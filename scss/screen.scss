@@ -108,15 +108,14 @@ h3{
     /* от нежелательных выпаданий элементов */
 //    overflow: hidden;
     overflow: visible;
-	&>div{
-		padding-bottom: 60px;
-	}
-	.step-choose-method{
-		padding-bottom: 20px;
-	}
 	.step-finalCheck, .step-payment, .step-shipment, .step-authorization{
 		margin-bottom: 20px;
+		padding-bottom: 20px;
 	}
+	.step-authorization, .step-shipment, .step-finalCheck{
+		padding-bottom: 60px;
+	}
+
 }
 
 .modal-content{

@@ -60,27 +60,33 @@
     min-height: 80%; }
   /* line 126, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
   .modal-footer button {
-    margin-bottom: 10px; } }
+    margin-bottom: 10px; }
+  /* line 129, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
+  .card-container {
+    min-height: 400px; }
+  /* line 132, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
+  .modal-body .step-payment {
+    padding-bottom: 60px; } }
 
 @media only screen and (max-width: 768px) and (orientation: portrait) {
-  /* line 133, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
+  /* line 139, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
   .card-container {
     margin-top: 20%; } }
 
 @media only screen and (max-width: 630px) {
-  /* line 139, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
+  /* line 145, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
   .hint-container__text {
     width: 125px; } }
 
 @media only screen and (max-width: 580px) {
-  /* line 146, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
+  /* line 152, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
   .hint-container__text {
     width: 105%;
     top: 30px;
     transform: translate(0, 0);
     left: -2.5%;
     box-shadow: 1px 1px 2px 1.5px #777; }
-    /* line 152, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
+    /* line 158, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
     .hint-container__text:after {
       top: -1px;
       margin-top: -5px;
@@ -94,10 +100,10 @@
       opacity: 0.99; } }
 
 @media only screen and (max-width: 480px) {
-  /* line 170, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
+  /* line 176, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
   .card-container {
     margin-top: 20%; }
-  /* line 174, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
+  /* line 180, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
   #myModal {
     position: absolute;
     left: 0;
@@ -106,11 +112,11 @@
     right: 0; } }
 
 @media only screen and (max-width: 425px) {
-  /* line 186, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
+  /* line 192, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
   .input-group-btn .dropdown-menu {
     width: 260px;
     max-height: 300px; }
-  /* line 191, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
+  /* line 197, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
   .dropdown-menu > li > a {
     padding-left: 10px; } }
 
@@ -118,7 +124,7 @@
 /* iPads (portrait and landscape) ----------- */
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* line 225, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
+  /* line 231, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
   .card-container {
     margin-top: 6%; } }
 
