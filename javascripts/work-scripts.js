@@ -267,7 +267,13 @@ $( document ).ready(function() {
 		$(".card-container" ).removeClass("animated shake");
 	});
 	
+	$(".sms-code-input").on( 'click', function(){
+        $("#authorization-continue").detach().appendTo( $(' .modal-body .step-authorization' )).css("margin-top", "20px");
+    });
 	
+	$('#phoneNumber').blur(function(){
+		$(".popover").hide();
+	});
 	
 
 /*close jQuery*/   
