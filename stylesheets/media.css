@@ -16,7 +16,7 @@
 
   /* line 50, ../scss/media.scss */
   #cardholder-name-input {
-    padding-top: 3px;
+    padding-top: 5px;
   }
 }
 /*        ****** ******         */
@@ -100,7 +100,7 @@
 
   /* line 137, ../scss/media.scss */
   .modal-content {
-    min-height: 80%;
+    min-height: 400px;
   }
 
   /* line 140, ../scss/media.scss */
@@ -120,7 +120,7 @@
 
   /* line 149, ../scss/media.scss */
   .modal-body .step-shipment {
-    padding-bottom: 60px;
+    padding-bottom: 50px;
   }
 }
 @media only screen and (max-width: 768px) and (orientation: portrait) {

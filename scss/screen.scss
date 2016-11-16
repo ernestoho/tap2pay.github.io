@@ -391,6 +391,12 @@ input.form-control{
     }
 }
 
+.modal-button{
+	&:hover, &:active, &:focus{
+		outline: none !important;
+	}
+}
+
 
 /*стили выбора метода оплаты*/
 .step-choose-method{
@@ -1330,7 +1336,7 @@ h2.step-payment{
     margin: 0px 0 0 0;
     height: 36px;
     line-height: 36px;
-    padding: 2px 0 0 38px;
+    padding: 2px 5px 2px 7px;
     letter-spacing: 0.4px;
     border-radius: 5px;
     box-shadow: none !important;

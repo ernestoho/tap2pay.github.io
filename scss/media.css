@@ -12,7 +12,7 @@
     font-size: 15px; }
   /* line 50, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
   #cardholder-name-input {
-    padding-top: 3px; } }
+    padding-top: 5px; } }
 
 /*        ****** ******         */
 @media only screen and (max-width: 1024px) {
@@ -72,7 +72,7 @@
     margin-top: 30px; }
   /* line 137, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
   .modal-content {
-    min-height: 80%; }
+    min-height: 400px; }
   /* line 140, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
   .modal-footer button {
     margin-bottom: 10px; }
@@ -84,7 +84,7 @@
     padding-bottom: 60px; }
   /* line 149, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
   .modal-body .step-shipment {
-    padding-bottom: 60px; } }
+    padding-bottom: 50px; } }
 
 @media only screen and (max-width: 768px) and (orientation: portrait) {
   /* line 156, F:/HTML_CSS_JS/Sites/tap2pay project/scss/media.scss */
