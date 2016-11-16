@@ -37,11 +37,19 @@
 
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {  
-	.credit-card-number input, #cardholder-name-input, #card-email-input{
+	.credit-card-number input{
 		padding: 2px 5px 2px 27px;
 		line-height: 35px;
 		font-size: 15px;
-	} 
+	}
+	#cardholder-name-input, #card-email-input{
+		padding: 2px 5px 2px 7px;
+		line-height: 35px;
+		font-size: 15px;
+	}
+	#cardholder-name-input{
+		padding-top: 3px;
+	}
 }
 
 /*        ****** ******         */

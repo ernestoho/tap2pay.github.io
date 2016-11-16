@@ -1,37 +1,49 @@
 /*==========  Mobile First Method  ==========*/
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   /* line 40, ../scss/media.scss */
-  .credit-card-number input, #cardholder-name-input, #card-email-input {
+  .credit-card-number input {
     padding: 2px 5px 2px 27px;
     line-height: 35px;
     font-size: 15px;
   }
+
+  /* line 45, ../scss/media.scss */
+  #cardholder-name-input, #card-email-input {
+    padding: 2px 5px 2px 7px;
+    line-height: 35px;
+    font-size: 15px;
+  }
+
+  /* line 50, ../scss/media.scss */
+  #cardholder-name-input {
+    padding-top: 3px;
+  }
 }
 /*        ****** ******         */
 @media only screen and (max-width: 1024px) {
-  /* line 67, ../scss/media.scss */
+  /* line 75, ../scss/media.scss */
   .hint-container__text {
     width: 200px;
   }
 }
 @media only screen and (max-width: 768px) {
-  /* line 73, ../scss/media.scss */
+  /* line 81, ../scss/media.scss */
   .hint-container__text {
     width: 150px;
   }
 
-  /* line 76, ../scss/media.scss */
+  /* line 84, ../scss/media.scss */
   .popover {
     background-color: #fd1f39;
     min-height: 56px;
   }
 
-  /* line 80, ../scss/media.scss */
+  /* line 88, ../scss/media.scss */
   .popover.right > .arrow:after {
     border-right-color: #fd1f39;
   }
 
-  /* line 83, ../scss/media.scss */
+  /* line 91, ../scss/media.scss */
   .popover.right {
     margin-left: -268px;
     margin-top: 45px;
@@ -39,7 +51,7 @@
     width: 300px;
   }
 
-  /* line 89, ../scss/media.scss */
+  /* line 97, ../scss/media.scss */
   .popover.right > .arrow {
     margin: -32px 0 0 0;
     opacity: 0.99;
@@ -49,13 +61,13 @@
     transform: translate(0, -50%) rotate(90deg);
   }
 
-  /* line 99, ../scss/media.scss */
+  /* line 107, ../scss/media.scss */
   .phoneNumber {
     box-shadow: none !important;
     border: 1px solid #ccc !important;
   }
 
-  /* line 104, ../scss/media.scss */
+  /* line 112, ../scss/media.scss */
   #phoneNumber.Invalid-class {
     background-image: url("../images/mob-error.png");
     background-repeat: no-repeat;
@@ -64,67 +76,67 @@
     box-shadow: 0 0px 2px 0px red !important;
   }
 
-  /* line 111, ../scss/media.scss */
+  /* line 119, ../scss/media.scss */
   .popover-content, .popover {
     color: #fff;
     background-color: red;
     opacity: 1;
   }
 
-  /* line 116, ../scss/media.scss */
+  /* line 124, ../scss/media.scss */
   .popover.right > .arrow:after {
     border-right-color: red;
   }
 
-  /* line 119, ../scss/media.scss */
+  /* line 127, ../scss/media.scss */
   .modal-open {
     overflow-y: visible;
   }
 
-  /* line 125, ../scss/media.scss */
+  /* line 133, ../scss/media.scss */
   .card-container {
     margin-top: 30px;
   }
 
-  /* line 129, ../scss/media.scss */
+  /* line 137, ../scss/media.scss */
   .modal-content {
     min-height: 80%;
   }
 
-  /* line 132, ../scss/media.scss */
+  /* line 140, ../scss/media.scss */
   .modal-footer button {
     margin-bottom: 10px;
   }
 
-  /* line 135, ../scss/media.scss */
+  /* line 143, ../scss/media.scss */
   .card-container {
     min-height: 400px;
   }
 
-  /* line 138, ../scss/media.scss */
+  /* line 146, ../scss/media.scss */
   .modal-body .step-payment {
     padding-bottom: 60px;
   }
 
-  /* line 141, ../scss/media.scss */
+  /* line 149, ../scss/media.scss */
   .modal-body .step-shipment {
     padding-bottom: 60px;
   }
 }
 @media only screen and (max-width: 768px) and (orientation: portrait) {
-  /* line 148, ../scss/media.scss */
+  /* line 156, ../scss/media.scss */
   .card-container {
     margin-top: 20%;
   }
 }
 @media only screen and (max-width: 630px) {
-  /* line 154, ../scss/media.scss */
+  /* line 162, ../scss/media.scss */
   .hint-container__text {
     width: 125px;
   }
 }
 @media only screen and (max-width: 580px) {
-  /* line 161, ../scss/media.scss */
+  /* line 169, ../scss/media.scss */
   .hint-container__text {
     width: 105%;
     top: 30px;
@@ -132,7 +144,7 @@
     left: -2.5%;
     box-shadow: 1px 1px 2px 1.5px #777;
   }
-  /* line 167, ../scss/media.scss */
+  /* line 175, ../scss/media.scss */
   .hint-container__text:after {
     top: -1px;
     margin-top: -5px;
@@ -147,12 +159,12 @@
   }
 }
 @media only screen and (max-width: 480px) {
-  /* line 185, ../scss/media.scss */
+  /* line 193, ../scss/media.scss */
   .card-container {
     margin-top: 20%;
   }
 
-  /* line 189, ../scss/media.scss */
+  /* line 197, ../scss/media.scss */
   #myModal {
     position: absolute;
     left: 0;
@@ -162,13 +174,13 @@
   }
 }
 @media only screen and (max-width: 425px) {
-  /* line 201, ../scss/media.scss */
+  /* line 209, ../scss/media.scss */
   .input-group-btn .dropdown-menu {
     width: 260px;
     max-height: 300px;
   }
 
-  /* line 206, ../scss/media.scss */
+  /* line 214, ../scss/media.scss */
   .dropdown-menu > li > a {
     padding-left: 10px;
   }
@@ -177,7 +189,7 @@
 /* iPads (portrait and landscape) ----------- */
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* line 240, ../scss/media.scss */
+  /* line 248, ../scss/media.scss */
   .card-container {
     margin-top: 6%;
   }
